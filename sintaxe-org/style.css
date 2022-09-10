@@ -1,0 +1,85 @@
+:root {
+  --color:#e8e8e8;
+  --color-gray:#888;
+  --bg-color:#2d2d2d;
+  --bg-color-hover:#323232;
+  --neoSdw1:#aaaaaa2f;
+  --neoSdw2:#00000099;
+  --placeholder: #444;
+  --invSdw1:#FF8870;
+  --invSdw2:#322020;
+  --valid-color: #40e0d0;
+  --swt-text: "to light";
+}
+
+.light-mode:root {
+  --valid-color: #008f77;
+  --placeholder: #cecece;
+  --bg-color:#e8e8e8;
+  --bg-color-hover:#e4e4e4;
+  --neoSdw1:#ffffffdd;
+  --neoSdw2:#66666677;
+  --color:#3a3a3a;
+  --invSdw1:#f77;
+  --invSdw2:#a87575;
+  --swt-text: "to dark";
+}
+
+@keyframes rotation {
+  100% {
+    rotate: 360deg;
+  }
+}
+html * {
+  color: var(--color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px;
+  position: relative;
+}
+.main h1 {
+  margin-bottom: 30px;
+}
+.main .load {
+  width: 80px;
+  height: 80px;
+  top: calc(50% - 80px);
+  position: absolute;
+  border: 15px solid rgba(255, 255, 255, 0.0666666667);
+  border-bottom-color: #9af8ef;
+  border-radius: 40px;
+  animation: rotation 0.65s ease infinite;
+  display: none;
+}
+.main form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.0666666667);
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+}
+.main form .form-grp {
+  margin-top: 10px;
+}
+.main form .form-grp h6 {
+  margin-bottom: 10px;
+}
+.main form .form-grp option {
+  color: var(--bg-color);
+}
+
+/*# sourceMappingURL=style.css.map */

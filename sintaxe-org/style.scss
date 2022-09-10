@@ -24,3 +24,60 @@
     --invSdw2:#a87575;
     --swt-text: "to dark";
   }
+
+  @keyframes rotation{
+    100% {rotate: 360deg;}
+  }
+
+  html * {
+    color: var(--color);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+  }
+  body{
+    background-color: var(--bg-color);
+  }
+  .main{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px;
+    position: relative;
+    h1{
+        margin-bottom: 30px;
+    }
+    .load{
+        width: 80px;
+        height: 80px;
+        top: calc(50% - 80px);
+        position: absolute;
+        border: 15px solid #fff1;
+        border-bottom-color: #9af8ef;
+        border-radius: 40px;
+        animation: rotation .65s ease infinite;
+        display: none;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px;
+        background-color: #fff1;
+        border-radius: 15px;
+        backdrop-filter: blur(2px);
+
+        .form-grp{
+            margin-top:10px;
+            h6{
+                margin-bottom: 10px;
+            }
+            option{
+                color: var(--bg-color);
+            }
+        }
+        
+    }
+  }
