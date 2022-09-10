@@ -1,0 +1,120 @@
+:root {
+  --color:#e8e8e8;
+  --color-gray:#888;
+  --bg-color:#2d2d2d;
+  --bg-color-hover:#323232;
+  --neoSdw1:#aaaaaa2f;
+  --neoSdw2:#00000099;
+  --placeholder: #444;
+  --invSdw1:#FF8870;
+  --invSdw2:#ff5520;
+  --valid-color: #40e0d0;
+  --swt-text: "to light";
+}
+
+.light-mode:root {
+  --valid-color: #008f77;
+  --placeholder: #cecece;
+  --bg-color:#e8e8e8;
+  --bg-color-hover:#e4e4e4;
+  --neoSdw1:#ffffffdd;
+  --neoSdw2:#66666677;
+  --color:#3a3a3a;
+  --invSdw1:#f77;
+  --invSdw2:#a87575;
+  --swt-text: "to dark";
+}
+
+html {
+  font-size: 62.5%;
+  background-color: var(--bg-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+html * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: var(--color);
+}
+
+main {
+  width: 98%;
+  max-width: 250px;
+  position: relative;
+}
+
+.ball {
+  width: 80px;
+  height: 80px;
+  background-color: var(--valid-color);
+  border-radius: 28px;
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  z-index: -1;
+}
+
+.calculadora {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: -2px -2px 5px var(--neoSdw1), 2px 2px 5px var(--neoSdw2);
+  border-radius: 8px;
+}
+.calculadora button {
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid var(--bg-color);
+  box-shadow: -2px -2px 5px var(--neoSdw1), 2px 2px 5px var(--neoSdw2);
+  color: var(--color);
+  border-radius: 5px;
+}
+.calculadora .result {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 5;
+  width: 100%;
+  height: 60px;
+  font-size: 2rem;
+  padding: 20px;
+  box-shadow: -2px -2px 5px var(--neoSdw1) inset, 2px 2px 5px var(--neoSdw2) inset;
+}
+.calculadora .numero {
+  height: 35px;
+  width: 35px;
+}
+.calculadora .operacoes {
+  height: 35px;
+  width: 35px;
+  font-size: 2rem;
+  grid-row-start: 2;
+  background-color: var(--invSdw1);
+}
+.calculadora #clear {
+  background-color: var(--invSdw2);
+  grid-row-start: 3;
+  grid-row-end: 5;
+  height: 100%;
+}
+.calculadora #concluir {
+  height: 100%;
+  font-size: 2rem;
+  background-color: var(--valid-color);
+  color: var(--bg-color);
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,26 @@
+:root {
+    --color:#e8e8e8;
+    --color-gray:#888;
+    --bg-color:#2d2d2d;
+    --bg-color-hover:#323232;
+    --neoSdw1:#aaaaaa2f;
+    --neoSdw2:#00000099;
+    --placeholder: #444;
+    --invSdw1:#FF8870;
+    --invSdw2:#322020;
+    --valid-color: #40e0d0;
+    --swt-text: "to light";
+  }
+  
+  .light-mode:root {
+    --valid-color: #008f77;
+    --placeholder: #cecece;
+    --bg-color:#e8e8e8;
+    --bg-color-hover:#e4e4e4;
+    --neoSdw1:#ffffffdd;
+    --neoSdw2:#66666677;
+    --color:#3a3a3a;
+    --invSdw1:#f77;
+    --invSdw2:#a87575;
+    --swt-text: "to dark";
+  }
