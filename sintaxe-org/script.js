@@ -3,7 +3,9 @@
 const button = document.querySelector('.btn-primary');
 const load = document.querySelector('.load');
 const form = document.querySelector('form');
-const table = document.querySelector('table');
+var table = document.querySelector('table');
+table = table.querySelector('tbody');
+console.log(table)
 
 function erro(val){
     val.style.border = '1px solid red';
@@ -15,15 +17,15 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     load.style.display = 'block';
     var responseTable = "";
-    
+
     for(var i=0; i<7; i++){
         
         if(e.target[i].checked){
-            responseTable += `<th>${e.target[i].value}</th>`;
+            responseTable += `<td>${e.target[i].value}</td>`;
         }
         else if(i==1){
             if(e.target[i].value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)){
-                responseTable += `<th>${e.target[i].value}</th>`;
+                responseTable += `<td>${e.target[i].value}</td>`;
                 e.target[i].style.border = 'none';
             }else{
                 return erro(e.target[i]);
@@ -34,12 +36,12 @@ form.addEventListener('submit', (e) => {
                 return erro(e.target[i]);
                 
             }else{
-                responseTable += `<th>${e.target[i].options[e.target[i].selectedIndex].value}</th>`;
+                responseTable += `<td>${e.target[i].options[e.target[i].selectedIndex].value}</td>`;
                 e.target[i].style.border = 'none';
             }
             
         }else if(i!=4 && i!=5){
-            responseTable += `<th>${e.target[i].value}</th>`;
+            responseTable += `<td>${e.target[i].value}</td>`;
         }
     }
 
@@ -47,7 +49,5 @@ form.addEventListener('submit', (e) => {
         load.style.display = 'none';
         table.innerHTML+=`<tr>${responseTable}</tr>`;
     },2000);
-    
-    
     
 });
