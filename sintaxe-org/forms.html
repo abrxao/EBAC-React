@@ -16,8 +16,8 @@
             <form id="forms"> 
             <h1>Pesquisa de Dados</h1>              
                 <div class="mb-3">
-                    <label for="nome" class="form-label">Nome</label><br>
-                    <input  id="nome" class="form-control" name="nome" placeholder="Digite seu nome" type="text" required>
+                    <label for="nome" class="form-label">Nome Completo</label><br>
+                    <input  id="nome" class="form-control" name="nome" minlength="6" placeholder="Digite seu nome" type="text" required>
                     <span class="verify"></span>
                 </div>
                 
@@ -30,7 +30,7 @@
                 
                 <div class="mb-3">
                     <label for="city" class="form-label">Cidade</label><br>
-                    <input  id="city" class="form-control" name="city" placeholder="Digite sua cidade" type="text" required>
+                    <input  id="city" class="form-control" name="city" placeholder="Digite sua cidade" type="text" required minlength="3">
                     
                     <span class="verify"></span>
                 </div>
@@ -88,29 +88,31 @@
 
                 <div class="form-grp">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="ok" id="flexCheckIndeterminate">
+                        <input class="form-check-input" type="checkbox" value="ok" id="flexCheckIndeterminate" required>
                         <label class="form-check-label" for="flexCheckIndeterminate">
                             Concordo com os termos de privacidade
                         </label>
                     </div> 
                 </div>
-                
+
                     <button type="submit" class="btn btn-primary"><span></span> ENVIAR</button>
-                
-                
+
             </form>
+
+            <div class="load">
+                <div class="blank"></div>
+                <div class="blank"></div>
+            </div>
+
         </section>
-        <div class="load">
-            <div class="blank"></div>
-            <div class="blank"></div>
-        </div>
+
         <section id="tabela">
             <table class="table table-dark table-striped table-hover">
                 <thead>
                     <th>Nome</th>
                     <th>E-mail</th>
                     <th>Cidade</th>
-                    <th>ESTADO</th>
+                    <th>Estado</th>
                     <th>Bebida Prefirida</th>
                     <th>Termos</th>
                 </thead>

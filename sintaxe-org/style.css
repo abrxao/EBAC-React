@@ -49,6 +49,12 @@ body {
   padding: 40px;
   position: relative;
 }
+.main section#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
 .main h1 {
   margin-bottom: 30px;
 }
@@ -56,7 +62,6 @@ body {
   width: 80px;
   height: 80px;
   top: calc(50% - 80px);
-  position: absolute;
   border: 15px solid rgba(255, 255, 255, 0.0666666667);
   border-bottom-color: #9af8ef;
   border-radius: 40px;
@@ -80,6 +85,10 @@ body {
 }
 .main form .form-grp option {
   color: var(--bg-color);
+}
+.main table tr th {
+  width: 20px;
+  text-overflow: ellipsis;
 }
 
 /*# sourceMappingURL=style.css.map */
