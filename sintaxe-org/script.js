@@ -5,13 +5,32 @@ const load = document.querySelector('.load');
 const form = document.querySelector('form');
 var table = document.querySelector('table');
 table = table.querySelector('tbody');
-console.log(table)
 
 function erro(val){
     val.style.border = '1px solid red';
     alert(`Verifique o campo de ${val.getAttribute('id')}`);
     load.style.display = 'none'; 
 }
+
+const refreshButton = document.querySelector('#refresh');
+const cocaPlacar = document.querySelector('.coca');
+const pepsiPlacar = document.querySelector('.pepsi');
+
+const placar = ()=>{
+    var teste = table.querySelectorAll('tr');
+    var coca = 0;
+    var pepsi = 0;
+    teste.forEach((row)=>{
+        var column = row.querySelectorAll('td');
+        if(column[4].innerHTML=="Pepsi"){
+            pepsi++;
+            pepsiPlacar.querySelector('p').innerHTML = pepsi;
+        }else{
+            coca++;
+            cocaPlacar.querySelector('p').innerHTML = coca;
+        };
+    });
+};
 
 form.addEventListener('submit', (e) => { 
     e.preventDefault();
@@ -48,6 +67,9 @@ form.addEventListener('submit', (e) => {
     setTimeout(() => {
         load.style.display = 'none';
         table.innerHTML+=`<tr>${responseTable}</tr>`;
-    },2000);
+        placar();
+        console.log(table);
+    },15);
     
 });
+

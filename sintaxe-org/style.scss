@@ -25,6 +25,23 @@
   --swt-text: "to dark";
 }
 
+@mixin graficColunm {
+  height: 60px;
+  padding: 0;
+  width: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  p{
+    display: block;
+    margin: 0;
+  }
+  
+}
+
 @keyframes rotation{
   100% {rotate: 360deg;}
 }
@@ -52,6 +69,28 @@ body{
     gap: 35px;
     padding: 10px;
   }
+
+  .placar{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #444;
+    gap: 20px;
+    .btn-secondary{
+      width: 100%;
+    }
+    .valores{
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-around;
+      .coca,.pepsi{
+        text-align: center;
+      }
+      
+    }
+  }
+
   section#form{
     margin-right: 10px;
     max-width: 450px;
@@ -123,11 +162,12 @@ body{
         }
       }
     }
+    
     @media (max-width: 1024px){
       p{
         display: block;
       }
     }
   }
-  
+    
 }

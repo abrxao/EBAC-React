@@ -59,6 +59,25 @@ body {
     padding: 10px;
   }
 }
+.main .placar {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #444;
+  gap: 20px;
+}
+.main .placar .btn-secondary {
+  width: 100%;
+}
+.main .placar .valores {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.main .placar .valores .coca, .main .placar .valores .pepsi {
+  text-align: center;
+}
 .main section#form {
   margin-right: 10px;
   max-width: 450px;
