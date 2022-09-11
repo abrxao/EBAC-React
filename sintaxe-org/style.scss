@@ -1,98 +1,133 @@
 :root {
-    --color:#e8e8e8;
-    --color-gray:#888;
-    --bg-color:#2d2d2d;
-    --bg-color-hover:#323232;
-    --neoSdw1:#aaaaaa2f;
-    --neoSdw2:#00000099;
-    --placeholder: #444;
-    --invSdw1:#FF8870;
-    --invSdw2:#322020;
-    --valid-color: #40e0d0;
-    --swt-text: "to light";
+  --color:#e8e8e8;
+  --color-gray:#888;
+  --bg-color:#2d2d2d;
+  --bg-color-hover:#323232;
+  --neoSdw1:#aaaaaa2f;
+  --neoSdw2:#00000099;
+  --placeholder: #444;
+  --invSdw1:#FF8870;
+  --invSdw2:#322020;
+  --valid-color: #40e0d0;
+  --swt-text: "to light";
+}
+
+.light-mode:root {
+  --valid-color: #008f77;
+  --placeholder: #cecece;
+  --bg-color:#e8e8e8;
+  --bg-color-hover:#e4e4e4;
+  --neoSdw1:#ffffffdd;
+  --neoSdw2:#66666677;
+  --color:#3a3a3a;
+  --invSdw1:#f77;
+  --invSdw2:#a87575;
+  --swt-text: "to dark";
+}
+
+@keyframes rotation{
+  100% {rotate: 360deg;}
+}
+html * {
+  color: var(--color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+body{
+  background-color: var(--bg-color);
+}
+.main{
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px;
+  position: relative;
+  @media (max-width: 1024px){
+    flex-direction: column;
+    align-items:center;
+    gap: 35px;
+    padding: 10px;
+  }
+  section#form{
+    margin-right: 10px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
   
-  .light-mode:root {
-    --valid-color: #008f77;
-    --placeholder: #cecece;
-    --bg-color:#e8e8e8;
-    --bg-color-hover:#e4e4e4;
-    --neoSdw1:#ffffffdd;
-    --neoSdw2:#66666677;
-    --color:#3a3a3a;
-    --invSdw1:#f77;
-    --invSdw2:#a87575;
-    --swt-text: "to dark";
+  h1{
+    margin-bottom: 30px;
+    font-size: 1.62em;
+    text-align: center;
   }
-
-  @keyframes rotation{
-    100% {rotate: 360deg;}
+  .load{
+    width: 80px;
+    height: 80px;
+    top: calc(50% - 80px);
+    border: 15px solid #fff1;
+    border-bottom-color: #9af8ef;
+    border-radius: 40px;
+    animation: rotation .65s ease infinite;
+    display: none;
   }
-
-  html * {
-    color: var(--color);
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    outline: 0;
-  }
-  body{
-    background-color: var(--bg-color);
-  }
-  .main{
+  
+  form{
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 40px;
-    position: relative;
-    section#form{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    background-color: #fff1;
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    @media (max-width:1024px){
+      padding: 15px;
     }
-
-    h1{
-        margin-bottom: 30px;
+    .form-grp{
+      margin-top:10px;
+      h6{
+        margin-bottom: 10px;
+      }
+      option{
+        color: var(--bg-color);
+      }
     }
-    .load{
-        width: 80px;
-        height: 80px;
-        top: calc(50% - 80px);
-        border: 15px solid #fff1;
-        border-bottom-color: #9af8ef;
-        border-radius: 40px;
-        animation: rotation .65s ease infinite;
-        display: none;
+    button{
+      margin: 20px 0;
     }
-
-    form{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 30px;
-        background-color: #fff1;
-        border-radius: 15px;
-        backdrop-filter: blur(2px);
-
-        .form-grp{
-            margin-top:10px;
-            h6{
-                margin-bottom: 10px;
-            }
-            option{
-                color: var(--bg-color);
-            }
-        }
-        
+  }
+  
+  section#tabela{
+    max-width: 100%;
+    overflow: hidden;
+    
+    h2{
+      margin: 9px 0;
+      margin-left: 5px;
     }
-
+    p{
+      display: none;
+      margin-left: 5px;
+    }
     table{
+      text-align: center;
+      
       tr{
         th{
-          width: 20px;
           text-overflow: ellipsis;
         }
       }
     }
+    @media (max-width: 1024px){
+      p{
+        display: block;
+      }
+    }
   }
+  
+}

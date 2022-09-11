@@ -43,13 +43,25 @@ body {
 }
 
 .main {
+  max-width: 100vw;
+  overflow-x: hidden;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   padding: 40px;
   position: relative;
 }
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 10px;
+  }
+}
 .main section#form {
+  margin-right: 10px;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,6 +69,8 @@ body {
 }
 .main h1 {
   margin-bottom: 30px;
+  font-size: 1.62em;
+  text-align: center;
 }
 .main .load {
   width: 80px;
@@ -77,6 +91,11 @@ body {
   border-radius: 15px;
   backdrop-filter: blur(2px);
 }
+@media (max-width: 1024px) {
+  .main form {
+    padding: 15px;
+  }
+}
 .main form .form-grp {
   margin-top: 10px;
 }
@@ -86,9 +105,31 @@ body {
 .main form .form-grp option {
   color: var(--bg-color);
 }
-.main table tr th {
-  width: 20px;
+.main form button {
+  margin: 20px 0;
+}
+.main section#tabela {
+  max-width: 100%;
+  overflow: hidden;
+}
+.main section#tabela h2 {
+  margin: 9px 0;
+  margin-left: 5px;
+}
+.main section#tabela p {
+  display: none;
+  margin-left: 5px;
+}
+.main section#tabela table {
+  text-align: center;
+}
+.main section#tabela table tr th {
   text-overflow: ellipsis;
+}
+@media (max-width: 1024px) {
+  .main section#tabela p {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
