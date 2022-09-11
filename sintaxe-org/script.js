@@ -17,10 +17,10 @@ const cocaPlacar = document.querySelector('.coca');
 const pepsiPlacar = document.querySelector('.pepsi');
 
 const placar = ()=>{
-    var teste = table.querySelectorAll('tr');
+    var tableRows = table.querySelectorAll('tr');
     var coca = 0;
     var pepsi = 0;
-    teste.forEach((row)=>{
+    tableRows.forEach((row)=>{
         var column = row.querySelectorAll('td');
         if(column[4].innerHTML=="Pepsi"){
             pepsi++;
