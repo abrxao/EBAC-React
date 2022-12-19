@@ -42,6 +42,30 @@
   
 }
 
+@keyframes balldec{
+  28%{
+    left: 30px;
+  }
+  
+  50%{
+    bottom: 120px;
+  }
+}
+
+@keyframes ball2dec{
+  28%{
+    right: 30px;
+  }
+  
+  50%{
+    top: 120px;
+  }
+}
+
+
+
+
+
 @keyframes rotation{
   100% {rotate: 360deg;}
 }
@@ -69,7 +93,7 @@ body{
     gap: 35px;
     padding: 10px;
   }
-
+  
   .placar{
     display: flex;
     flex-direction: column;
@@ -90,14 +114,32 @@ body{
       
     }
   }
-
+  
   section#form{
-    margin-right: 10px;
-    max-width: 450px;
+    max-width: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    position: relative;
+    .form-decoration{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      bottom: -30px;
+      left: -30px;
+      background-color: var(--invSdw1);
+      position: absolute;
+      animation: balldec 6s infinite ease-in-out;
+
+      &:nth-child(1){
+        animation-delay: 1s;
+        left: -30px;
+        background-color: var(--valid-color);
+        bottom: -30px;
+      }
+    }
+    
   }
   
   h1{
@@ -121,9 +163,10 @@ body{
     flex-direction: column;
     gap: 10px;
     padding: 30px;
-    background-color: #fff1;
+    background-color: #2d2d2da1;
     border-radius: 15px;
-    backdrop-filter: blur(2px);
+    border: 2px solid #fff5;
+    backdrop-filter: blur(4px);
     @media (max-width:1024px){
       padding: 15px;
     }
@@ -169,5 +212,5 @@ body{
       }
     }
   }
-    
+  
 }
