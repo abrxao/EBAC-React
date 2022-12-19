@@ -1,6 +1,80 @@
 .IMC{
-    background-color: #f2f2f2;
-    margin: auto;
-    padding: 40px 0;
-    width: 1000px;
+    background-color: #222222;
+    color: #f2f2f2;
+    margin-top: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    box-shadow:
+    9px 9px 18px #131313,
+    -9px -9px 18px #272727;
+    
+}
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    position: relative;
+
+}
+.inputField label{
+    opacity: .4;
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    left: 16px;
+    transition: .250s;
+}
+
+.inputField:has(:where(input:focus)) label, .inputField:has(:where(input:not([value=""]))) label{
+    top: -24px;
+    left: 0;
+    opacity: 1;
+}
+
+
+
+.inputField input{
+    color: #f2f2f2;
+    border:1px solid #f2f2f266;
+    width: 180px;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #fff0;
+}
+
+
+.IMC button{
+    width: 180px;
+    color: #f2f2f2;
+    height: 40px;
+    border:3px solid #fff0;
+    border-radius: 6px;
+    margin-top: 18px;
+    box-shadow:
+    3px 3px 6px #131313,
+    -3px -3px 6px #272727;
+    cursor: pointer;
+    background-color: #fff0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.IMC button:active{
+    color: #f2f2f299;
+    font-size: 14px;
+    box-shadow:
+    inset 3px 3px 6px #131313,
+    inset -3px -3px 6px #272727,
+    3px 3px 6px #131313,
+    -3px -3px 6px #272727;
+}
+
+.resultBlock{
+    border: 1px solid #fff;
+    padding: 16px;
+    border-radius: 8px;
+    
 }
