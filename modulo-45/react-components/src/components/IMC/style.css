@@ -1,16 +1,23 @@
 .IMC{
+    width: 250px;
     background-color: #222222;
     color: #f2f2f2;
     margin-top: 24px;
     padding: 24px;
     border-radius: 12px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 16px;
     flex-direction: column;
     box-shadow:
-    9px 9px 18px #131313,
-    -9px -9px 18px #272727;
+    6px 6px 5px #131313,
+    -6px -6px 5px #272727;
     
+}
+
+.IMC h2{
+    font-size: 20px
 }
 
 .inputField {
@@ -24,7 +31,7 @@
     opacity: .4;
     position: absolute;
     pointer-events: none;
-    top: 10px;
+    top: 13px;
     left: 16px;
     transition: .250s;
 }
@@ -42,6 +49,7 @@
     border:1px solid #f2f2f266;
     width: 180px;
     padding: 12px;
+    font-size: 14px;
     border-radius: 6px;
     background-color: #fff0;
 }
@@ -73,6 +81,7 @@
 }
 
 .resultBlock{
+    width: 100%;
     border: 1px solid #fff;
     padding: 16px;
     border-radius: 8px;

@@ -4,7 +4,7 @@ import IMC from './components/IMC';
 function App() {
   return (
     <div className="App">
-      <Header  title="Mudando titulo usando props"/>
+      <Header  title="Calcule seu IMC"/>
       <IMC/>
     </div>
   );
