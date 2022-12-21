@@ -26,21 +26,22 @@
 return (
     <div className="IMC">    
     <div className="inputField">
-    <label for="height">Altura</label>
     <input
     type="text" 
     value={height}
-    onChange={e => setHeight(e.target.value)}
+    onChange={e => setHeight(e.target.value.replace(",","."))}
     />
+    <label for="height">Altura</label>
     </div>
     
+
     <div className="inputField">
-    <label for="weight">Peso</label>  
     <input
     type="text" 
     value={weight}
-    onChange = {e => setWeight(e.target.value)}
+    onChange = {e => setWeight(e.target.value.replace(",","."))}
     />
+    <label for="weight">Peso</label>  
     </div>
     
     <button onClick={calculator}>Calcular</button>

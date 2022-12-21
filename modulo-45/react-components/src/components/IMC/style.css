@@ -36,13 +36,11 @@
     transition: .250s;
 }
 
-.inputField:has(:where(input:focus)) label, .inputField:has(:where(input:not([value=""]))) label{
+.inputField input:focus ~ label, .inputField input:not([value=""]) ~ label{
     top: -24px;
     left: 0;
     opacity: 1;
 }
-
-
 
 .inputField input{
     color: #f2f2f2;
