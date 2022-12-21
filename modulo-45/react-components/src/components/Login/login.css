@@ -157,7 +157,7 @@ input[type="password"]{
     box-shadow: 
     4px 4px 7px #121213,
     -4px -4px 7px #272727;
-    animation: fade .8s;
+    animation: fade 1s;
 }
 
 .logged .logBtn{
@@ -170,6 +170,15 @@ input[type="password"]{
     -webkit-text-fill-color: transparent;
 }
 
+.spoiler{
+    position: fixed;
+    color: #f2f2f2;
+    top: 25%;
+    animation: spoiler 3s linear ;
+    opacity: 0;
+    
+}
+
 @keyframes fade{
     0%{
         opacity: 0;
@@ -179,5 +188,27 @@ input[type="password"]{
     }
     100%{
         opacity: 1;
+    }
+}
+
+@keyframes spoiler{
+    0%{
+        visibility: initial;
+    }
+
+    20%{
+        opacity: .7;
+    }
+    40%{
+        opacity: 1;
+    }
+    60%{
+        opacity: .7;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }

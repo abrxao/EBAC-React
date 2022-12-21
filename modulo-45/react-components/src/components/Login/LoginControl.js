@@ -77,6 +77,7 @@ export default class LoginControl extends React.Component{
                       
         }else{
             button = <div className="loginInputs">
+                <div className="spoiler">Nome: teste -- Senha: 123</div>
                 <Greeting name={this.state.name} isLoggedIn={isLoggedIn}/>
             
             <div className="inputField">
