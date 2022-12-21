@@ -98,7 +98,6 @@ input[type="password"]{
 }
 
 .loginInputs{
-    height: 300px;
     padding: 30px;
     border-radius: 20px;
     display: flex;
@@ -158,6 +157,7 @@ input[type="password"]{
     box-shadow: 
     4px 4px 7px #121213,
     -4px -4px 7px #272727;
+    animation: fade .8s;
 }
 
 .logged .logBtn{
@@ -168,4 +168,16 @@ input[type="password"]{
     background: -webkit-linear-gradient(10deg, #8AD7F0, #B7E9F7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    85%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
 }

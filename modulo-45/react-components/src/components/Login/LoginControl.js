@@ -19,14 +19,28 @@ export default class LoginControl extends React.Component{
             password: ''
         }
     }
+
     handleLogin(){
-        if(this.state.password == '123' && this.state.name == 'teste'){
-            this.setState({isLoggedIn: true});
-        }else{
-            alert('Login ou/e senha errados')
+        const loginInputs = document.querySelector('.loginInputs');
+
+        if(loginInputs!=undefined){
+            
+            if(this.state.password == '123' && this.state.name == 'teste'){
+                loginInputs.style.animation = 'fade reverse .9s';
+                setTimeout(()=>{
+                    this.setState({isLoggedIn: true});
+                    loginInputs.style.animation = '';
+                }, 850)
+                
+            }else{
+                loginInputs.style.animation = '';
+                alert('Login ou/e senha errados');
+            }
         }
         
+        
     }
+
     handleLogout(){
         this.handleName("");
         this.handleLogin("");
