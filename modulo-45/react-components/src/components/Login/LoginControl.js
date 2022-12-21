@@ -1,51 +1,92 @@
 import React from "react";
 import Greeting from "./index";
+import eye from "./eye-icon.png"
+import "./login.css"
 
 export default class LoginControl extends React.Component{
-
+    
     constructor(props) {
         super(props);
-
+        
         this.handleLogin = this.handleLogin.bind(this);
         this.handleLogout = this.handleLogout.bind(this);
         this.handleName = this.handleName.bind(this);
+        this.handlePassword = this.handlePassword.bind(this);
+        
         this.state = {
             isLoggedIn: false,
-            name: ''
+            name: '',
+            password: ''
         }
     }
     handleLogin(){
-        this.setState({isLoggedIn: true});
+        if(this.state.password == '123' && this.state.name == 'teste'){
+            this.setState({isLoggedIn: true});
+        }else{
+            alert('Login ou/e senha errados')
+        }
+        
     }
     handleLogout(){
+        this.handleName("");
+        this.handleLogin("");
         this.setState({isLoggedIn: false});
     }
-
+    
     handleName(name){
         this.setState({name: name});
     }
+    
+    handlePassword(password){
+        this.setState({password: password});
+    }
 
+    toogleInputType(e){
+        var inputField = e.parentNode.parentNode;        
+        var inputPassword = inputField.querySelector('input');
+        inputPassword.type = inputPassword.type == 'password' ? 'text': 'password';        
+    }
+    
     render(){
         const isLoggedIn = this.state.isLoggedIn;
-
+        
         let button;
 
         if(isLoggedIn){
-            button = <button onClick={this.handleLogout}>Logout</button>;
-        }else{
-            button = <div>
-                    <input placeholder="digite seu nome" onChange={e => this.handleName(e.target.value)}/>;
-                    <button onClick={this.handleLogin}>Login</button>;
-                </div>
-                
-        }
-    return(
-        <div>
-            <Greeting name={this.state.name} isLoggedIn={isLoggedIn}/>
             
+            button = <div className="logged">
+                <Greeting name={this.state.name} isLoggedIn={isLoggedIn}/>
+                <button onClick={this.handleLogout} className="logBtn">Logout</button>
+                  
+            </div>
+            
+                      
+        }else{
+            button = <div className="loginInputs">
+                <Greeting name={this.state.name} isLoggedIn={isLoggedIn}/>
+            
+            <div className="inputField">
+            <input type="text" required onChange={e => this.handleName(e.target.value)}/>
+            <label>Nome</label>
+            </div>
+            
+            <div className="inputField">
+            <input type="password" required onChange={e => this.handlePassword(e.target.value)} />
+            <label>Senha </label>
+            
+            <button className="eyeBtn" onClick={e => this.toogleInputType(e.target)}><img src={eye}/></button>
+            
+            </div>  
+            
+            <button onClick={this.handleLogin} className="logBtn">Login</button>
+            </div>
+            
+        }
+        return(
+            <div>
             {button}
-        </div>
-    )
+            </div>
+            )
+        }
+        
     }
-    
-}
