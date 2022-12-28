@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import {Box, Container, ThemeProvider} from '@mui/system';
+import './App.css';
 import {theme, themeDark} from './theme.js';
 import axios from 'axios';
 import Autocomplete from '@mui/material/Autocomplete';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
 import teste from './libPoke/pokeList'
 
 
@@ -42,10 +44,9 @@ function App() {
         alignItems: 'center',
         gap: 2,
         bgcolor: 'background.paper',
-        boxShadow: 1,
+        boxShadow: '3px 3px 5px #e7e7e7, -3px -3px 5px #fff',
         borderRadius: 3,
-        padding: 2,
-        boxShadow: '3px 3px 8px #aaa'
+        padding: 2.5
        
       }}>
       <Autocomplete
@@ -58,87 +59,16 @@ function App() {
         renderInput={(params) => <TextField {...params} label="Escolha um pokemon" />}
       />
 
-      <Button variant="outlined"
+      <Button variant="contained"
         sx={{
           height: 56,
           fontSize: 15,
           fontWeight: 'bold'
         }}
         onClick={handleAdd}      
-      >Adicionar</Button>
+      >Adicionar<AddRoundedIcon sx={{marginLeft: 1}}/></Button>
     </Box>
     
-    <ThemeProvider theme={theme}>
-    
-    <Box sx={{
-      bgcolor: 'background.paper',
-      boxShadow: 1,
-      borderRadius: 3,
-      p:2,
-      minWidth: 250,
-      boxShadow: '3px 3px 8px #aaa'
-    }}>
-    
-    <Box
-    sx={{
-      color: 'text.secondary'
-    }}
-    >Visualizações</Box>
-    <Box
-    sx={{
-      color: 'text.secondary',
-      fontWeight: 'bold',
-      fontSize: 32
-    }}
-    >30k</Box>
-    <Box
-    sx={{
-      color: 'success.dark',
-      display: 'inline',
-      fontWeight: 'bold',
-      mx: 0.5,
-      fontSize: 14,
-    }}>+15%</Box>
-    <Box sx={{
-      color: 'text.secondary', display:'inline', fontSize: 14 
-    }}>vs. Last Week</Box>
-    </Box> 
-    </ThemeProvider>
-    
-    <ThemeProvider theme={themeDark}>
-    <Box sx={{
-      bgcolor: 'background.paper',
-      boxShadow: 1,
-      borderRadius: 3,
-      p:2,
-      minWidth: 250,
-      boxShadow: '3px 3px 6px #aaa'
-    }}>            
-    <Box
-    sx={{
-      color: 'text.secondary'
-    }}
-    >Visualizações</Box>
-    <Box
-    sx={{
-      color: 'text.secondary',
-      fontWeight: 'bold',
-      fontSize: 32
-    }}
-    >30k</Box>
-    <Box
-    sx={{
-      color: 'success.dark',
-      display: 'inline',
-      fontWeight: 'bold',
-      mx: 0.5,
-      fontSize: 14,
-    }}>+15%</Box>
-    <Box sx={{
-      color: 'text.secondary', display:'inline', fontSize: 14 
-    }}>vs. Last Week</Box>
-    </Box> 
-    </ThemeProvider>
     
     </Container>
     </React.Fragment>
