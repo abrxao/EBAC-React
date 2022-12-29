@@ -1,6 +1,6 @@
 .iconDecoration {
     position: absolute;
-    animation: iconsX in inite ease-in-out, iconsY infinite ease-in-out;
+    animation: iconsX infinite ease-in-out, iconsY infinite ease-in-out;
     animation-duration: 20s;
     top:0px;
     width: 40px;

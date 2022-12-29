@@ -38,7 +38,6 @@ function App() {
   
   const handleAdd = async () => {
     const {data} = await axios(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
-    console.log(data);
     setPokemonName(data.name[0].toUpperCase() + 
     data.name.slice(1));
     getLocation()
