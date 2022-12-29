@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const teste = async()=>{
-    const {data} = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+const getPokeList = async()=>{
+    const {data} = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=649&offset=0')
     return data;
 }
 
-export default teste;
+export default getPokeList;
