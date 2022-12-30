@@ -20,6 +20,7 @@ function App() {
   const [pokemonHeight, setPokemonHeight] = useState();
   const [pokemonWeight, setPokemonWeight] = useState();
   const [pokemonLocation, setPokemonLocation] = useState();
+  const [pokeList, setPokeList] = useState();
   
   function setTypes(data){
     let types="";
@@ -35,6 +36,11 @@ function App() {
     setPokemonLocation(data.pokedex_numbers[1].pokedex.name);
   }
   
+  const enterListener = (e) => {
+    if(e.key=='Enter'){
+      handleAdd();
+    }
+  }
   
   const handleAdd = async () => {
     const {data} = await axios(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);
@@ -46,8 +52,6 @@ function App() {
     setPokemonImg(data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']);
     setPokemonWeight(data.weight);
   }
-  
-  const [pokeList, setPokeList] = useState();
   
   useEffect(() => {
     getPokeList().then( res => {setPokeList(res.results)});
@@ -106,14 +110,15 @@ function App() {
       minWidth: '200px', 
     }}
     onChange={handleChange}
+    onKeyPress={(e)=>enterListener(e)}  
     renderInput={(params) => <TextField {...params} label="Escolha um pokemon" />}
     />
     
     <Button variant="text"
     sx={{height: '56px'}}
-    onClick={handleAdd}      
-    > <SearchIcon sx={{ zoom: 1.2
-    }}/></Button>
+    onClick={handleAdd}
+    ><SearchIcon sx={{ zoom: 1.2}}/>
+    </Button>
     </Box>
     <PokeCard title={pokemonName} img={pokemonImg} type={pokemonType} height={pokemonHeight} weight={pokemonWeight} location={pokemonLocation}/>
     </Container>

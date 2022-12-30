@@ -1,0 +1,23 @@
+.hoverHello{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    width: 200px;
+    height: 20px;
+    overflow: hidden;
+    transition: 1s all;
+}
+
+span::after{
+    content: "passe o mouse aqui";
+    top: 0;
+    left: 0;
+}
+.hoverHello:hover span::after{
+    content: "hello world";
+}
+
+
+
