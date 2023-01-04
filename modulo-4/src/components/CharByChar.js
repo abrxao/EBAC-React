@@ -4,10 +4,12 @@ export default function CharByChar(props){
     const [typing, setTyping] = useState('');
     const [index, setIndex] = useState(0);
     
+    const txt = `${props.txt} ${props.date}`;
+
     useEffect(() => {
-        if(index < props.txt.length){
+        if(index < txt.length){
             setTimeout(() => {
-                setTyping(typing+props.txt[index]);
+                setTyping(typing+txt[index]);
                 setIndex(index+1);
             }, 100);   
         }else{

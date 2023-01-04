@@ -30,7 +30,7 @@
 
 .slideHello{
   margin: auto;
-  width: 300px;
+  width: 350px;
   height: 40px;
   padding: 16px;
   overflow: hidden;
@@ -44,11 +44,11 @@
 }
 
 .slideHello .H3{
-  width: 180px;
+  width: 100%;
   position: absolute;
   top: 0px;
   left: -181px;
-  animation: slide 4s ease-out infinite;
+  animation: slide 4s linear infinite;
 
 }
 
@@ -74,14 +74,24 @@
   }
 
   30%{
+    left:0px;
     transform: skewX(-5deg)
   }
   35%{
+    left:10px;
+    transform: skewX(0);
+  }
+  70%{
+    left:100px;
+    transform: skewX(0);
+  }
+  80%{
+    left:160px;
     transform: skewX(0);
   }
 
   100%{
-    left: 332px;
+    left: 382px;
   }
 }
 

@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 
-export default function CustomHello(){
+export default function CustomHello(props){
 
     function customAlert(value){
-        alert('Hello ' + value);
+        alert(`Hello ${value} ${props.date}`);
     }
 
     const [value, setValue] = useState("world");

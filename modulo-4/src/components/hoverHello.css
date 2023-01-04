@@ -8,16 +8,26 @@
     height: 20px;
     overflow: hidden;
     transition: 1s all;
+    cursor: pointer;
 }
 
-span::after{
-    content: "passe o mouse aqui";
+span#first::after{
+    content: "passa o mouse aqui";
     top: 0;
     left: 0;
 }
-.hoverHello:hover span::after{
-    content: "hello world";
+
+span#second{
+    display: none;
 }
 
+.hoverHello:hover #first{
+    display: none;
+}
+
+
+.hoverHello:hover #second{
+    display: block;
+}
 
 

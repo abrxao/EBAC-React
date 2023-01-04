@@ -1,9 +1,11 @@
 import React from "react";
 import './Button.css'
 
-const ButtonHello = () =>{
+
+const ButtonHello = (props) =>{
+
     function alertHello(){
-        alert("Hello World!");
+        alert(`Hello World! ${props.date}`);
     }
     return(
         <div>

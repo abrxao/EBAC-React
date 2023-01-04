@@ -4,12 +4,13 @@ class HelloWorldClass extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name:'class'
+            name:'class',
+            date:''
         }
     }
 
     render() {
-        return <div><h4>Hello World {this.props.name}</h4></div>
+        return <div><h4>Hello World {this.props.name} {this.props.date}</h4></div>
     }
 }
 
