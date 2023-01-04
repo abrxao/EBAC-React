@@ -31,16 +31,21 @@ const CalcKeyboard = () =>{
         const operationsSymbols = ["+","/","x","-"]
         
         if(!operationsSymbols.some( el => displayValue2.innerHTML.includes(el)) && displayValue.innerHTML!="" && e.target.value!="=" ){
+
             memory.push(displayValue.innerHTML);
             memory.push(e.target.id);
             displayValue2.innerHTML = displayValue.innerHTML + " " + e.target.value;
             displayValue.innerHTML = "";
+            displayValue2.classList.add("Display__secBlock--answer");
+
         }else if(displayValue.innerHTML!=""){
+
             memory.push(displayValue.innerHTML);
             displayValue.innerHTML = operations[memory[1]](memory[0],memory[2]);
             displayValue.id="answer";
             displayValue2.innerHTML = "";
             memory=[];
+            displayValue2.classList.remove("Display__secBlock--answer");
         }
         
     }

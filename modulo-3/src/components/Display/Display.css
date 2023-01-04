@@ -1,10 +1,45 @@
 .Display{
     height: 60px;
     background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 1.8rem;
+    position: relative;
     padding: .6rem;
     border-radius: .4rem;
 }
+
+.Display__firstBlock{
+    font-size: 1.5rem;
+    position: absolute;
+    right: .6rem;
+    bottom: .6rem;
+}
+
+.Display__secBlock{
+    font-size: 1.5rem;
+    position: absolute;
+    right: .6rem;
+    bottom: .6rem;
+}
+
+.Display__secBlock--answer{
+    position: absolute;
+    color: #888;
+    font-size: 1.25rem;
+    top: .6rem;
+    bottom: .6rem;
+    animation: answer .140s linear ;
+}
+
+@keyframes answer{
+    0%{
+        font-size: 1.8rem;
+        top: calc(60px - .6rem);
+        
+    }
+    100%{
+        font-size: 1.3rem;
+        top: .6rem;
+        color: #888;
+    }
+}
+
+

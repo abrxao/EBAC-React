@@ -12,9 +12,16 @@
 }
 
 .App {
-  width: 100%;
+  width: 95%;
   max-width: 300px;
   background-color: #6b6b6b;
   padding: 2rem;
   border-radius: .5rem;
+}
+
+@media (max-width: 320px) {
+  .App{
+    padding: 1.5rem;
+    zoom: .7;
+  }
 }

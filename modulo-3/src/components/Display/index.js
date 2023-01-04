@@ -4,9 +4,9 @@ import './Display.css';
 const Display = ()=>{
     return(
         <div className="Display">
-            <div className="Display__secBlock" >
+            <div className="Display__secBlock" value="" >
             </div>
-            <div className="Display__firstBlock" id="">
+            <div className="Display__firstBlock" id="" >
             </div>                    
         </div>
     )
