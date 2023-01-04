@@ -1,5 +1,11 @@
 .operationButton{
+    align-items: center;
+    display: flex;
+    justify-content: center;
     padding: .25rem;
+    box-shadow: 3px 3px 5px #333;
+    border-radius: 8px;
+    border: 2px solid #000;
 }
 .operationButton__content{
     text-align: center;
@@ -23,4 +29,5 @@
 .operationButton__content:active{
     border-bottom: 3px solid #9d3;
     background-color: #fff4;
+    zoom: 0.9;
 }

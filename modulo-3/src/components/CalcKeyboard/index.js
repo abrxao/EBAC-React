@@ -4,78 +4,81 @@ import OperationButton from "../OperationButton";
 import './CalcKeyboard.css';
 
 document.addEventListener("keydown", (e)=>{
-        
+    
     const numbers = "0123456789"
-    const operations = "+=-/x*"
-    
-    
+    const operations = "+Enter=-/x*"    
+
     if(numbers.includes(e.key)){
         const key = document.querySelector(`input[value="${e.key}"]`);
         numberInput(key);
     }else if(operations.includes(e.key)){
-        const key = document.querySelector(`input[value="${e.key}"]`);
+        
+        var correctKey = e.key=="*"? "x":e.key;
+        correctKey =  e.key=="Enter"? "=":e.key;
+
+        const key = document.querySelector(`input[value="${e.key=="*"? "x":e.key}"]`);
         operationInput(key);
     }
-
+    
 });
 
 var memory = [];
+
+function numberInput(e){
+    const displayValue = document.querySelector('.Display__firstBlock');
     
-    function numberInput(e){
-        const displayValue = document.querySelector('.Display__firstBlock');
-        
-        if(displayValue.id != "answer"){
-            if(e.value.match(/^[0-9]*$/)){
-                displayValue.innerHTML += e.value;
-            }else if(!displayValue.innerHTML.match(",")){
-                displayValue.innerHTML += e.value;
-            }
-        }else{
-            displayValue.innerHTML = "";
-            displayValue.id = "";
-            numberInput(e);
+    if(displayValue.id != "answer"){
+        if(e.value.match(/^[0-9]*$/)){
+            displayValue.innerHTML += e.value;
+        }else if(!displayValue.innerHTML.match(",")){
+            displayValue.innerHTML += e.value;
         }
-    }    
-    
-    function operationInput(e){
-        
-        const displayValue = document.querySelector('.Display__firstBlock');
-        const displayValue2 = document.querySelector('.Display__secBlock');
-        const operationsSymbols = ["+","/","x","-"]
-        
-        if(!operationsSymbols.some( el => displayValue2.innerHTML.includes(el)) && displayValue.innerHTML!="" && e.value!="=" ){
-            
-            memory.push(displayValue.innerHTML);
-            memory.push(e.id);
-            displayValue2.innerHTML = displayValue.innerHTML + " " + e.value;
-            displayValue.innerHTML = "";
-            displayValue2.classList.add("Display__secBlock--answer");
-            
-        }else if(displayValue.innerHTML!=""){
-            
-            memory.push(displayValue.innerHTML);
-            displayValue.innerHTML = operations[memory[1]](memory[0],memory[2]);
-            displayValue.id="answer";
-            displayValue2.innerHTML = "";
-            memory=[];
-            displayValue2.classList.remove("Display__secBlock--answer");
-        }
+    }else{
+        displayValue.innerHTML = "";
+        displayValue.id = "";
+        numberInput(e);
     }
+}    
+
+function operationInput(e){
     
-    const operations = {
-        sum: (a,b)=>{
-            return parseFloat(a)+parseFloat(b);
-        },
-        sub:(a,b)=>{
-            return parseFloat(a)-parseFloat(b);
-        },
-        division: (a,b)=>{
-            return parseFloat(a)/parseFloat(b);
-        },
-        mult: (a,b)=>{
-            return parseFloat(a)*parseFloat(b);
-        }
+    const displayValue = document.querySelector('.Display__firstBlock');
+    const displayValue2 = document.querySelector('.Display__secBlock');
+    const operationsSymbols = ["+","/","x","-"]
+    
+    if(!operationsSymbols.some( el => displayValue2.innerHTML.includes(el)) && displayValue.innerHTML!="" && e.value!="=" ){
+        
+        memory.push(displayValue.innerHTML);
+        memory.push(e.id);
+        displayValue2.innerHTML = displayValue.innerHTML + " " + e.value;
+        displayValue.innerHTML = "";
+        displayValue2.classList.add("Display__secBlock--answer");
+        
+    }else if(displayValue.innerHTML!="" && memory[1]){
+        
+        memory.push(displayValue.innerHTML);
+        displayValue.innerHTML = operations[memory[1]](memory[0],memory[2]);
+        displayValue.id="answer";
+        displayValue2.innerHTML = "";
+        memory=[];
+        displayValue2.classList.remove("Display__secBlock--answer");
     }
+}
+
+const operations = {
+    sum: (a,b)=>{
+        return parseFloat(a)+parseFloat(b);
+    },
+    sub:(a,b)=>{
+        return parseFloat(a)-parseFloat(b);
+    },
+    division: (a,b)=>{
+        return parseFloat(a)/parseFloat(b);
+    },
+    mult: (a,b)=>{
+        return parseFloat(a)*parseFloat(b);
+    }
+}
 
 const CalcKeyboard = () =>{
     return (
@@ -100,5 +103,5 @@ const CalcKeyboard = () =>{
         </div>
         )
     }
-    
-    export default CalcKeyboard;
+
+export default CalcKeyboard;
