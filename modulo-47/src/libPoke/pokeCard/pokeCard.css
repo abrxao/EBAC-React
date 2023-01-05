@@ -7,15 +7,3 @@
     justify-content: center;
     transition: .6s;
 }
-
-:root{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(#fafad290, #dadab2dd);
-}
-#root{
-    background: linear-gradient(#fafad290, #dadab2dd);
-    backdrop-filter: opacity(100%);
-}

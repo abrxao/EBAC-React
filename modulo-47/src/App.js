@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {Box, Container, ThemeProvider} from '@mui/system';
+import {Box, Container} from '@mui/system';
 import './App.css';
-import {theme, themeDark} from './theme.js';
 import axios from 'axios';
 import Autocomplete from '@mui/material/Autocomplete';
 import Button from '@mui/material/Button';
@@ -64,26 +63,19 @@ function App() {
   }
   
   return (
-    
-    <React.Fragment>
+    <div className="App">
     
     <PokeHeader/>
     <Container 
     sx={{
-      display: 'block',
-      gap: '20px',
-      padding: '20px',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor:'#f2f2f2aa',
       boxShadow: '4px 4px 5px #d7d7d7, -3px -3px 5px #fff',
-      width:'auto',
-      borderRadius: 4,
-      backdropFilter: 'blur(6px)',
-    }}
-    maxWidth="sm">
+      borderRadius: 4
+    }}>
     
     <Box 
     sx={{
@@ -93,21 +85,18 @@ function App() {
       gap: 1,
       boxShadow: '3px 3px 5px #d7d7d7, -3px -3px 5px #fff',
       borderRadius: 3,
-      padding: (window.innerWidth <= 320 ? 1: 2),
-      marginBottom: '20px',
-      width: '100%', 
-      maxWidth: "320px",
-      zoom: (window.innerWidth <= 320 ? 0.7:1 )
-      
-    }}>
+      marginBottom: 2,
+      width: '100%'
+    }}
+    >
+
     <Autocomplete
     disablePortal
     id="searchPokemon"
     options={pokeList}
     getOptionLabel={(option) => option.name}
     sx={{
-      width: '90%',
-      minWidth: '200px', 
+      width: '100%',
     }}
     onChange={handleChange}
     onKeyPress={(e)=>enterListener(e)}  
@@ -115,15 +104,17 @@ function App() {
     />
     
     <Button variant="text"
-    sx={{height: '56px'}}
+    sx={{
+    aspectRatio:"1"}}
     onClick={handleAdd}
-    ><SearchIcon sx={{ zoom: 1.2}}/>
+    ><SearchIcon sx={{ zoom: 1.1}}/>
     </Button>
     </Box>
     <PokeCard title={pokemonName} img={pokemonImg} type={pokemonType} height={pokemonHeight} weight={pokemonWeight} location={pokemonLocation}/>
     </Container>
     <IconDecoration/>
-    </React.Fragment>
+    </div>
+    
     
     );
   }

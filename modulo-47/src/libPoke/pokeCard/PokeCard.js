@@ -24,12 +24,9 @@ function PokeCard(props) {
     <Card sx={{ width: "100%",
       position: 'relative',
       borderRadius: 3,
-      maxWidth: "320px",
-      border: '16px solid #f2f2f200',
+      padding: (window.innerWidth <= 400 ? "8px": "16px" ),
       backgroundColor: '#fff0',
-      boxShadow: '4px 4px 4px #d7d7d7, -3px -3px 5px #fff',      
-      zoom: (window.innerWidth <= 320 ? 0.8: 1 ),
-      
+      boxShadow: '4px 4px 4px #d7d7d7, -3px -3px 5px #fff'
       
     }}>
       <div className="pokemonImg">
