@@ -12,6 +12,7 @@ import PokeHeader from './libPoke/PokeHeader';
 import IconDecoration from './libPoke/IconDecoration';
 
 function App() {
+
   const [pokemon, setPokemon] = useState({name:'gengar', url: 'https://pokeapi.co/api/v2/pokemon/94'});
   const [pokemonName, setPokemonName] = useState();
   const [pokemonType, setPokemonType] = useState();

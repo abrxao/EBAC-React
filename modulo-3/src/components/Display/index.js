@@ -1,13 +1,11 @@
 import React from "react";
 import './Display.css';
 
-const Display = ()=>{
+const Display = (props)=>{
     return(
         <div className="Display">
-            <div className="Display__secBlock" value="" >
-            </div>
-            <div className="Display__firstBlock" id="" >
-            </div>                    
+            <input disable="true" type="text" className="Display__secBlock"/>
+            <input type="text" className="Display__firstBlock" id=""/>                  
         </div>
     )
 }
