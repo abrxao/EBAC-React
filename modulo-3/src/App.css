@@ -10,6 +10,7 @@
 }
 
 .App{
+  width: 100%;
 }
 
 .calculator *{
@@ -18,7 +19,7 @@
 
 .calculator {
   margin: auto;
-  width: 95%;
+  width: 75%;
   max-width: 300px;
   background-color: #6b6b6b;
   padding: 2rem;

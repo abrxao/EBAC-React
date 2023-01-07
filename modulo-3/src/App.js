@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import CalcKeyboard from './components/CalcKeyboard';
 import Display from './components/Display';
@@ -83,7 +83,6 @@ export default class App extends React.Component{
   }
   
   numberInput(e){
-    console.log(this.state)
     const displayValue = document.querySelector('.Display__firstBlock');
     
     if(e.value.match(/^[0-9]*$/)){
@@ -109,17 +108,34 @@ export default class App extends React.Component{
     }
   }
   
-  handleKeydown(e){
-    console.log(e.key)
+  componentDidMount(){
+    document.addEventListener("keydown",(e)=>{
+      
+      var correctKey = e.key == "Enter"?"=":e.key;
+      correctKey = e.key == "*"?"x":correctKey;
+      
+      
+
+      const Numbers = "0123456789"
+      const Operations = "-+=/*Enterx"
+      
+      if(Numbers.includes(correctKey)){
+        const  keyElement = document.querySelector(`input[value="${correctKey}"]`)
+        this.numberInput(keyElement)
+      }else if(Operations.includes(correctKey)){
+        const  keyElement = document.querySelector(`input[value="${correctKey}"]`)
+        this.operationInput(keyElement)
+      }
+    })
   }
   
   render(){
     return (
-      <div className="App" onKeyDown={(e)=>this.handleKeydown(e)}>
-        <div className="calculator" >
-          <Display/>
-          <CalcKeyboard numberInput={(e)=>this.numberInput(e)} operationInput={(e)=>this.operationInput(e)}/>
-        </div>
+      <div className="App">
+      <div className="calculator" >
+      <Display/>
+      <CalcKeyboard numberInput={(e)=>this.numberInput(e)} operationInput={(e)=>this.operationInput(e)}/>
+      </div>
       </div>
       
       )
