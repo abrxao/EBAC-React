@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import CalcKeyboard from './components/CalcKeyboard';
 import Display from './components/Display';
@@ -33,45 +33,41 @@ export default class App extends React.Component{
     
     const displayValue = document.querySelector('.Display__firstBlock');
     const displayValue2 = document.querySelector('.Display__secBlock');
-    const operationsSymbols = ["+","/","x","-"]
-    console.log(this.state.operations);
-    if(!operationsSymbols.some( el => displayValue2.value.includes(el)) && displayValue.value!="" && e.value!="=" ){
+    const operationsSymbols = "/-x+";
+
+    if(operationsSymbols.includes(e.value) && displayValue.value &&  !this.state.operation){
       
       this.setState({
         operation:e.id
       });
+
+      console.log(operationsSymbols.includes(e.value))
       
-      displayValue2.value = this.state.firstNum + " " + e.value;
+      displayValue2.value = `${this.state.firstNum} ${e.value}`;
       displayValue.value = "";
       displayValue2.classList.add("Display__secBlock--answer");
       
-    }
-    else if(displayValue.value!="" && this.state.operation){
-      
+    }else if(displayValue.value!="" && this.state.operation!=""){
+
       this.setState({
+        firstNum: this.state.operations[this.state.operation](this.state.firstNum,this.state.secondNum),
         secondNum: ""
       });
       
-      this.setState({
-        firstNum: this.state.operations[this.state.operation](this.state.firstNum,this.state.secondNum)
-      });
-      
       if(e.value!=="="){
+        
+        displayValue2.value = `${this.state.operations[this.state.operation](this.state.firstNum,this.state.secondNum)} ${e.value}`;
+        displayValue.value = "";
+
         this.setState({
           operation: e.id
         });
-        this.setState({
-          firstNum: this.state.operations[this.state.operation](this.state.firstNum,this.state.secondNum)
-        });
-        displayValue2.value = `${this.state.operations[this.state.operation](this.state.firstNum,this.state.secondNum)} ${e.value}`;
-        displayValue.value = "";
+
       }else{
         this.setState({
-          operation: ""
-        });
-        this.setState({
+          operation: "",
           isAnswer: true
-        });
+        })
         
         displayValue.value = this.state.operations[this.state.operation](this.state.firstNum,this.state.secondNum);
         
@@ -79,6 +75,7 @@ export default class App extends React.Component{
         
         displayValue2.classList.remove("Display__secBlock--answer");
       }
+
     };
   }
   
@@ -91,7 +88,8 @@ export default class App extends React.Component{
         displayValue.value = e.value;
         this.setState({
           isAnswer: false
-        }) 
+        })
+
         !this.state.operation ? this.setState({firstNum: displayValue.value.replace(',','.')}):this.setState({secondNum: displayValue.value.replace(',','.')});
       }else{
         displayValue.value += e.value;
@@ -113,8 +111,8 @@ export default class App extends React.Component{
       
       var correctKey = e.key == "Enter"?"=":e.key;
       correctKey = e.key == "*"?"x":correctKey;
-    correctKey = e.key == "."?",":correctKey;
-
+      correctKey = e.key == "."?",":correctKey;
+      
       const Numbers = "0123456789,."
       const Operations = "-+=/*Enterx"
       
@@ -131,10 +129,10 @@ export default class App extends React.Component{
   render(){
     return (
       <div className="App">
-      <div className="calculator" >
-      <Display/>
-      <CalcKeyboard numberInput={(e)=>this.numberInput(e)} operationInput={(e)=>this.operationInput(e)}/>
-      </div>
+        <div className="calculator" >
+          <Display/>
+          <CalcKeyboard numberInput={(e)=>this.numberInput(e)} operationInput={(e)=>this.operationInput(e)}/>
+        </div>
       </div>
       
       )
