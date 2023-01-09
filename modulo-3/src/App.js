@@ -34,7 +34,7 @@ export default class App extends React.Component{
     const displayValue = document.querySelector('.Display__firstBlock');
     const displayValue2 = document.querySelector('.Display__secBlock');
     const operationsSymbols = ["+","/","x","-"]
-    
+    console.log(this.state.operations);
     if(!operationsSymbols.some( el => displayValue2.value.includes(el)) && displayValue.value!="" && e.value!="=" ){
       
       this.setState({
@@ -113,10 +113,9 @@ export default class App extends React.Component{
       
       var correctKey = e.key == "Enter"?"=":e.key;
       correctKey = e.key == "*"?"x":correctKey;
-      
-      
+    correctKey = e.key == "."?",":correctKey;
 
-      const Numbers = "0123456789"
+      const Numbers = "0123456789,."
       const Operations = "-+=/*Enterx"
       
       if(Numbers.includes(correctKey)){
