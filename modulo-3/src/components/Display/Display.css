@@ -1,49 +1,48 @@
-.Display *{
-    font-family: 'Courier New', Courier, monospace;
-}
 
 .Display{
     height: 60px;
-    background-color: #fff;
+    background-color: #2d2d2d;
     position: relative;
-    padding: .6rem;
+    padding: .5rem;
     border-radius: .4rem;
     border: 2px solid #000;
     box-shadow: 4px 4px 8px #333;
-    color:#000;
     overflow: hidden;
 }
 
 .Display__firstBlock{
     font-size: 1.3rem;
     position: absolute;
+    width: calc(100% - 1.4rem);
     right: .6rem;
     bottom: .6rem;
-    color:#000;
+    color:#fff;
     border: none;
     text-align: end;
     padding: .3rem;
     pointer-events: none;
     background-color: #fff0;
+    text-align:right;
 }
 
 .Display__secBlock{
     font-size: 1.3rem;
+    width: calc(100% - 1.4rem);
     position: absolute;
     background-color: #fff0;
     right: .6rem;
     bottom: .6rem;
-    color:#000;
+    color:#ddd;
     border: none;
-    text-align: end;
     padding: .3rem;
     pointer-events: none;
     background-color: none;
+    text-align:right;
 }
 
 .Display__secBlock--answer{
     position: absolute;
-    color: #888;
+    color: #bdbdbd;
     font-size: 1rem;
     top: .6rem;
     right: .6rem;
