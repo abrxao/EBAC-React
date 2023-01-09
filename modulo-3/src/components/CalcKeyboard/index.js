@@ -1,6 +1,6 @@
 import React from "react";
-import NumericButton from '../NumericButton';
-import OperationButton from "../OperationButton";
+import NumericButton from './NumericButton';
+import OperationButton from "./OperationButton";
 import './CalcKeyboard.css';
 
 const CalcKeyboard = (props) =>{
