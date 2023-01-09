@@ -99,10 +99,16 @@ export default class App extends React.Component{
       
     }else if(!displayValue.value.match(",")){
       
-      displayValue.value += e.value;
-      
-      !this.state.operation ? this.setState({firstNum: displayValue.value.replace(',','.')}):
-      this.setState({secondNum: displayValue.value.replace(',','.')});
+      if(this.state.isAnswer){
+        displayValue.value = e.value;
+        this.setState({
+          isAnswer: false
+        })
+      }else{
+        displayValue.value += e.value;
+
+        !this.state.operation ? this.setState({firstNum: displayValue.value.replace(',','.')}):this.setState({secondNum: displayValue.value.replace(',','.')});
+      }
     }
   }
   
