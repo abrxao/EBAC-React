@@ -1,5 +1,8 @@
-export default function NumberInput(){
+export default function NumberInput(props){
     return(
-        <input type="number" defaultValue="100"/>
+        <div className={props.className}>
+            <label htmlFor={props.name}>{props.name}</label>
+            <input type="number" name={props.name} />
+        </div>
     )
 }

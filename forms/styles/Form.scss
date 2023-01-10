@@ -1,0 +1,15 @@
+.Form{
+    max-width: 450px;
+    height: auto;
+    width: 95%;
+    backdrop-filter: blur(3px);
+    background-color:#E0AFA0;
+    padding: 2rem;
+    border-radius: .3rem;
+    &__title{
+        font-weight: 200;
+    }
+    &__TextInput{
+        
+    }
+}
