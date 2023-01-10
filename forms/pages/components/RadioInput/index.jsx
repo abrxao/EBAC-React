@@ -6,7 +6,7 @@ export default function RadioInput(props) {
                 props.options.map((elem,index)=>{
                     return (
                     <div key={index}>
-                        <input type="radio" name={props.name} value={elem} defaultChecked={index==0?true:false}/>
+                        <input type="radio" name={props.name} value={elem}/>
                         <label value={elem}>{elem}</label>
                     </div>
                     )

@@ -3,7 +3,7 @@ import TextInput from "../TextInput";
 import NumberInput from "../NumberInput";
 import RadioInput from "../RadioInput";
 import OptionsInput from "../OptionsInput";
-import DocumentArea, {validationFn} from "../DocumentArea";
+import DocumentArea from "../DocumentArea";
 
 class Form extends React.Component{
     constructor(props){
@@ -11,14 +11,14 @@ class Form extends React.Component{
 
         this.state = {
             genders:["Male","Feminine","Others"],
-            maritalStatus: ["Married","Single","Divorced","Widowed"],
+            maritalStatus: ["Select on","Married","Single","Divorced","Widowed"],
             answers:{
                 name:"",
                 age:"",
                 gender:"",
                 maritalStatus:"",
-                documentType:""
-
+                documentType:"",
+                documentNumber:"",
             }
         }
     }
@@ -27,6 +27,7 @@ class Form extends React.Component{
 
     }
     handleSubmit(e){
+        console.log(this.state.answers);
         e.preventDefault();
     }
     
@@ -35,12 +36,53 @@ class Form extends React.Component{
             <div className="Form">
             <form>
                 <h3 className="Form__title">Forms </h3>
-                <TextInput name="Name" className="Form__TextInput"/>
-                <NumberInput name="age" className="Form__NumberInput"/>
-                <RadioInput name="gender" options={this.state.genders}className="Form__RadioBox"/>
-                <OptionsInput options={this.state.maritalStatus} name="Marital Status" className="Form__OptionsInput"/>
-                <DocumentArea className="Form__DocumentArea"/>
-                <button className="Form__submitBtn" type="submit" onClick={e=> this.handleSubmit(e)}>ENVIAR</button>
+
+                <TextInput name="Name" className="Form__TextInput" onChange={e=>this.setState({
+                    answers:{
+                        ...this.state.answers,
+                        name:e.target.value
+                    }
+                })}/>
+
+                <NumberInput name="age" className="Form__NumberInput" onChange={e=>this.setState({
+                    answers:{
+                        ...this.state.answers,
+                        age:e.target.value
+                    }
+                })}
+                />
+
+                <RadioInput name="gender" options={this.state.genders}className="Form__RadioBox" onChange={e=>this.setState({
+                    answers:{
+                      ...this.state.answers,
+                       gender:e.target.value
+                    }
+                    
+                })}/>
+
+                <OptionsInput options={this.state.maritalStatus} name="Marital Status" className="Form__OptionsInput" onChange={e=>this.setState({
+                    answers:{
+                        ...this.state.answers,
+                         maritalStatus:e.target.value
+                      }
+                    
+                })}/>
+
+                <DocumentArea className="Form__DocumentArea" onChange={e=> this.setState({
+                    answers:{
+                        ...this.state.answers,
+                         documentType:e.target.value
+                      }
+                })} 
+                onKeyDown={e=> this.setState({
+                    answers:{
+                        ...this.state.answers,
+                         documentNumber:e.target.value
+                      }
+                })}
+                />
+
+                <button className="Form__submitBtn" type="submit" onClick={e=> this.handleSubmit(e)}>SEND</button>
             </form>
             </div>
             

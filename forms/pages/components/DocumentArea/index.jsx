@@ -2,38 +2,13 @@ import RadioInput from "../RadioInput";
 import React from "react";
 import TextInput from "../TextInput";
 
-export const validationFn={
-    CPF:()=>{
+export default function DocumentArea(props) {
+    var options = ["CPF","CNPJ"]
 
-    },
-    CPNJ:()=>{
-
-    }
-}
-
-export class DocumentArea extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            options: ["CPF","CPNJ"],
-            isCPNJ: true
-        }
-    }
-
-    handleRadioChange(){
-        
-    }
-
-    render(){
         return(
-            <div className={this.props.className}>
-                <RadioInput options={this.state.options} name="options" onChange={e => this.handleRadioChange(e)}/>
-                <TextInput name=""/>
+            <div className={props.className}>
+                <RadioInput options={options} name="options" onChange={e => props.onChange(e)}/>
+                <TextInput onChange={e=>props.onKeyDown(e)}/>
             </div>
-            
         )
-    }
 }
-
-export default DocumentArea;
