@@ -17,8 +17,11 @@ class Form extends React.Component{
                 age:"",
                 gender:"",
                 maritalStatus:"",
-                documentType:"",
-                documentNumber:"",
+                document:{
+                    type:"",
+                    number:"",
+                    isValid:false
+                }
             }
         }
     }
@@ -35,16 +38,21 @@ class Form extends React.Component{
         return(
             <div className="Form">
             <form>
-                <h3 className="Form__title">Forms </h3>
+                <div className="Form__title">
+                    <h1>FORMS</h1>
+                    <span></span>                
+                </div>
 
-                <TextInput name="Name" className="Form__TextInput" onChange={e=>this.setState({
+                <TextInput name="Name" className="Form__TextInput" onChange={e=>
+
+                this.setState({
                     answers:{
                         ...this.state.answers,
                         name:e.target.value
                     }
                 })}/>
 
-                <NumberInput name="age" className="Form__NumberInput" onChange={e=>this.setState({
+                <NumberInput name="Age" required={true}className="Form__NumberInput" onChange={e=>this.setState({
                     answers:{
                         ...this.state.answers,
                         age:e.target.value
@@ -52,7 +60,7 @@ class Form extends React.Component{
                 })}
                 />
 
-                <RadioInput name="gender" options={this.state.genders}className="Form__RadioBox" onChange={e=>this.setState({
+                <RadioInput name="Gender" required={true} options={this.state.genders}className="Form__RadioBox" onChange={e=>this.setState({
                     answers:{
                       ...this.state.answers,
                        gender:e.target.value
@@ -68,22 +76,29 @@ class Form extends React.Component{
                     
                 })}/>
 
-                <DocumentArea className="Form__DocumentArea" onChange={e=> this.setState({
+                <DocumentArea name="Document Number" className="Form__DocumentArea" onChange={e=> this.setState({
                     answers:{
                         ...this.state.answers,
-                         documentType:e.target.value
+                         document:{
+                            ...this.state.answers.document,
+                            type:e.target.value
+                         }
                       }
                 })} 
                 onKeyDown={e=> this.setState({
                     answers:{
                         ...this.state.answers,
-                         documentNumber:e.target.value
+                        document:{
+                            ...this.state.answers.document,
+                            number:e.target.value
+                         }
                       }
                 })}
                 />
 
                 <button className="Form__submitBtn" type="submit" onClick={e=> this.handleSubmit(e)}>SEND</button>
-            </form>
+            </form>            
+
             </div>
             
             )
