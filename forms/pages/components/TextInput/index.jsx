@@ -10,10 +10,18 @@ export default function TextInput(props){
     return(
         <div className={props.className}>
             
-            <input type="text" name={props.name} onChange={props.onChange} autoComplete="off" onKeyUp={e=>handleKeyUp(e)} className={isInputFill?"filled":""}/>
+            <input
+            type="text"
+            name={props.name}
+            autoComplete="off"
+            disabled={props.disabled}
+            onChange={props.onChange}            
+            onKeyUp={e=>handleKeyUp(e)}
+            className={isInputFill?"filled":""}/>
+
             <label htmlFor={props.name}>{props.name}</label>
             <span></span>
-            <span className="obligatory">*</span>
+            <span className="obligatory" id={props.id}>*</span>
         </div>
     )
 }

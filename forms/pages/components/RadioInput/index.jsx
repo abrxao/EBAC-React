@@ -4,7 +4,7 @@ export default function RadioInput(props) {
             <fieldset>
                 <legend className={`${props.className}__title`}>{props.name}</legend>
 
-                <div className={`${props.className}__inputs`}>
+                <div className={`${props.className}__inputs`} id={props.id}>
                 {props.options.map((elem,index)=>{
                     return (
                         <div key={index} >

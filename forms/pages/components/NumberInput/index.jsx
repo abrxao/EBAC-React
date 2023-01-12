@@ -5,7 +5,6 @@ export default function NumberInput(props){
     const [isInputFill, setIsInputFill] = new useState(false);
 
     const handleKeyUp = (e)=>{
-        /*e.key.match(/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+$/) ? e.target.value[e.target.value.length]="":""*/
 
         e.target.value ? setIsInputFill(true): setIsInputFill(false);
     }
@@ -13,10 +12,18 @@ export default function NumberInput(props){
     return(
         <div className={props.className}>
 
-            <input type="text" pattern="\d*" name={props.name} onKeyDown={props.onChange} autoComplete="off" onKeyUp={e=>handleKeyUp(e)} className={isInputFill?"filled":""}/>
+            <input 
+            type="number" 
+            name={props.name} 
+            onChange={props.onChange}
+            autoComplete="off"
+            onKeyUp={e=>handleKeyUp(e)}            
+            className={(isInputFill?"filled ":"")}            
+            />
+
             <label htmlFor={props.name}>{props.name}</label>
-            <span></span>
-            <span className="obligatory">*</span>
+            <span ></span>
+            <span className="obligatory" id={props.id}>*</span>
         </div>
     )
 }
