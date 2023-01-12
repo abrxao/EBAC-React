@@ -168,8 +168,32 @@
 
 .webApp{
     width: 94%;
-    max-width: 360px;
+    display: flex;
+    max-width: 768px;
+    gap: 2rem;
     margin: auto;
+    @media (max-width: 768px) {
+        display: block;
+        .answersForm,.Form{
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+.answersForm{
+    background-color: #0003;
+    border: 1px solid #fff5;
+    backdrop-filter: blur(6px);
+    width: 100%;
+    padding: 2rem;
+    border-radius: .3rem;
+    position: relative;
+    overflow: hidden;
+    p{
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 200;
+    }
 }
 
 .Form{

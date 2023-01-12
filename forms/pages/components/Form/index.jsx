@@ -14,7 +14,7 @@ class Form extends React.Component{
             modal: "",
             erroCamps:[],
             genders:["Male","Feminine","Others"],
-            maritalStatus: ["Select on","Married","Single","Divorced","Widowed"],
+            maritalStatus: ["","Married","Single","Divorced","Widowed"],
             answers:{
                 name:{
                     value:"",
@@ -39,6 +39,18 @@ class Form extends React.Component{
                 }
                 
             },
+            results:{
+                name:"",
+                age:"",
+                gender:"",
+                maritalStatus:"",
+                document:{
+                    area:"CPF2",
+                    type:"",
+                    number:""
+                },
+            }
+            ,
             status:false
         }
         
@@ -142,7 +154,7 @@ class Form extends React.Component{
         if(answers.name.value.length < 4){
             this.state.erroCamps.push(answers.name);
         }
-
+        
         this.state.erroCamps.forEach((elem)=>{
             const area = document.querySelector(`#${elem.area}`);
             area.classList.add("invalid")
@@ -162,8 +174,14 @@ class Form extends React.Component{
         }else{
             this.setState({
                 ...this.state,
-                    status: true
-            })
+                results:{
+                    name: this.state.answers.name.value,
+                    age: this.state.answers.age.value,
+                    gender: this.state.answers.gender.value,
+                    maritalStatus: this.state.answers.maritalStatus.value,
+                    document: this.state.answers.document
+                }
+            });
         }
 
         setTimeout(()=>{
@@ -262,13 +280,13 @@ class Form extends React.Component{
                             <ModalErro visible={this.state.modal}/>
                     </form>
                 </div>
-                <div className="anwsersForm">
-                        <p>Name:{this.state.status && this.state.answers.name.value}</p>
-                        <p>Age:{this.state.status && this.state.answers.age.value}</p>
-                        <p>Gender: {this.state.status && this.state.answers.gender.value}</p>
-                        <p>Marital Status: {this.state.status && this.state.answers.maritalStatus}</p>
-                        <p>Document Type: {this.state.status && this.state.answers.document.type}</p>
-                        <p>Document Number: {this.state.status && this.state.answers.document.number}</p>
+                <div className="answersForm">
+                        <p>Name: {this.state.results.name}</p>
+                        <p>Age: {this.state.results.age}</p>
+                        <p>Gender: {this.state.results.gender}</p>
+                        <p>Marital Status: {this.state.results.maritalStatus}</p>
+                        <p>Document type: {this.state.results.document.type}</p>
+                        <p>Document number: {this.state.results.document.number}</p>
                 </div>
 
                 
