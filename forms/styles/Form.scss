@@ -188,7 +188,12 @@
     height: auto;
     max-height: 638px;
     padding: 2rem;
+    padding-top:0;
     border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:1rem;
     position: relative;
     overflow: hidden;
     overflow-y: scroll;
@@ -197,19 +202,44 @@
         background-color: var(--melonOrange); 
         border-radius: .4rem;
         border: 3px solid var(--darkLava); 
-      }
+    }
     &::-webkit-scrollbar-track {
         background: var(--darkLava);        
-      }
-
+    }
+    
     &::-webkit-scrollbar {
         width: .8rem; 
-      }
-    
-    p{
-        margin-bottom: 1rem;
-        font-size: 1rem;
-        font-weight: 200;
+    }
+    &__answer{
+        background-color: var(--darkLava);
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: .3rem;
+        p{
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 200;
+        }
+    }
+    &__header{
+        margin-top: -1rem;
+        width: calc(100% + 4rem);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &__title{
+            h2{
+                font-size: 2rem;
+                font-weight: 200;
+            }
+        }
+
+        &__radioBtn{
+            @include radioGroup;
+            zoom: .8;
+        }
     }
 }
 
