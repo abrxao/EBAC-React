@@ -6,12 +6,16 @@ export default class AnswersArea extends React.Component {
         super(props);
     }
 
+    teste(){
+        console.log(this.props.results)
+    };
+
     render(){
         return (
             <div className={this.props.className}>
-               {this.props.results.map((result, index) =>(
+               {/*this.props.results.map((result, index) =>(
                     <AnswersContent {...result} key={index + result.name} />
-               ))}
+               ))*/}
                 
             </div>
                        

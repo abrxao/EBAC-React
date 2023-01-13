@@ -13,7 +13,6 @@ class Form extends React.Component{
         
         this.state = {
             modal: "",
-            erroCamps:[],
             genders:["Male","Feminine","Others"],
             maritalStatus: ["","Married","Single","Divorced","Widowed"],
             answers:{
@@ -119,42 +118,38 @@ class Form extends React.Component{
     }
     
     handleSubmit(e){
-        this.setState({
-            ...this.state,
-            erroCamps: []
-        })
+        e.preventDefault();
+        const erroCamps = [];
         const answers = this.state.answers;
         const invalids = document.querySelectorAll(".invalid");
         invalids.forEach((e)=>{
             e.classList.remove("invalid");
-        })
+        });    
         
-        e.preventDefault();
         if(answers.document.type==="CPF"){
-            this.validCPF(answers.document.number) ? "":this.state.erroCamps.push(answers.document)
+            this.validCPF(answers.document.number) ? "":erroCamps.push(answers.document)
         }else if(answers.document.type==="CNPJ"){
-            this.validCNPJ(answers.document.number) ? "":this.state.erroCamps.push(answers.document)
+            this.validCNPJ(answers.document.number) ? "":erroCamps.push(answers.document)
         }
         
         if(!answers.gender.value){
-            this.state.erroCamps.push(answers.gender);
-            
+            erroCamps.push(answers.gender);
         }
         
         if(answers.age.value <= 0 || answers.age>=125){
-            this.state.erroCamps.push(answers.age);
+            erroCamps.push(answers.age);
         }
         
         if(answers.name.value.length < 4){
-            this.state.erroCamps.push(answers.name);
+            erroCamps.push(answers.name);
         }
-        
-        this.state.erroCamps.forEach((elem)=>{
+
+        erroCamps.forEach((elem)=>{
             const area = document.querySelector(`#${elem.area}`);
-            area.classList.add("invalid")
+            area.classList.add("invalid");
         });
-        
-        if(this.state.erroCamps.length > 0){
+
+        if(erroCamps.length > 0){
             this.setState({
                 ...this.state,
                 modal:"visible"
@@ -167,13 +162,13 @@ class Form extends React.Component{
             },4000)
         }else{
             this.state.results.push({
-                name: this.state.answers.name.value,
-                age: this.state.answers.age.value,
-                gender: this.state.answers.gender.value,
-                maritalStatus: this.state.answers.maritalStatus.value,
-                document: this.state.answers.document
-            })
-            
+                    name: this.state.answers.name.value,
+                    age: this.state.answers.age.value,
+                    gender: this.state.answers.gender.value,
+                    maritalStatus: this.state.answers.maritalStatus.value,
+                    document: this.state.answers.document
+                })
+
             setTimeout(()=>{
                 const inputs = document.querySelectorAll("input");
                 const option = document.querySelector("option");
@@ -187,10 +182,6 @@ class Form extends React.Component{
                     }
                 });
             },100)
-            this.setState({
-                ...this.state,
-                erroCamps: []
-            })
         }
     }
     
@@ -279,10 +270,11 @@ class Form extends React.Component{
                 />
                 
                 <button className="Form__submitBtn" type="submit" onClick={e=> this.handleSubmit(e)}>SEND</button>
+
                 <ModalErro visible={this.state.modal}/>
                 </form>
                 </div>
-                <AnswersArea className="answersArea" results={this.state.results}/>
+                <AnswersArea className={"answersArea"} results={["this.state.results"]}/>
                 </div> 
                 )
             }          

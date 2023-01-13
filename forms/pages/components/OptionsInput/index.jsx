@@ -5,7 +5,7 @@ export default function OptionsInput(props){
             <label htmlFor={props.name}>{props.name}</label>
                 <select name={props.name} id={props.name} >
                     {props.options.map((elem, index)=>{
-                       return <option value={elem} key={index}>{elem}</option>
+                       return <option value={elem} key={index + elem}>{elem}</option>
                     })}
                     </select>
         </div>
