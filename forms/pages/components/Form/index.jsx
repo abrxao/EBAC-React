@@ -141,8 +141,9 @@ class Form extends React.Component{
             erroCamps.push(answers.gender);
         }
         
-        if(answers.age.value <= 0 || answers.age>=125){
+        if(parseFloat(answers.age.value) < 0 || parseFloat(answers.age.value)>125){
             erroCamps.push(answers.age);
+            console.log()
         }
         
         if(answers.name.value.length < 4){
@@ -280,7 +281,7 @@ class Form extends React.Component{
                     
                 })}/>
                 
-                <DocumentArea erro="" id="CPF" name="Document Number" className="Form__DocumentArea" onChange={e=> this.setState({
+                <DocumentArea erro="" id="CPF" name="Document Type" className="Form__DocumentArea" onChange={e=> this.setState({
                     ...this.state,
                     answers:{
                         ...this.state.answers,
