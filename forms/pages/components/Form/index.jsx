@@ -40,7 +40,7 @@ class Form extends React.Component{
                 
             },
             results:[],
-            status:false
+            status:true
         }
         
     }
@@ -119,6 +119,10 @@ class Form extends React.Component{
     
     handleSubmit(e){
         e.preventDefault();
+        this.setState({
+            ...this.state,
+            status:false
+        });
         const erroCamps = [];
         const answers = this.state.answers;
         const invalids = document.querySelectorAll(".invalid");
@@ -143,12 +147,12 @@ class Form extends React.Component{
         if(answers.name.value.length < 4){
             erroCamps.push(answers.name);
         }
-
+        
         erroCamps.forEach((elem)=>{
             const area = document.querySelector(`#${elem.area}`);
             area.classList.add("invalid");
         });
-
+        
         if(erroCamps.length > 0){
             this.setState({
                 ...this.state,
@@ -161,14 +165,45 @@ class Form extends React.Component{
                 });
             },4000)
         }else{
+            this.setState({
+                ...this.state,
+                status:true
+            });
             this.state.results.push({
-                    name: this.state.answers.name.value,
-                    age: this.state.answers.age.value,
-                    gender: this.state.answers.gender.value,
-                    maritalStatus: this.state.answers.maritalStatus.value,
-                    document: this.state.answers.document
-                })
-
+                name: this.state.answers.name.value,
+                age: this.state.answers.age.value,
+                gender: this.state.answers.gender.value,
+                maritalStatus: this.state.answers.maritalStatus.value,
+                document: this.state.answers.document
+            })
+            this.setState({
+                ...this.state,
+                answers:{
+                    name:{
+                        value:"",
+                        area:"Name"
+                    },
+                    age:{
+                        value:"",
+                        area:"Age"
+                    },
+                    gender:{
+                        value:"",
+                        area:"Gender"
+                    },
+                    maritalStatus:{
+                        value:"",
+                        area:""
+                    },
+                    document:{
+                        area:"CPF2",
+                        type:"",
+                        number:""
+                    }
+                }
+            });
+            
+            
             setTimeout(()=>{
                 const inputs = document.querySelectorAll("input");
                 const option = document.querySelector("option");
@@ -270,11 +305,11 @@ class Form extends React.Component{
                 />
                 
                 <button className="Form__submitBtn" type="submit" onClick={e=> this.handleSubmit(e)}>SEND</button>
-
+                
                 <ModalErro visible={this.state.modal}/>
                 </form>
                 </div>
-                <AnswersArea className={"answersArea"} results={["this.state.results"]}/>
+                {this.state.status && <AnswersArea className="answersArea" results={this.state.results}/>}
                 </div> 
                 )
             }          
