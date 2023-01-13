@@ -18,7 +18,8 @@ export default function NumberInput(props){
             onChange={props.onChange}
             autoComplete="off"
             onKeyUp={e=>handleKeyUp(e)}            
-            className={(isInputFill?"filled ":"")}            
+            className={(isInputFill?"filled ":"")}     
+            disabled={props.disabled}       
             />
 
             <label htmlFor={props.name}>{props.name}</label>

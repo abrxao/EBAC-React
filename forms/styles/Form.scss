@@ -29,6 +29,8 @@
         
         &:disabled ~{
             span{opacity: .6;}
+            label{opacity: .6;}
+            
         }
         
         &.filled ~{
@@ -212,7 +214,7 @@
     backdrop-filter: blur(6px);
     width: 100%;
     height: auto;
-    max-height: 638px;
+    max-height: 654px;
     padding: 2rem;
     padding-top:0;
     border-radius: .3rem;
@@ -224,12 +226,12 @@
     overflow-x: hidden;
     scrollbar-color: #fff0 #fff;
     &::-webkit-scrollbar-thumb {
-        background-color: var(--melonOrange); 
+        background-color: var(--melonOrange);
+
         border-radius: .4rem;
-        border: 3px solid var(--darkLava); 
     }
     &::-webkit-scrollbar-track {
-        background: var(--darkLava);        
+        background: #fff0;        
     }
     
     &::-webkit-scrollbar {
@@ -368,7 +370,7 @@
         @include radioGroup;
         &__NumberInput{
             @include textInput;
-            margin-top: .5rem;
+            margin-top: 1.5rem;
             input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button {
                 -webkit-appearance: none;
