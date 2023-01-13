@@ -6,6 +6,7 @@ import OptionsInput from "../OptionsInput";
 import DocumentArea from "../DocumentArea";
 import ModalErro from "../ModalErro";
 import AnswersArea from "../AnswersArea";
+import ModalAnswer from "../AnswersArea/ModalAnswer";
 
 class Form extends React.Component{
     constructor(props){
@@ -203,20 +204,17 @@ class Form extends React.Component{
                 }
             });
             
+            const inputs = document.querySelectorAll("input");
+            const option = document.querySelector("option");
             
-            setTimeout(()=>{
-                const inputs = document.querySelectorAll("input");
-                const option = document.querySelector("option");
-                
-                option.selected = true;
-                
-                inputs.forEach(input =>{
-                    input.value="";
-                    if(input.checked){
-                        input.checked = false;
-                    }
-                });
-            },100)
+            option.selected = true;
+            
+            inputs.forEach(input =>{
+                input.value="";
+                if(input.checked){
+                    input.checked = false;
+                }
+            });
         }
     }
     
@@ -310,6 +308,7 @@ class Form extends React.Component{
                 </form>
                 </div>
                 {this.state.status && <AnswersArea className="answersArea" results={this.state.results}/>}
+                {<ModalAnswer></ModalAnswer>}
                 </div> 
                 )
             }          
