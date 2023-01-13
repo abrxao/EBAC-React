@@ -10,7 +10,6 @@ export default function DocumentArea(props) {
         const input = document.querySelector(`.${props.className}__NumberInput input`);
         setInputStatus(false);
         input.focus();
-        
     }
         return(
             <div className={props.className}>
@@ -23,6 +22,7 @@ export default function DocumentArea(props) {
 
                 <NumberInput
                 disabled={inputStatus}
+                name={"Document Number"}
                 onChange={e=>props.onKeyDown(e)}
                 id="CPF2"
                 className={props.className + "__NumberInput"}/>
