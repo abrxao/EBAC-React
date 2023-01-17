@@ -1,0 +1,13 @@
+@import "./reset_n_vars.scss";
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+:focus{
+  outline: 0;
+}
+
+@import ".././pages/components/TextInput/TextInput.scss";
