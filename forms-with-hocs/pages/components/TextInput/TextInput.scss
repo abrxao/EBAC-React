@@ -1,2 +1,85 @@
-input{
+.textInput{
+    margin-top: 2rem;
+    *{
+        font-family: 'Gontserrat', sans-serif;
+    }
+    position: relative;
+    label{
+        color: var(--color);
+        position: absolute;
+        left: 0;
+        top: .5rem;
+        font-size: .85rem;
+        pointer-events: none;
+        opacity: .85;
+        transition: .2s;
+        font-weight: 300;
+    }
+    &__icon{
+        svg{
+            margin-bottom:-.2rem; 
+        }
+        font-size: 1.3rem;
+    }
+    input{
+        border: 2px solid transparent;
+        width: 100%;
+        color: var(--color);
+        border-bottom: 2px solid var(--mdGreen);
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        padding-left: 0;
+        border-radius: .2rem;
+        background-color: var(--darkGreen);
+        outline: none;
+        font-family: 'Gontserrat', sans-serif;
+        font-weight: 300;
+        
+        &:focus{
+            border-bottom: 2px solid var(--lgtGreen);
+            ~ label{
+                top:-1.2rem;
+                opacity: 1;
+            }
+        }
+        &.filled{
+            border-bottom: 2px solid var(--lgtGreen);
+            ~ label{
+                top:-1.2rem;
+                opacity: 1;
+            }
+        }
+        
+    }
+    
+    &__viewPassword{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        height: 1.7rem;
+        aspect-ratio: 1;
+        position: absolute;
+        opacity: .85;
+        color: var(--color);
+        right:.5rem;
+        top:.4rem;
+        font-size: 1.4rem;
+        cursor: pointer;
+        &:hover{
+            background: #fff2;
+            opacity: 1;
+        }
+    }
+    
+    &__passwordTip{
+        b{
+            font-weight: 500;
+        }
+        margin-top: .5rem;
+        text-align: justify;
+        color: var(--color);
+        font-weight: 300;
+        font-size: .75rem;
+    }
 }
