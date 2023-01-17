@@ -1,4 +1,3 @@
-import teste from "../utils/teste"
 
 function Header({value, invalid}) {
     return(<>

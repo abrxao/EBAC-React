@@ -1,9 +1,21 @@
 @import "./reset_n_vars.scss";
+@import "../pages/components/Forms/Forms.scss";
 
 html,
 body {
   max-width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body{
+
+}
+html{
+  background:var(--bgColor);
 }
 
 :focus{

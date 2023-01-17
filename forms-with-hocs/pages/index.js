@@ -1,7 +1,6 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import { TextInput } from './components/TextInput/TextInput';
-
+import TextInputWithValidation from './components/TextInput/TextInput';
+import Forms from './components/Forms/Forms';
 export default class Home extends React.Component {
 
   constructor(){
@@ -9,20 +8,15 @@ export default class Home extends React.Component {
     this.state = {
       num:0
     }
-    this._input = React.createRef();
-  }
-
-  componentDidMount(){
-    console.log('componentDidMount');
   }
 
   render() {
     return (
       <>
-        <label>Home</label>
-        <input type="text" ref={this._input} onChange={e=>this.setState({num: e.target.value})}/>
-        <Header value={this.state.num}/>
-        <TextInput/>
+          <Forms>
+            <TextInputWithValidation name="password" required={true}/>
+          </Forms>
+        
       </>
         )
       }
