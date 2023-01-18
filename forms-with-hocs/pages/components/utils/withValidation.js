@@ -1,5 +1,5 @@
 import {MdEmail} from 'react-icons/md';
-import {RiLockPasswordFill} from 'react-icons/ri';
+import {ImKey} from 'react-icons/im';
 import {FaUser} from 'react-icons/fa';
 import React,{useState} from 'react';
 
@@ -13,7 +13,7 @@ export default function withValidation(Component) {
                 valid:()=>{},
             },
             password: {
-                icon:<RiLockPasswordFill/>,
+                icon:<ImKey/>,
                 valid:(password)=>{
                     {
                         const uppercase = /[A-Z]/;
