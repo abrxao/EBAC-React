@@ -1,9 +1,28 @@
 .textInput{
-    margin-top: 2rem;
+    margin-top: 1.2rem;
+    opacity: .9;
+    position: relative;
+    &:hover{
+        opacity: 1;
+    }
+
+    &__warn{
+        position: absolute;
+        top:2.7rem;
+        width: 100%;
+        p{
+           color: var(--color);
+           font-weight: 200;
+           font-size:.7rem;
+           text-align: right;
+        }
+        
+    }
+
     *{
         font-family: 'Gontserrat', sans-serif;
     }
-    position: relative;
+    
     label{
         color: var(--color);
         position: absolute;
@@ -36,10 +55,10 @@
         font-family: 'Gontserrat', sans-serif;
         font-weight: 300;
         transition: .2s;
-        opacity: .85;
+        margin-bottom: 1rem;
+        
         &:hover{
             border-bottom: 2px solid var(--lgtGreen);
-            opacity: 1;
         }
         &[type="password"]{
             letter-spacing: 3px;
