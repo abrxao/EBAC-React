@@ -1,15 +1,11 @@
 
-function Header({value, invalid}) {
-    return(<>
-        <h1 style={{
-                color: (invalid ? '#f00' : '#000')
-            }}>{value}</h1>
-        {invalid && <p>muito ruim</p>}
-    </>
-       
+export default function Header(props) {
+    return(<div className="title">
+        <hgroup>
+            <h1>{props.title}</h1>
+            {props.subtitle && <h2>{props.subtitle}</h2>}
+        </hgroup>
+        
+    </div>
     )
 };
-
-const ComponentTeste = teste(Header)
-
-export default ComponentTeste;
