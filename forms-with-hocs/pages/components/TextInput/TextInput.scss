@@ -19,7 +19,8 @@
         svg{
             margin-bottom:-.2rem; 
         }
-        font-size: 1.3rem;
+        font-size: 1rem;
+        margin-right: .2rem;
     }
     input{
         border: 2px solid transparent;
@@ -28,13 +29,24 @@
         border-bottom: 2px solid var(--mdGreen);
         padding: .5rem 1rem;
         font-size: 1rem;
-        padding-left: 0;
+        padding-left: 2px;
         border-radius: .2rem;
         background-color: var(--darkGreen);
         outline: none;
         font-family: 'Gontserrat', sans-serif;
         font-weight: 300;
-        
+        transition: .2s;
+        opacity: .85;
+        &:hover{
+            border-bottom: 2px solid var(--lgtGreen);
+            opacity: 1;
+        }
+        &[type="password"]{
+            letter-spacing: 3px;
+            font-weight: 500;
+            font-size: 1rem;
+            -webkit-text-stroke: 1px;
+        }
         &:focus{
             border-bottom: 2px solid var(--lgtGreen);
             ~ label{
@@ -48,6 +60,9 @@
                 top:-1.2rem;
                 opacity: 1;
             }
+        }
+        &.invalid{
+            border-bottom: 2px solid #f77;
         }
         
     }
