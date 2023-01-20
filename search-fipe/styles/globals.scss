@@ -5,7 +5,14 @@
 @import "../pages/components/InputList/InputList.scss";
 @import "../pages/components/Header/Header.scss";
 
-:root {
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  @media(max-width:1000px){
+    flex-direction: column;
+  }
 }
 
 
