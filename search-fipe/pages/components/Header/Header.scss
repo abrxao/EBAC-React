@@ -1,0 +1,29 @@
+.title{
+    
+    hgroup{
+        text-align: left;
+        border-left: .5rem solid var(--lgtGreen);
+        padding-left: .6rem;
+        margin-bottom: .7rem;
+        h1{
+            font-family: 'Long Shot', sans-serif;
+            padding-left: 1px;
+            -webkit-text-stroke: .02px var(--color);
+            color: #fff0;
+            font-size: 3.2rem;
+            letter-spacing: 4px;
+        }
+        h2{
+            margin-top: -.5rem;
+            font-family: 'Gontserrat', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            opacity: .75;
+            color: var(--color);
+            svg{
+                margin-bottom: -3px;
+            }
+        } 
+    }
+    
+}

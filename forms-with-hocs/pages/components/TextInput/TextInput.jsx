@@ -1,4 +1,4 @@
-import withValidation from './utils/withValidation';
+import WithValidation from './utils/WithValidation';
 import React,{useState} from 'react';
 import {IoMdEye,IoMdEyeOff} from 'react-icons/io';
 import {FaExclamationCircle} from 'react-icons/fa';
@@ -44,7 +44,7 @@ export function TextInput({Icon, name, onKeyUp, valid, type,onKeyPress, maxLengt
     )
 }
 
-const TextInputWithValidation = withValidation(TextInput)
+const TextInputWithValidation = WithValidation(TextInput)
 
 export default TextInputWithValidation;
     

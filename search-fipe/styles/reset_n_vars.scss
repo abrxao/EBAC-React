@@ -1,0 +1,28 @@
+:root{
+    --lgtGreen: #C5EFCB;
+    --mdGreen: #A9C5A0;
+    --darkGreen: #758173;
+    --bgColor: #f6f6f6;
+    --color: #090b09;
+    --color: #f6f6f6;
+}
+
+@media(prefers-color-scheme:dark){
+    :root{
+        --bgColor: #090b09;
+    }
+    
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    input:focus{
+        outline: none;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus {
+        transition: background-color 600000s 0s, color 600000s 0s;
+    }
+}
+

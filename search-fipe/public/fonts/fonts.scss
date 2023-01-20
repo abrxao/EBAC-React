@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-BoldItalic.woff2') format('woff2'),
+        url('./Gontserrat-BoldItalic.woff') format('woff'),
+        url('./Gontserrat-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-BlackItalic.woff2') format('woff2'),
+        url('./Gontserrat-BlackItalic.woff') format('woff'),
+        url('./Gontserrat-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-ExtraBold.woff2') format('woff2'),
+        url('./Gontserrat-ExtraBold.woff') format('woff'),
+        url('./Gontserrat-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-Black.woff2') format('woff2'),
+        url('./Gontserrat-Black.woff') format('woff'),
+        url('./Gontserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-Bold.woff2') format('woff2'),
+        url('./Gontserrat-Bold.woff') format('woff'),
+        url('./Gontserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-ExtraLight.woff2') format('woff2'),
+        url('./Gontserrat-ExtraLight.woff') format('woff'),
+        url('./Gontserrat-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-ExtraBoldItalic.woff2') format('woff2'),
+        url('./Gontserrat-ExtraBoldItalic.woff') format('woff'),
+        url('./Gontserrat-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-Italic.woff2') format('woff2'),
+        url('./Gontserrat-Italic.woff') format('woff'),
+        url('./Gontserrat-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-SemiBold.woff2') format('woff2'),
+        url('./Gontserrat-SemiBold.woff') format('woff'),
+        url('./Gontserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-ExtraLightItalic.woff2') format('woff2'),
+        url('./Gontserrat-ExtraLightItalic.woff') format('woff'),
+        url('./Gontserrat-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-Medium.woff2') format('woff2'),
+        url('./Gontserrat-Medium.woff') format('woff'),
+        url('./Gontserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-SemiBoldItalic.woff2') format('woff2'),
+        url('./Gontserrat-SemiBoldItalic.woff') format('woff'),
+        url('./Gontserrat-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-LightItalic.woff2') format('woff2'),
+        url('./Gontserrat-LightItalic.woff') format('woff'),
+        url('./Gontserrat-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-Light.woff2') format('woff2'),
+        url('./Gontserrat-Light.woff') format('woff'),
+        url('./Gontserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-Regular.woff2') format('woff2'),
+        url('./Gontserrat-Regular.woff') format('woff'),
+        url('./Gontserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-MediumItalic.woff2') format('woff2'),
+        url('./Gontserrat-MediumItalic.woff') format('woff'),
+        url('./Gontserrat-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-ThinItalic.woff2') format('woff2'),
+        url('./Gontserrat-ThinItalic.woff') format('woff'),
+        url('./Gontserrat-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Long Shot';
+    src: url('./LongShot.woff2') format('woff2'),
+        url('./LongShot.woff') format('woff'),
+        url('./LongShot.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gontserrat';
+    src: url('./Gontserrat-Thin.woff2') format('woff2'),
+        url('./Gontserrat-Thin.woff') format('woff'),
+        url('./Gontserrat-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+

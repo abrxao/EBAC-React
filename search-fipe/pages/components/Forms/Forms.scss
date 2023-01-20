@@ -1,0 +1,64 @@
+.formContainer{
+    width: 94%;
+    margin-top: 2rem;
+    max-width: 400px;
+    
+    background-color: var(--darkGreen);
+    padding: 2rem;
+    border-radius: .2rem;
+    @media(max-width:350px){
+        padding: 1.4rem;
+    }
+    &__content{
+        aspect-ratio: .73;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        @media (max-width: 1000px){
+            aspect-ratio: auto;
+        }
+        &__erro{
+            top: 5rem;
+            left: -100%;
+            position: absolute;
+            animation: erroModal 3.5s;
+            width: auto;
+            padding: .3rem 0;
+            &__Modal{
+                overflow: hidden;
+                padding: .3rem;
+                background-color: #f77;
+                box-shadow: 2px 0px 4px -2px inset #0009;
+                font-family: 'Gontserrat', sans-serif;
+                border-top-right-radius: .2rem;
+                border-bottom-right-radius: .2rem;
+                h2{position: absolute;}
+            }
+        }
+        button{
+            font-family: 'Gontserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1.2rem;
+            padding: .5rem 1rem;
+            border-radius: .2rem;
+            color: #5d5d5d;
+            border: none;
+            outline: none;
+            letter-spacing: 4px;
+            cursor: pointer;
+            width: 100%;
+            background-color: var(--lgtGreen);
+            opacity: .85;
+            margin-top: 1rem;
+            svg{
+                font-size: 1.2rem;
+                margin-bottom: -.2rem;
+            }
+            &:hover{
+                opacity: 1;
+            } 
+        }
+    }
+}
