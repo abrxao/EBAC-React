@@ -1,0 +1,30 @@
+.Menu{
+    padding: 1rem 0;
+    width: 100vw;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #fff5;
+    &__menuLinks{
+        background-image: linear-gradient(90deg,#fff,#fff,#0093E9 50%,#0093E9 60%, #80D0C7 75%, #80D0C7 100%);
+        background-repeat: no-repeat;
+        background-size: 340%;
+        background-position-x: 0;
+        -webkit-background-clip: text;
+        transition: .2s;
+        &:hover{
+            background-position-x: 70%;
+        }
+        a{  
+            font-family: "Roboto", Helvetica, Aria;
+            color: #fff;
+            outline: none;
+            text-decoration: none;
+            letter-spacing: 1px;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+    }
+}

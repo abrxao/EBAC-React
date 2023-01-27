@@ -1,0 +1,11 @@
+.mainAnswers *{
+    box-sizing: border-box;
+}
+.mainAnswers{
+    display: flex;
+    flex-direction: column;
+
+    .allAnswers{
+        padding: 0px;
+    }
+}
