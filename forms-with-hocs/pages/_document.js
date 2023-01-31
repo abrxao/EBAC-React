@@ -3,9 +3,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body>
-        <NextScript />
+        <body>
+          <NextScript />
       </body>
+      
+      
     </Html>
   )
 }

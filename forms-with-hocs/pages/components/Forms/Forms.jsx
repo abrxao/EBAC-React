@@ -1,12 +1,11 @@
 import React from "react";
 import {GoVerified} from "react-icons/go";
 import {RiRefreshFill} from "react-icons/ri";
-import {RiSendPlaneFill} from "react-icons/ri";
+import SendButton from "../SendButton/SendButton";
 export default class Forms extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            answers: [],
             isSend:false,
             modalErro:false
         }
@@ -18,6 +17,12 @@ export default class Forms extends React.Component {
 
         var answer = {};
 
+        if(localStorage.sendClicks){
+            localStorage.sendClicks++;
+        }else{
+            localStorage.setItem('sendClicks',1);
+        }
+
         const inputs = this._form.current.querySelectorAll("input");
 
         inputs.forEach(input => {
@@ -25,7 +30,7 @@ export default class Forms extends React.Component {
                 input.classList.add("invalid");
             }else{
                 const name = input.getAttribute("id");
-                answer[name]=input.value;
+                answer[name] = input.value;
                 input.value=""
             }
         })
@@ -36,7 +41,18 @@ export default class Forms extends React.Component {
                 this.setState({modalErro: false});
             }, 3500);
         }else{
-            this.state.answers.push(answer);
+            if(localStorage.answers){
+                var array = JSON.parse(localStorage.answers);
+                var aux = array.map(elem=>{
+                    return elem
+                });
+                aux.push(answer);
+
+                localStorage.setItem("answers",JSON.stringify(aux));
+            }else{
+                localStorage.setItem("answers",JSON.stringify([answer]));
+            }
+            
             this.setState({isSend: true});
         }
     }
@@ -51,7 +67,7 @@ export default class Forms extends React.Component {
             <div className="formContainer">
                 <form ref={this._form} className="formContainer__content">
                     {!this.state.isSend && this.props.children}
-                    {!this.state.isSend && <div><button onClick={e=> this.handleSubmit(e)} type="submit">SEND<RiSendPlaneFill/></button></div>}
+                    {!this.state.isSend && <SendButton onClick={e=>this.handleSubmit(e)}/>}
                     {this.state.isSend &&
                         <div className="formContainer__content__sendArea">
                             <h2><GoVerified/> SENDED</h2>
