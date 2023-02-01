@@ -12,12 +12,12 @@
         &::after{
             content:"";
             border:10px solid transparent;
-            border-top-color: var(--lgtGreen);
+            border-top-color: var(--darkGreen);
             display: inline-block;
             position: absolute;
             right: .5rem;
             bottom: 2px;
-            border-radius: .5rem;
+            border-radius: .2rem;
             pointer-events: none;
             cursor: pointer;
         }
