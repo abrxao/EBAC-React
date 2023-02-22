@@ -3,9 +3,7 @@ import {
   Box,
   ChakraProvider,
   Text,
-  keyframes,
   Container,
-  Button,
 } from "@chakra-ui/react";
 import ContextProvider from "../components/Context/Context";
 import InputList from "../components/InputList";
