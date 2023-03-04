@@ -1,0 +1,63 @@
+
+.Display{
+    height: 60px;
+    background-color: #2d2d2d;
+    position: relative;
+    padding: .5rem;
+    border-radius: .4rem;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 8px #333;
+    overflow: hidden;
+    &__firstBlock{
+        font-size: 1.3rem;
+        position: absolute;
+        width: calc(100% - 1.4rem);
+        right: .6rem;
+        bottom: .6rem;
+        color:#fff;
+        border: none;
+        text-align: end;
+        padding: .3rem;
+        pointer-events: none;
+        background-color: #fff0;
+        text-align:right;
+    }
+    &__secBlock{
+        font-size: 1.3rem;
+        width: calc(100% - 1.4rem);
+        position: absolute;
+        background-color: #fff0;
+        right: .6rem;
+        bottom: .6rem;
+        color:#ddd;
+        border: none;
+        padding: .3rem;
+        pointer-events: none;
+        background-color: none;
+        text-align:right;
+        &--answer{
+            position: absolute;
+            color: #bdbdbd;
+            font-size: 1rem;
+            top: .6rem;
+            right: .6rem;
+            animation: answer .140s linear;
+            height: 1rem;
+            z-index: 1;
+        }
+    }
+}
+
+@keyframes answer{
+    0%{
+        font-size: 1.8rem;
+        top: calc(60px - .6rem);
+    }
+    100%{
+        font-size: 1.3rem;
+        top: .6rem;
+        color: #888;
+    }
+}
+
+

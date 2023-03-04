@@ -1,0 +1,32 @@
+.numericButton {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+  box-shadow: 3px 3px 5px #333;
+  border-radius: 8px;
+  border: 2px solid #000;
+  &__content {
+    text-align: center;
+    cursor: pointer;
+    padding: 0.35rem;
+    font-size: 1.7rem;
+    background-color: #fff0;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    border: 3px solid #fff0;
+    border-radius: 6px;
+    border-bottom: 3px solid #fff;
+    font-weight: 700;
+    transition: 0.1s;
+    &:hover {
+      background-color: #fff2;
+    }
+    &:active {
+      border-bottom: 3px solid #9d3;
+      background-color: #fff4;
+      zoom: 0.9;
+    }
+  }
+}

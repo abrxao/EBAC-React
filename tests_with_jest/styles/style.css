@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap");
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(#fff, #777);
+  background-position: 120%;
+}
+
+.calculator * {
+  font-family: Londrina Shadow;
+}
+
+.calculator {
+  margin: auto;
+  width: 100%;
+  max-width: 300px;
+  background-color: #6b6b6b;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid #000;
+  box-shadow: 6px 6px 8px #888;
+}
+
+@media (max-width: 320px) {
+  .calculator {
+    padding: 1.5rem;
+    zoom: 0.7;
+  }
+}
+.CalcKeyboard {
+  padding: 0.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.Display {
+  height: 60px;
+  background-color: #2d2d2d;
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 8px #333;
+  overflow: hidden;
+}
+.Display__firstBlock {
+  font-size: 1.3rem;
+  position: absolute;
+  width: calc(100% - 1.4rem);
+  right: 0.6rem;
+  bottom: 0.6rem;
+  color: #fff;
+  border: none;
+  text-align: end;
+  padding: 0.3rem;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0);
+  text-align: right;
+}
+.Display__secBlock {
+  font-size: 1.3rem;
+  width: calc(100% - 1.4rem);
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  right: 0.6rem;
+  bottom: 0.6rem;
+  color: #ddd;
+  border: none;
+  padding: 0.3rem;
+  pointer-events: none;
+  background-color: none;
+  text-align: right;
+}
+.Display__secBlock--answer {
+  position: absolute;
+  color: #bdbdbd;
+  font-size: 1rem;
+  top: 0.6rem;
+  right: 0.6rem;
+  animation: answer 0.14s linear;
+  height: 1rem;
+  z-index: 1;
+}
+
+@keyframes answer {
+  0% {
+    font-size: 1.8rem;
+    top: calc(60px - 0.6rem);
+  }
+  100% {
+    font-size: 1.3rem;
+    top: 0.6rem;
+    color: #888;
+  }
+}
+.numericButton {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+  box-shadow: 3px 3px 5px #333;
+  border-radius: 8px;
+  border: 2px solid #000;
+}
+.numericButton__content {
+  text-align: center;
+  cursor: pointer;
+  padding: 0.35rem;
+  font-size: 1.7rem;
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  outline: none;
+  width: 100%;
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 6px;
+  border-bottom: 3px solid #fff;
+  font-weight: 700;
+  transition: 0.1s;
+}
+.numericButton__content:hover {
+  background-color: rgba(255, 255, 255, 0.1333333333);
+}
+.numericButton__content:active {
+  border-bottom: 3px solid #9d3;
+  background-color: rgba(255, 255, 255, 0.2666666667);
+  zoom: 0.9;
+}
+
+.operationButton {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+  box-shadow: 3px 3px 5px #333;
+  border-radius: 8px;
+  border: 2px solid #000;
+}
+
+.operationButton__content {
+  text-align: center;
+  cursor: pointer;
+  padding: 0.35rem;
+  font-size: 1.7rem;
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  outline: none;
+  width: 100%;
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 6px;
+  border-bottom: 3px solid #fff;
+  font-weight: 700;
+  transition: 0.1s;
+}
+
+.operationButton__content:hover {
+  background-color: rgba(255, 255, 255, 0.1333333333);
+}
+
+.operationButton__content:active {
+  border-bottom: 3px solid #9d3;
+  background-color: rgba(255, 255, 255, 0.2666666667);
+  zoom: 0.9;
+}
+
+/*# sourceMappingURL=style.css.map */
