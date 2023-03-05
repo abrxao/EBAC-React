@@ -21,7 +21,6 @@ const ConversionProvider: FunctionComponent<PropsWithChildren> = ({
 
   const changeConversions = (array: any) => {
     setConversions(array);
-    console.log("tstes");
   };
 
   return (

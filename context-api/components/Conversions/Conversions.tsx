@@ -14,12 +14,19 @@ const Conversions: FunctionComponent = () => {
   const convertContext = useConversion();
 
   useEffect(() => {
-    convertContext?.changeConversions(
-      JSON.parse(localStorage.conversions).reverse()
-    );
-    window.addEventListener("storage", (e) => {
-      convertContext?.changeConversions(JSON.parse(localStorage.conversions).reverse());
-    });
+    if (window !== undefined) {
+      const localConversions = localStorage.conversions ?? " ";
+      const conversions =
+        localConversions.trim() !== ""
+          ? JSON.parse(localConversions).reverse()
+          : [];
+      convertContext?.changeConversions(conversions);
+      window.addEventListener("storage", (e) => {
+        convertContext?.changeConversions(
+          JSON.parse(localStorage.conversions).reverse()
+        );
+      });
+    }
   }, []);
 
   const handleDate: Function = (ms: number) => {
