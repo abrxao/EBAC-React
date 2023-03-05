@@ -40,8 +40,6 @@ export default class App extends React.Component{
       this.setState({
         operation:e.id
       });
-
-      console.log(operationsSymbols.includes(e.value))
       
       displayValue2.value = `${this.state.firstNum} ${e.value}`;
       displayValue.value = "";
