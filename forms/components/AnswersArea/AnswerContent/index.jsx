@@ -20,8 +20,8 @@ export default class AnswersContent extends React.Component{
                     <p>Age: {this.props.age}</p>
                     <p>Gender: {this.props.gender}</p>
                     <p>Marital Status: {this.props.maritalStatus}</p>
-                    <p>Document type: {this.props.document.type}</p>
-                    <p>Document number: {this.props.document.number}</p>
+                    <p>Document type: {this.props.documentType}</p>
+                    <p>Document number: {this.props.documentNumber}</p>
                 </div>
             
             
