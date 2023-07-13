@@ -104,7 +104,6 @@ class Form extends React.Component {
       parseFloat(answers.age.value) > 125
     ) {
       erroCamps.push(answers.age);
-      console.log();
     }
 
     if (answers.name.value.length < 4) {
@@ -132,7 +131,6 @@ class Form extends React.Component {
         ...this.state,
         status: true,
       });
-      console.log(this.state)
       this.handleSend();
 
       this.setState({
