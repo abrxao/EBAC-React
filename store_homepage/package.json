@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "server": "json-server --watch db.json --port 3004",
     "build": "next build",
     "start": "next start",
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "json-server": "^0.17.3",
-    "react-query": "^3.39.3"
+    "react-query": "^3.39.3",
+    "tailwind-merge": "^1.13.2"
   }
 }
