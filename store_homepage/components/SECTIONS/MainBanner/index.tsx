@@ -6,6 +6,7 @@ import Container from "../../Container";
 import Link from "next/link";
 import Title from "@/components/Title";
 import LinkButton from "@/components/LinkButton";
+import Paragraph from "@/components/Paragraph";
 
 const MainBanner: FunctionComponent = () => {
   return (
@@ -15,9 +16,9 @@ const MainBanner: FunctionComponent = () => {
         <div className="w-5/6">
           <Title>JOGUE ATÉ QUE NÃO POSSAM TE IGNORAR</Title>
         </div>
-        <p className="mb-3 tracking-wide">
+        <Paragraph>
           E continue jogando até que eles não consigam parar de olhar
-        </p>
+        </Paragraph>
         <div className="flex flex-col items-start space-y-4">
           <LinkButton href="#">COMPRAR AGORA</LinkButton>
           <LinkButton href="#">VER MAIS</LinkButton>
