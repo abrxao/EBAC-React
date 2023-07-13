@@ -1,14 +1,14 @@
 "use client";
 import { FunctionComponent } from "react";
-import MenuIcon from "../MenuIcon";
+import MenuIcon from "../../MenuIcon";
 import { AiOutlineShopping, AiOutlineSearch } from "react-icons/ai";
 import { LuUser } from "react-icons/lu";
 import { PiHeartStraightBold } from "react-icons/pi";
 import { VscMenu } from "react-icons/vsc";
 import Image from "next/image";
 import adi_logo from "@/public/adi_simbol.png";
-import Container from "../Container";
-import Badge from "../Badge";
+import Container from "../../Container";
+import Badge from "../../Badge";
 
 const Header: FunctionComponent = () => {
   return (
