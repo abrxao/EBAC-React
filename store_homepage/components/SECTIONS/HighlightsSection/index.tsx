@@ -7,9 +7,9 @@ import Title from "@/components/Title";
 const HighlightsSection: FunctionComponent = () => {
   return (
     <div>
-      <Container className="mt-4">
+      <Container className="mt-4 pr-0">
         <Title className="my-8">EM DESTAQUE</Title>
-        <ProductsSlider />
+        <ProductsSlider url={"http://localhost:3004/destaques"} />
       </Container>
     </div>
   );

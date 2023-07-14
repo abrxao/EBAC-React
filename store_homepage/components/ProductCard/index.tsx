@@ -29,13 +29,13 @@ const ProductCard: FunctionComponent<ImageProps> = ({
 
   return (
     <div className="group cursor-pointer">
-      <div className="relative ">
+      <div className="relative overflow-hidden">
         <Image src={src} alt={description} width={260} height={260} />
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-6 right-4">
           <PiHeartStraightBold size={20} />
         </div>
 
-        <Paragraph className="absolute -bottom-4 left-1 text-[12px] bg-white p-1 group-hover:-bottom-2 duration-150 text-">
+        <Paragraph className="absolute scale-x-90 scale-y-105 -bottom-4 left-1 text-[12px] bg-white p-2px  group-hover:-bottom-2 duration-150 text-">
           {formatCurrency(price)}
         </Paragraph>
       </div>

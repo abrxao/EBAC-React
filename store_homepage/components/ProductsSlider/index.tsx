@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { useQuery } from "react-query";
 import { Swiper, SwiperSlide } from "swiper/react";
 import tenis from "../../public/images/white_shoe.avif";
@@ -12,17 +12,24 @@ import Image from "next/image";
 import ProductCard from "../ProductCard";
 import SkeletonCreator from "../SkeletonCreator";
 
-export default function ProductsSlider() {
+interface ProductsSliderProps {
+  url: string;
+}
+
+const ProductsSlider: FunctionComponent<ProductsSliderProps> = ({url}) => {
   const { data: products, isLoading } = useQuery("products", async () => {
-    const { data } = await axios.get("http://localhost:3004/destaques");
+    const { data } = await axios.get(url);
     return data;
   });
   return (
     <>
-      <Swiper slidesPerView={2.5} spaceBetween={16} className="mySwiper">
+      <Swiper slidesPerView={2.6} spaceBetween={8} className="mySwiper">
         {isLoading ? (
-          <div className="flex gap-4 mb-12">
-            <SkeletonCreator className="aspect-square w-2/5 shrink-0" quantity={5} />
+          <div className="flex gap-2 mb-12">
+            <SkeletonCreator
+              className="aspect-square w-2/5 shrink-0"
+              quantity={5}
+            />
           </div>
         ) : (
           products.map((product, index) => {
@@ -42,4 +49,6 @@ export default function ProductsSlider() {
       </Swiper>
     </>
   );
-}
+};
+
+export default ProductsSlider;
