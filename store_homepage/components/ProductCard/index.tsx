@@ -18,6 +18,15 @@ const ProductCard: FunctionComponent<ImageProps> = ({
   description,
   type,
 }) => {
+  function formatCurrency(value: number) {
+    const formattedValue = value.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
+
+    return formattedValue;
+  }
+
   return (
     <div className="group cursor-pointer">
       <div className="relative ">
@@ -27,7 +36,7 @@ const ProductCard: FunctionComponent<ImageProps> = ({
         </div>
 
         <Paragraph className="absolute -bottom-4 left-1 text-[12px] bg-white p-1 group-hover:-bottom-2 duration-150 text-">
-          R${price}
+          {formatCurrency(price)}
         </Paragraph>
       </div>
 
