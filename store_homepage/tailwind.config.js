@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         "light-gray": "#f5f5f5",
       },
+      spacing: {
+        "2px": "2px",
+      },
       letterSpacing: {
         widest: ".2rem",
         md: ".025rem",

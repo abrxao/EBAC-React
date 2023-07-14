@@ -13,9 +13,7 @@ const MainBanner: FunctionComponent = () => {
     <div>
       <Image src={banner} alt="banner Geisa Ferreira" />
       <Container className="-mt-28 bg-light-gray pb-6">
-        <div className="w-5/6">
-          <Title>JOGUE ATÉ QUE NÃO POSSAM TE IGNORAR</Title>
-        </div>
+        <Title>JOGUE ATÉ QUE NÃO POSSAM TE IGNORAR</Title>
         <Paragraph>
           E continue jogando até que eles não consigam parar de olhar
         </Paragraph>

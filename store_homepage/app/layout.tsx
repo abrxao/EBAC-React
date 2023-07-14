@@ -1,7 +1,10 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { adiFont } from './fonts'
+'use client'
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { adiFont } from "./fonts";
+import { QueryClientProvider } from "react-query";
+import { queryClient } from "@/utils/queryClient";
 
 export const metadata: Metadata = {
   title: "adidas Brasil Loja",
@@ -12,11 +15,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={adiFont.className}>{children}</body>
-    </html>
-  )
+    <QueryClientProvider client={queryClient}>
+      <html lang="en">
+        <body className={adiFont.className}>{children}</body>
+      </html>
+    </QueryClientProvider>
+  );
 }

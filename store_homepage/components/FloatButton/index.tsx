@@ -6,7 +6,7 @@ export type baseComponent = {
   children?: ReactNode;
 };
 
-const FlutterButton: FunctionComponent<baseComponent> = ({
+const FloatButton: FunctionComponent<baseComponent> = ({
   className,
   children,
 }) => {
@@ -14,7 +14,7 @@ const FlutterButton: FunctionComponent<baseComponent> = ({
     <span className={"border border-black"}>
       <button
         className={twMerge(
-          " bg-black -translate-x-1 -translate-y-1 w-full h-full text-white p-3 active:translate-x-0 active:translate-y-0 duration-100 flex items-center gap-3 tracking-wide",
+          " bg-black -translate-x-2px -translate-y-2px w-full h-full text-white p-3 border-2 border-black active:translate-x-0 active:translate-y-0 duration-150 text-sm flex items-center gap-3 tracking-wider font-bold hover:text-white/50",
           className
         )}
       >
@@ -23,4 +23,4 @@ const FlutterButton: FunctionComponent<baseComponent> = ({
     </span>
   );
 };
-export default FlutterButton;
+export default FloatButton;

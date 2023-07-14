@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "server": "json-server --watch db.json --port 3004",
+    "server": "json-server --watch db.js --port 3004",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -26,6 +26,7 @@
   "devDependencies": {
     "json-server": "^0.17.3",
     "react-query": "^3.39.3",
+    "swiper": "^10.0.4",
     "tailwind-merge": "^1.13.2"
   }
 }
