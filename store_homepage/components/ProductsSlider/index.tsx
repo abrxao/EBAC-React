@@ -7,8 +7,6 @@ import axios from "axios";
 
 // Import Swiper styles
 import "swiper/css";
-import LinkButton from "../LinkButton";
-import Image from "next/image";
 import ProductCard from "../ProductCard";
 import SkeletonCreator from "../SkeletonCreator";
 
@@ -17,11 +15,20 @@ interface ProductsSliderProps {
   id: string;
 }
 
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  src: string;
+  type: string;
+}
+
 const ProductsSlider: FunctionComponent<ProductsSliderProps> = ({
   url,
   id,
 }) => {
-  const { data: products, isLoading } = useQuery(id, async () => {
+  const { data: products, isLoading } = useQuery<[Product]>(id, async () => {
     const { data } = await axios.get(url);
     return data;
   });
@@ -36,7 +43,7 @@ const ProductsSlider: FunctionComponent<ProductsSliderProps> = ({
             />
           </div>
         ) : (
-          products.map((product, index) => {
+          products?.map((product, index) => {
             return (
               <SwiperSlide key={product.name}>
                 <ProductCard

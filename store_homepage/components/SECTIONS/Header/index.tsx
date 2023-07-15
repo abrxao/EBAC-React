@@ -16,10 +16,10 @@ const Header: FunctionComponent = () => {
       <Container className="flex justify-between">
         <div className="flex -space-x-2 xs:space-x-1 w-2/5">
           <MenuIcon>
-            <VscMenu size={24} fill="#000" />
+            <VscMenu size={22} fill="#000" />
           </MenuIcon>
-          <MenuIcon>
-            <PiHeartStraightBold size={24} fill="#000" />
+          <MenuIcon className="py-4">
+            <PiHeartStraightBold size={22} fill="#000" className="py-2px"/>
           </MenuIcon>
         </div>
 
@@ -30,16 +30,16 @@ const Header: FunctionComponent = () => {
         <div className="flex -space-x-2 justify-end xs:space-x-1 w-2/5">
           <MenuIcon>
             <Badge value={1}>
-              <LuUser size={24} color="#000" />
+              <LuUser size={22} color="#000" />
             </Badge>
           </MenuIcon>
 
           <MenuIcon>
-            <AiOutlineSearch size={24} fill="#000" />
+            <AiOutlineSearch size={22} fill="#000" />
           </MenuIcon>
 
           <MenuIcon>
-            <AiOutlineShopping size={24} fill="#000" />
+            <AiOutlineShopping size={22} fill="#000" />
           </MenuIcon>
         </div>
       </Container>
