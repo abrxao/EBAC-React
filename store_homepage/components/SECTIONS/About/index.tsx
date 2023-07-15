@@ -1,12 +1,7 @@
-"use client";
 import { FunctionComponent } from "react";
-import Image from "next/image";
 import Container from "../../Container";
 import Title from "@/components/Title";
 import Paragraph from "@/components/Paragraph";
-import FloatButton from "@/components/FloatButton";
-
-import { BsArrowRight } from "react-icons/bs";
 
 const About: FunctionComponent = () => {
   return (

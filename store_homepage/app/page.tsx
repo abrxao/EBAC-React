@@ -1,5 +1,6 @@
 import ProductsSlider from "@/components/ProductsSlider";
 import About from "@/components/SECTIONS/About";
+import Footer from "@/components/SECTIONS/Footer";
 import Header from "@/components/SECTIONS/Header";
 import HighlightsSection from "@/components/SECTIONS/HighlightsSection";
 import MainBanner from "@/components/SECTIONS/MainBanner";
@@ -15,6 +16,7 @@ export default function Home() {
       <HighlightsSection />
       <ProductsSection />
       <About />
+      <Footer />
     </main>
   );
 }
