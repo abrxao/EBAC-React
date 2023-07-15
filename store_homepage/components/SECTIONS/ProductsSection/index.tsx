@@ -44,7 +44,7 @@ const ProductsSection: FunctionComponent = () => {
             </Paragraph>
           </button>
           <div
-            className={`translate-x-0 -translate-y-2 duration-300 absolute ${
+            className={`translate-x-0 -translate-y-2 duration-300 absolute ease-out ${
               urlProducts !== "novidades" && "translate-x-32"
             }`}
           >
