@@ -12,7 +12,7 @@ module.exports = () => {
         type: "Originals",
       },
       {
-        id: 2,
+        id: 45,
         name: "Camisa 1 Autêntica Real Madrid 22/23",
         description: "very cool",
         price: 599,
@@ -20,7 +20,7 @@ module.exports = () => {
         type: "Performance",
       },
       {
-        id: 3,
+        id: 78,
         name: "Camisa 1 Real Madrid 23/24",
         description: "very cool",
         price: 399,
@@ -28,7 +28,7 @@ module.exports = () => {
         type: "Originals",
       },
       {
-        id: 4,
+        id: 13,
         name: "Tênis Adizero Adios Pro 3.0",
         description: "very cool",
         price: 1899,
@@ -52,7 +52,7 @@ module.exports = () => {
         type: "Originals",
       },
       {
-        id: 7,
+        id: 71,
         name: "Jaqueta Hino Real Madrid",
         description: "very cool",
         price: 699,
@@ -62,7 +62,7 @@ module.exports = () => {
     ],
     novidades: [
       {
-        id: 1,
+        id: 54,
         name: "Camisa 1 AS Roma 23/24",
         description: "very cool",
         price: 399,
@@ -90,11 +90,11 @@ module.exports = () => {
         name: "Tênis Forum Bold",
         description: "very cool",
         price: 1899,
-        src: "https://www.adidas.com.br/tenis-forum-bold/IG0285.html?cm_sp=SLOT-10.4-_-?_?_?_?_PRODUCT-CAROUSEL-NEW-ARRIVALS-DEFAULT-_-PRODUCTSELECTIONCAROUSEL-PRODUCT-CARD-_-731417",
+        src: "https://assets.adidas.com/images/w_600,f_auto,q_auto/d2e80e0374954f56a5946406d814ce08_9366/Tenis_Forum_Bold_Branco_IG0285_01_standard.jpg",
         type: "Originals",
       },
       {
-        id: 5,
+        id: 53,
         name: "Tênis Gazelle",
         description: "very cool",
         price: 599,
@@ -116,6 +116,48 @@ module.exports = () => {
         price: 1199,
         src: "https://assets.adidas.com/images/w_600,f_auto,q_auto/ef53d314449c45abb07ba9fac0033052_9366/Tenis_Ultraboost_Light_23_Branco_IE1689_HM1.jpg",
         type: "Running",
+      },
+    ],
+    colecoes: [
+      {
+        id: 1,
+        name: "Tênis Superstar",
+        description: "very cool",
+        price: 499,
+        src: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/7ed0855435194229a525aad6009a0497_9366/EG4958_01_standard.jpg",
+        type: "Originals",
+      },
+      {
+        id: 6,
+        name: "Tênis Forum 84 Low ADV",
+        description: "very cool",
+        price: 899,
+        src: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/eccff94a10764acab1aeaf1500fdb056_9366/HP9088_01_standard.jpg",
+        type: "Originals",
+      },
+      {
+        id: 10,
+        name: "Tênis Spli-On Superstar",
+        description: "very cool",
+        price: 399,
+        src: "https://assets.adidas.com/images/w_600,f_auto,q_auto/02b1557cadec4223919bab5900e84ba5_9366/Tenis_Slip-On_Superstar_Preto_EW2053_01_standard.jpg",
+        type: "Mulher Originals",
+      },
+      {
+        id: 4,
+        name: "Tênis Forum Bold",
+        description: "very cool",
+        price: 1899,
+        src: "https://assets.adidas.com/images/w_600,f_auto,q_auto/d2e80e0374954f56a5946406d814ce08_9366/Tenis_Forum_Bold_Branco_IG0285_01_standard.jpg",
+        type: "Originals",
+      },
+      {
+        id: 32,
+        name: "Vestido Adicolor Classics 3-Stripes Midi",
+        description: "very cool",
+        price: 399,
+        src: "https://assets.adidas.com/images/w_600,f_auto,q_auto/6d4b6eae937841e3a040afce01061507_9366/Vestido_Adicolor_Classics_3-Stripes_Midi_Preto_IK0439_21_model.jpg",
+        type: "Mulher Originals",
       },
     ],
   };

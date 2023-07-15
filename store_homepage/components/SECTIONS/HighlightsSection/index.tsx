@@ -9,7 +9,7 @@ const HighlightsSection: FunctionComponent = () => {
     <div>
       <Container className="mt-4 pr-0">
         <Title className="my-8">EM DESTAQUE</Title>
-        <ProductsSlider url={"http://localhost:3004/destaques"} />
+        <ProductsSlider id='destaques' url={"http://localhost:3004/destaques"} />
       </Container>
     </div>
   );

@@ -14,10 +14,14 @@ import SkeletonCreator from "../SkeletonCreator";
 
 interface ProductsSliderProps {
   url: string;
+  id: string;
 }
 
-const ProductsSlider: FunctionComponent<ProductsSliderProps> = ({url}) => {
-  const { data: products, isLoading } = useQuery("products", async () => {
+const ProductsSlider: FunctionComponent<ProductsSliderProps> = ({
+  url,
+  id,
+}) => {
+  const { data: products, isLoading } = useQuery(id, async () => {
     const { data } = await axios.get(url);
     return data;
   });
