@@ -14,7 +14,7 @@ const Header: FunctionComponent = () => {
   return (
     <header className="bg-white">
       <Container className="flex justify-between">
-        <div className="flex gap-2">
+        <div className="flex gap-2 w-2/5">
           <MenuIcon>
             <VscMenu size={24} fill="#000" />
           </MenuIcon>
@@ -27,7 +27,7 @@ const Header: FunctionComponent = () => {
           <Image src={adi_logo} alt="logo da adidas" width={52} />
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex justify-end gap-2 w-2/5">
           <MenuIcon>
             <Badge value={1}>
               <LuUser size={24} color="#000" />

@@ -12,7 +12,7 @@ import { BsArrowRight } from "react-icons/bs";
 const XCrazyFastSection: FunctionComponent = () => {
   return (
     <div>
-      <Image src={leoMessibanner} alt="banner Leo Messi" />
+      <Image src={leoMessibanner} alt="banner Leo Messi"/>
       <Container className="-mt-56">
         <Title className="mb-4">X CRAZYFAST</Title>
         <Paragraph>Feita para a velocidade</Paragraph>
