@@ -1,5 +1,6 @@
 import ProductsSlider from "@/components/ProductsSlider";
 import About from "@/components/SECTIONS/About";
+import AdiClubInviteSection from "@/components/SECTIONS/AdiClubInviteSection";
 import Footer from "@/components/SECTIONS/Footer";
 import Header from "@/components/SECTIONS/Header";
 import HighlightsSection from "@/components/SECTIONS/HighlightsSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <HighlightsSection />
       <ProductsSection />
       <About />
+      <AdiClubInviteSection />
       <Footer />
     </main>
   );
