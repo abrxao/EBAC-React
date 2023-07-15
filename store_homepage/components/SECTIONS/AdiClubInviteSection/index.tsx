@@ -8,8 +8,8 @@ import { BsArrowRight } from "react-icons/bs";
 const AdiClubInviteSection: FunctionComponent = () => {
   return (
     <section>
-      <Container className="p-8 bg-[#ebe53f] flex flex-col items-center">
-        <Title className="text-3xl text-center">
+      <Container className="p-8 bg-[#ede734] flex flex-col items-center">
+        <Title className="text-3xl text-center mb-4">
           ENTRE PARA O ADICLUB E GANHE 500 PONTOS RESGATÁVEIS
         </Title>
         <FloatButton>

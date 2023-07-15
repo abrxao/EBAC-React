@@ -11,16 +11,20 @@ const FloatButton: FunctionComponent<baseComponent> = ({
   children,
 }) => {
   return (
-    <span className={"border border-black"}>
-      <button
-        className={twMerge(
-          " bg-black -translate-x-2px -translate-y-2px w-full h-full text-white p-3 border-2 border-black active:translate-x-0 active:translate-y-0 duration-150 text-sm flex items-center gap-3 tracking-wider font-bold hover:text-white/50",
-          className
-        )}
-      >
-        {children}
-      </button>
-    </span>
+    <button
+      className="group"
+    >
+      <span className={"ring-1 ring-inset ring-black  flex"}>
+        <span
+          className={twMerge(
+            " bg-black -translate-x-1 -translate-y-1 text-white p-3 active:translate-x-0  active:translate-y-0 duration-150 text-sm flex items-center gap-3 tracking-wider font-bold hover:text-white/50",
+            className
+          )}
+        >
+          {children}
+        </span>
+      </span>
+    </button>
   );
 };
 export default FloatButton;
