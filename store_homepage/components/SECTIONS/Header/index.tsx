@@ -9,17 +9,23 @@ import Image from "next/image";
 import adi_logo from "@/public/adi_simbol.png";
 import Container from "../../Container";
 import Badge from "../../Badge";
+import useScrollDirection from "@/Hooks/useScrollDirection";
 
 const Header: FunctionComponent = () => {
+  const isOpen = useScrollDirection();
   return (
-    <header className="bg-white">
+    <header
+      className={`bg-white fixed w-full pt-1 -translate-y-1 duration-300 ${
+        !isOpen && "-translate-y-full"
+      }`}
+    >
       <Container className="flex justify-between">
         <div className="flex -space-x-2 xs:space-x-1 w-2/5">
           <MenuIcon>
             <VscMenu size={22} fill="#000" />
           </MenuIcon>
           <MenuIcon className="py-4">
-            <PiHeartStraightBold size={22} fill="#000" className="py-2px"/>
+            <PiHeartStraightBold size={22} fill="#000" className="py-2px" />
           </MenuIcon>
         </div>
 

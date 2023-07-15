@@ -10,7 +10,7 @@ import Paragraph from "@/components/Paragraph";
 
 const MainBanner: FunctionComponent = () => {
   return (
-    <div>
+    <div className="pt-16">
       <Image src={banner} alt="banner Geisa Ferreira" />
       <Container className="-mt-28 bg-light-gray pb-6">
         <Title>JOGUE ATÉ QUE NÃO POSSAM TE IGNORAR</Title>
