@@ -1,9 +1,11 @@
+"use client";
 import Image from "next/image";
 import { FunctionComponent } from "react";
 import Paragraph from "../Paragraph";
 import { PiHeartStraightBold } from "react-icons/pi";
+import useGlobalState from "@/stores/modalStore";
 
-interface ImageProps {
+interface ProductProps {
   src: string;
   description: string;
   price: number;
@@ -11,13 +13,15 @@ interface ImageProps {
   type?: string;
 }
 
-const ProductCard: FunctionComponent<ImageProps> = ({
+const ProductCard: FunctionComponent<ProductProps> = ({
   src,
   price,
   name,
   description,
   type,
 }) => {
+  const { setIsModalOpen } = useGlobalState();
+
   function formatCurrency(value: number) {
     const formattedValue = value.toLocaleString("pt-BR", {
       style: "currency",
@@ -31,9 +35,12 @@ const ProductCard: FunctionComponent<ImageProps> = ({
     <div className="group cursor-pointer">
       <div className="relative overflow-hidden">
         <Image src={src} alt={description} width={260} height={260} />
-        <div className="absolute top-6 right-4">
+        <button
+          className="absolute translate-x-full -translate-y-full top-1/4 right-1/4"
+          onClick={(e) => setIsModalOpen(true)}
+        >
           <PiHeartStraightBold size={20} />
-        </div>
+        </button>
 
         <Paragraph className="absolute scale-x-90 scale-y-105 -bottom-4 left-1 text-[12px] bg-white p-2px  group-hover:-bottom-2 duration-150 text-">
           {formatCurrency(price)}

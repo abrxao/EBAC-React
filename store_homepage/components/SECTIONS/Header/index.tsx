@@ -15,7 +15,7 @@ const Header: FunctionComponent = () => {
   const isOpen = useScrollDirection();
   return (
     <header
-      className={`bg-white fixed w-full pt-1 -translate-y-1 duration-300 ${
+      className={`bg-white fixed z-10 w-full pt-1 -translate-y-1 duration-300 ${
         !isOpen && "-translate-y-full"
       }`}
     >

@@ -7,6 +7,7 @@ import HighlightsSection from "@/components/SECTIONS/HighlightsSection";
 import MainBanner from "@/components/SECTIONS/MainBanner";
 import ProductsSection from "@/components/SECTIONS/ProductsSection";
 import XCrazyFastSection from "@/components/SECTIONS/XCrazyFastSection";
+import WishModal from "@/components/WishModal";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <AdiClubInviteSection />
       <Footer />
+      <WishModal />
     </main>
   );
 }
