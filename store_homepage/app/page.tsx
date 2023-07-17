@@ -1,3 +1,4 @@
+import NotAbleAlert from "@/components/NotAbleAlert";
 import ProductsSlider from "@/components/ProductsSlider";
 import About from "@/components/SECTIONS/About";
 import AdiClubInviteSection from "@/components/SECTIONS/AdiClubInviteSection";
@@ -15,12 +16,13 @@ export default function Home() {
       <Header />
       <MainBanner />
       <XCrazyFastSection />
-      <HighlightsSection />
       <ProductsSection />
+      <HighlightsSection />
       <About />
       <AdiClubInviteSection />
       <Footer />
       <WishModal />
+      <NotAbleAlert />
     </main>
   );
 }

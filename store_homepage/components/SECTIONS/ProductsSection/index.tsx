@@ -4,6 +4,7 @@ import Container from "../../Container";
 import ProductsSlider from "@/components/ProductsSlider";
 import Paragraph from "@/components/Paragraph";
 import { BsArrowRight } from "react-icons/bs";
+import LinkButton from "@/components/LinkButton";
 
 const ProductsSection: FunctionComponent = () => {
   const [urlProducts, setUrlProducts] = useState<string>("novidades");
@@ -44,7 +45,7 @@ const ProductsSection: FunctionComponent = () => {
             </Paragraph>
           </button>
           <div
-            className={`translate-x-0 -translate-y-2 duration-500 absolute ease-out ${
+            className={`translate-x-0 -translate-y-2 duration-300 absolute ease-out ${
               urlProducts !== "novidades" && "translate-x-32"
             }`}
           >
@@ -55,6 +56,7 @@ const ProductsSection: FunctionComponent = () => {
           id={urlProducts}
           url={`http://localhost:3004/${urlProducts}`}
         />
+        <LinkButton href="#">VER TUDO</LinkButton>
       </Container>
     </div>
   );
