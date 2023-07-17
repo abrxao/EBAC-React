@@ -9,7 +9,7 @@ const NotAbleAlert = () => {
   const { isAlertOpen, setIsAlertOpen } = useGlobalState();
   const animation = useMemo(() => {
     if (isAlertOpen) {
-      return "translate-x-1";
+      return "translate-x-0";
     } else {
       return "-translate-x-full";
     }
@@ -18,7 +18,7 @@ const NotAbleAlert = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsAlertOpen(false);
-    }, 1500);
+    }, 2200);
 
     return () => {
       clearTimeout(timeout);
@@ -26,7 +26,7 @@ const NotAbleAlert = () => {
   }, [isAlertOpen]);
 
   return (
-    <div className={`fixed top-0 z-50 p-1 duration-200  ${animation}`}>
+    <div className={`fixed top-0 z-50 duration-300 ease-out ${animation}`}>
       <div className=" bg-black p-2 gap-6 flex justify-between items-center ">
         <div>
           <Title className="text-white text-xl">

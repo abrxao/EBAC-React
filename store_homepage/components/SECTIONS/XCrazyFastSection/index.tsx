@@ -21,7 +21,7 @@ const XCrazyFastSection: FunctionComponent = () => {
           <FloatButton onClick={(e) => setIsAlertOpen(true)}>
             COMPRAR AGORA <BsArrowRight size={22} />
           </FloatButton>
-          <FloatButton>
+          <FloatButton onClick={(e) => setIsAlertOpen(true)}>
             VER MAIS <BsArrowRight size={22} />
           </FloatButton>
         </div>

@@ -156,5 +156,23 @@
       "src": "https://assets.adidas.com/images/w_600,f_auto,q_auto/6d4b6eae937841e3a040afce01061507_9366/Vestido_Adicolor_Classics_3-Stripes_Midi_Preto_IK0439_21_model.jpg",
       "type": "Mulher Originals"
     }
+  ],
+  "users": [
+    {
+      "email": "a@a.com",
+      "favs": [
+        "tenis",
+        "tenis2"
+      ],
+      "id": 1
+    },
+    {
+      "email": "a@a2.com",
+      "favs": [
+        "tenis2",
+        "tenis"
+      ],
+      "id": 2
+    }
   ]
 }

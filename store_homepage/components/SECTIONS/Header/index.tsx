@@ -10,9 +10,11 @@ import adi_logo from "@/public/adi_simbol.png";
 import Container from "../../Container";
 import Badge from "../../Badge";
 import useScrollDirection from "@/Hooks/useScrollDirection";
+import useGlobalState from "@/stores/modalStore";
 
 const Header: FunctionComponent = () => {
   const isOpen = useScrollDirection();
+  const { setIsAlertOpen } = useGlobalState();
   return (
     <header
       className={`bg-white fixed z-10 w-full pt-1 -translate-y-1 duration-300 ${
@@ -34,17 +36,17 @@ const Header: FunctionComponent = () => {
         </div>
 
         <div className="flex -space-x-2 justify-end xs:space-x-1 w-2/5">
-          <MenuIcon>
+          <MenuIcon onClick={(e) => setIsAlertOpen(true)}>
             <Badge value={1}>
               <LuUser size={22} color="#000" />
             </Badge>
           </MenuIcon>
 
-          <MenuIcon>
+          <MenuIcon onClick={(e) => setIsAlertOpen(true)}>
             <AiOutlineSearch size={22} fill="#000" />
           </MenuIcon>
 
-          <MenuIcon>
+          <MenuIcon onClick={(e) => setIsAlertOpen(true)}>
             <AiOutlineShopping size={22} fill="#000" />
           </MenuIcon>
         </div>

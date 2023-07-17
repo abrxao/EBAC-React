@@ -2,10 +2,7 @@
 import React, { FunctionComponent } from "react";
 import { useQuery } from "react-query";
 import { Swiper, SwiperSlide } from "swiper/react";
-import tenis from "../../public/images/white_shoe.avif";
 import axios from "axios";
-
-// Import Swiper styles
 import "swiper/css";
 import ProductCard from "../ProductCard";
 import SkeletonCreator from "../SkeletonCreator";
@@ -39,7 +36,7 @@ const ProductsSlider: FunctionComponent<ProductsSliderProps> = ({
           <div className="flex gap-2 mb-12">
             <SkeletonCreator
               className="aspect-square w-2/5 shrink-0"
-              quantity={5}
+              quantity={3}
             />
           </div>
         ) : (
