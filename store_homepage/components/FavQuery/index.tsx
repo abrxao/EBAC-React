@@ -37,7 +37,8 @@ const FavsQuery = ({ email }: { email: string }) => {
           <Title className="text-xl xs:text-3xl text-center">
             PRODUTOS FAVORITOS
           </Title>
-          {user?.favs.length == undefined && (
+          
+          {!user?.favs.length && (
             <Paragraph className="text-gray-400 text-center">
               sem favoritos por enquanto
             </Paragraph>

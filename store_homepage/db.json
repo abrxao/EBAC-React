@@ -160,8 +160,101 @@
   "users": [
     {
       "email": "a@a.com",
-      "favs": [],
+      "favs": [
+        {
+          "id": 54,
+          "name": "Camisa 1 AS Roma 23/24",
+          "description": "very cool",
+          "price": 399,
+          "src": "https://assets.adidas.com/images/w_600,f_auto,q_auto/76b710e9dfde4d52ad851fddb2037f1f_9366/Camisa_1_AS_Roma_23-24_Vermelho_IK7166_HM1.jpg",
+          "type": "Homem Futebol"
+        },
+        {
+          "id": 53,
+          "name": "Tênis Gazelle",
+          "description": "very cool",
+          "price": 599,
+          "src": "https://assets.adidas.com/images/w_600,f_auto,q_auto/1fd66cab542b45e999b486e8f1f5c57f_9366/Tenis_Gazelle_Azul_IG4987_01_standard.jpg",
+          "type": "Originals"
+        }
+      ],
       "id": 1
+    },
+    {
+      "email": "aasas@a.com",
+      "favs": [
+        {
+          "id": 71,
+          "name": "Jaqueta Hino Real Madrid",
+          "description": "very cool",
+          "price": 699,
+          "src": "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/7e44e2484eb249939d2eaf2a010ff7de_9366/HT6458_21_model.jpg",
+          "type": "Performance"
+        },
+        {
+          "id": 54,
+          "name": "Camisa 1 AS Roma 23/24",
+          "description": "very cool",
+          "price": 399,
+          "src": "https://assets.adidas.com/images/w_600,f_auto,q_auto/76b710e9dfde4d52ad851fddb2037f1f_9366/Camisa_1_AS_Roma_23-24_Vermelho_IK7166_HM1.jpg",
+          "type": "Homem Futebol"
+        },
+        {
+          "id": 4,
+          "name": "Tênis Forum Bold",
+          "description": "very cool",
+          "price": 799,
+          "src": "https://assets.adidas.com/images/w_600,f_auto,q_auto/d2e80e0374954f56a5946406d814ce08_9366/Tenis_Forum_Bold_Branco_IG0285_01_standard.jpg",
+          "type": "Originals"
+        },
+        {
+          "id": 7,
+          "name": "Tênis Ultraboost Light 23",
+          "description": "very cool",
+          "price": 1199,
+          "src": "https://assets.adidas.com/images/w_600,f_auto,q_auto/ef53d314449c45abb07ba9fac0033052_9366/Tenis_Ultraboost_Light_23_Branco_IE1689_HM1.jpg",
+          "type": "Running"
+        },
+        {
+          "id": 1,
+          "name": "Tênis Superstar",
+          "description": "very cool",
+          "price": 499,
+          "src": "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/7ed0855435194229a525aad6009a0497_9366/EG4958_01_standard.jpg",
+          "type": "Originals"
+        },
+        {
+          "id": 5,
+          "name": "Tênis adidas 4S FWD",
+          "description": "very cool",
+          "price": 1899,
+          "src": "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/03492fcfa4774e2d84f4af5b0104e0df_9366/GY2499_HM4.jpg",
+          "type": "Performance"
+        },
+        {
+          "id": 6,
+          "name": "Tênis Forum 84 Low ADV",
+          "description": "very cool",
+          "price": 899,
+          "src": "https://assets.adidas.com/images/w_600,f_auto,q_auto/4d4f226aeaf44ce7b9febe977c734883_9366/Tenis_Forum_84_Low_Branco_IE9936_01_standard.jpg",
+          "type": "Originals"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "email": "asdasdad@ac.om",
+      "favs": [
+        {
+          "id": 13,
+          "name": "Tênis Adizero Adios Pro 3.0",
+          "description": "very cool",
+          "price": 1899,
+          "src": "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto,fl_lossy,c_fill,g_auto/459c0f454f1445aa9cb6af1f00bd2d12_9366/GW4249_01_standard.jpg",
+          "type": "Performance"
+        }
+      ],
+      "id": 3
     }
   ]
 }

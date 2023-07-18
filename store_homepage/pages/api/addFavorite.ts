@@ -53,12 +53,19 @@ const addUserFavorite = async (
         };
       }
     }
-    await axios.patch(`http://localhost:3004/users/${user.id}`, {
-      favs: [...user.favs],
-    });
+    if (product !== null) {
+      await axios.patch(`http://localhost:3004/users/${user.id}`, {
+        favs: [...user.favs, product],
+      });
+      return {
+        success: false,
+        message: "O produto foi adicionado a sua lista de favoritos",
+      };
+    }
+
     return {
       success: false,
-      message: "O produto foi adicionado a sua lista de favoritos",
+      message: "Erro desconhecido",
     };
   } catch (error) {
     return {
