@@ -37,7 +37,11 @@ const FavsQuery = ({ email }: { email: string }) => {
           <Title className="text-xl xs:text-3xl text-center">
             PRODUTOS FAVORITOS
           </Title>
-          {user?.favs.length === 0 && <Paragraph className="text-gray-400 text-center">sem favoritos por enquanto</Paragraph>}
+          {user?.favs.length == undefined && (
+            <Paragraph className="text-gray-400 text-center">
+              sem favoritos por enquanto
+            </Paragraph>
+          )}
           {user?.favs.map((elem, index) => {
             return <FavCard product={elem} key={elem.name} />;
           })}

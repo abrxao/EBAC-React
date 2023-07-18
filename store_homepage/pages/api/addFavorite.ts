@@ -23,7 +23,7 @@ const addUserFavorite = async (
     const user = users.find((user) => user.email == email);
 
     if (user === undefined) {
-      if (product == null) {
+      if (product === null) {
         await axios.post(`http://localhost:3004/users`, {
           email: email,
           favs: [],
@@ -32,11 +32,13 @@ const addUserFavorite = async (
           success: false,
           message: "E-mail foi cadastrado",
         };
+      } else {
+        await axios.post(`http://localhost:3004/users`, {
+          email: email,
+          favs: [product],
+        });
       }
-      await axios.post(`http://localhost:3004/users`, {
-        email: email,
-        favs: [product],
-      });
+
       return {
         success: true,
         message: "E-mail cadastrado e produto enviado a sua lista de favoritos",
@@ -44,7 +46,7 @@ const addUserFavorite = async (
     }
 
     for (var i = 0; i < user?.favs.length; i++) {
-      if (user?.favs[i].name === product.name) {
+      if (user?.favs[i].name === product?.name) {
         return {
           success: false,
           message: "O produto já estava na lista de favoritos.",
@@ -52,7 +54,7 @@ const addUserFavorite = async (
       }
     }
     await axios.patch(`http://localhost:3004/users/${user.id}`, {
-      favs: [...user.favs, product],
+      favs: [...user.favs],
     });
     return {
       success: false,
