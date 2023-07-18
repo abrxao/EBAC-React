@@ -11,47 +11,60 @@ import Container from "../../Container";
 import Badge from "../../Badge";
 import useScrollDirection from "@/Hooks/useScrollDirection";
 import useGlobalState from "@/stores/modalStore";
+import MenuSideBar from "@/components/MenuSideBar";
 
 const Header: FunctionComponent = () => {
   const isOpen = useScrollDirection();
-  const { setIsAlertOpen } = useGlobalState();
+  const { setIsAlertOpen, setIsMenuOpen, setIsFavsBarOpen } = useGlobalState();
   return (
-    <header
-      className={`bg-white fixed z-10 w-full pt-1 -translate-y-1 duration-300 ${
-        !isOpen && "-translate-y-full"
-      }`}
-    >
-      <Container className="flex justify-between">
-        <div className="flex -space-x-2 xs:space-x-1 w-2/5">
-          <MenuIcon>
-            <VscMenu size={22} fill="#000" />
-          </MenuIcon>
-          <MenuIcon className="py-4">
-            <PiHeartStraightBold size={22} fill="#000" className="py-2px" />
-          </MenuIcon>
-        </div>
+    <>
+      <MenuSideBar />
+      <header
+        className={`bg-white fixed z-10 w-full pt-1 -translate-y-1 duration-300 ${
+          !isOpen && "-translate-y-full"
+        }`}
+      >
+        <Container className="flex justify-between">
+          <div className="flex -space-x-2 xs:space-x-1 w-2/5">
+            <MenuIcon
+              onClick={(e) => {
+                setIsMenuOpen(true);
+              }}
+            >
+              <VscMenu size={22} fill="#000" />
+            </MenuIcon>
+            <MenuIcon
+              className="py-4"
+              onClick={(e) => {
+                setIsFavsBarOpen(true);
+              }}
+            >
+              <PiHeartStraightBold size={22} fill="#000" className="py-2px" />
+            </MenuIcon>
+          </div>
 
-        <div className="aspect-square flex items-center">
-          <Image src={adi_logo} alt="logo da adidas" width={52} />
-        </div>
+          <div className="aspect-square flex items-center">
+            <Image src={adi_logo} alt="logo da adidas" width={52} />
+          </div>
 
-        <div className="flex -space-x-2 justify-end xs:space-x-1 w-2/5">
-          <MenuIcon onClick={(e) => setIsAlertOpen(true)}>
-            <Badge value={1}>
-              <LuUser size={22} color="#000" />
-            </Badge>
-          </MenuIcon>
+          <div className="flex -space-x-2 justify-end xs:space-x-1 w-2/5">
+            <MenuIcon onClick={(e) => setIsAlertOpen(true)}>
+              <Badge value={1}>
+                <LuUser size={22} color="#000" />
+              </Badge>
+            </MenuIcon>
 
-          <MenuIcon onClick={(e) => setIsAlertOpen(true)}>
-            <AiOutlineSearch size={22} fill="#000" />
-          </MenuIcon>
+            <MenuIcon onClick={(e) => setIsAlertOpen(true)}>
+              <AiOutlineSearch size={22} fill="#000" />
+            </MenuIcon>
 
-          <MenuIcon onClick={(e) => setIsAlertOpen(true)}>
-            <AiOutlineShopping size={22} fill="#000" />
-          </MenuIcon>
-        </div>
-      </Container>
-    </header>
+            <MenuIcon onClick={(e) => setIsAlertOpen(true)}>
+              <AiOutlineShopping size={22} fill="#000" />
+            </MenuIcon>
+          </div>
+        </Container>
+      </header>
+    </>
   );
 };
 

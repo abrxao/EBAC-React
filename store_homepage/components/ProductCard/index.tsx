@@ -5,7 +5,7 @@ import Paragraph from "../Paragraph";
 import { PiHeartStraightBold } from "react-icons/pi";
 import useGlobalState from "@/stores/modalStore";
 
-interface ProductProps {
+export interface Product {
   src: string;
   description: string;
   price: number;
@@ -13,14 +13,13 @@ interface ProductProps {
   type?: string;
 }
 
-const ProductCard: FunctionComponent<ProductProps> = ({
-  src,
-  price,
-  name,
-  description,
-  type,
-}) => {
-  const { setIsModalOpen } = useGlobalState();
+interface ProductProps {
+  product: Product;
+}
+
+const ProductCard: FunctionComponent<ProductProps> = ({ product }) => {
+  const { setIsModalOpen, setFavProdSelect } = useGlobalState();
+  const { src, name, description, price, type } = product;
 
   function formatCurrency(value: number) {
     const formattedValue = value.toLocaleString("pt-BR", {
@@ -37,7 +36,10 @@ const ProductCard: FunctionComponent<ProductProps> = ({
         <Image src={src} alt={description} width={260} height={260} />
         <button
           className="absolute translate-x-full -translate-y-full top-1/4 right-1/4"
-          onClick={(e) => setIsModalOpen(true)}
+          onClick={(e) => {
+            setIsModalOpen(true);
+            setFavProdSelect(product);
+          }}
         >
           <PiHeartStraightBold size={20} />
         </button>

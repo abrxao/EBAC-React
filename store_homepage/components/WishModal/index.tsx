@@ -9,6 +9,7 @@ import { MdCheck, MdClose } from "react-icons/md";
 import LinkButton from "../LinkButton";
 import useGlobalState from "@/stores/modalStore";
 import validEmail from "@/utils/validEmail";
+import axios from "axios";
 
 const WishModal = () => {
   const [email, setEmail] = useState<string>("");
@@ -16,13 +17,37 @@ const WishModal = () => {
     undefined
   );
   const [isChecked, setIsChecked] = useState<boolean>(false);
-  const { isModalOpen, setIsModalOpen } = useGlobalState();
+  const {
+    isModalOpen,
+    setIsModalOpen,
+    favProdSelect,
+    setLoggedEmail,
+    setIsActionMessageOpen,
+    setActionMessage,
+  } = useGlobalState();
   const formRef = useRef<HTMLInputElement | null>(null);
 
   function clickOutside(e: MouseEvent) {
     const target = e.target;
     if (target == formRef.current) {
       setIsModalOpen(false);
+    }
+  }
+
+  async function sendForms() {
+    setLoggedEmail("");
+    if (validEmail(email)) {
+      const { data } = await axios.post(
+        "http://localhost:3000/api/addFavorite",
+        {
+          email: email,
+          product: favProdSelect,
+        }
+      );
+      setIsModalOpen(false);
+      setLoggedEmail(email);
+      setActionMessage(data.message);
+      setIsActionMessageOpen(true);
     }
   }
 
@@ -84,7 +109,7 @@ const WishModal = () => {
         <div className="mt-4">
           <FloatButton
             className="w-full"
-            onClick={(e) => console.log(email)}
+            onClick={(e) => sendForms()}
             disabled={!isValidEmail}
           >
             CONTINUAR <BsArrowRight size={22} />

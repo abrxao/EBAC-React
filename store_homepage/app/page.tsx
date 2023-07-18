@@ -1,3 +1,5 @@
+import ActionComplete from "@/components/ActionComplete";
+import FavsSideBar from "@/components/FavsSideBar";
 import NotAbleAlert from "@/components/NotAbleAlert";
 import ProductsSlider from "@/components/ProductsSlider";
 import About from "@/components/SECTIONS/About";
@@ -12,7 +14,7 @@ import WishModal from "@/components/WishModal";
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <Header />
       <MainBanner />
       <XCrazyFastSection />
@@ -23,6 +25,8 @@ export default function Home() {
       <Footer />
       <WishModal />
       <NotAbleAlert />
+      <FavsSideBar />
+      <ActionComplete />
     </main>
   );
 }

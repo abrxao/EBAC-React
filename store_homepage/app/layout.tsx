@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { adiFont } from "./fonts";
 import { QueryClientProvider } from "react-query";
 import { queryClient } from "@/utils/queryClient";
+import useGlobalState from "@/stores/modalStore";
 
 export const metadata: Metadata = {
   title: "adidas Brasil Loja",
@@ -17,10 +17,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const { isMenuOpen, isFavsBarOpen } = useGlobalState();
   return (
     <QueryClientProvider client={queryClient}>
       <html lang="en">
-        <body className={adiFont.className}>{children}</body>
+        <body
+          className={`${(isMenuOpen || isFavsBarOpen) && "overflow-hidden"} ${
+            adiFont.className
+          }`}
+        >
+          {children}
+        </body>
       </html>
     </QueryClientProvider>
   );

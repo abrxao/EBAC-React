@@ -1,32 +1,41 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
+import { Product } from "@/components/ProductCard";
 
 type ApiResponse = {
   success: boolean;
   message: string;
 };
 
-type User = {
+export type User = {
   id: number;
   email: string;
-  favs: [string];
+  favs: [Product];
 };
 
 const addUserFavorite = async (
   email: string,
-  productName: string
+  product: Product
 ): Promise<ApiResponse> => {
   try {
     const response = await axios.get(`http://localhost:3004/users`);
     const users = response.data as User[];
-    const user = users.filter((user) => {
-      if (user.email == email) return user;
-    });
+    const user = users.find((user) => user.email == email);
 
-    if (user[0] == null) {
+    if (user === undefined) {
+      if (product == null) {
+        await axios.post(`http://localhost:3004/users`, {
+          email: email,
+          favs: [],
+        });
+        return {
+          success: false,
+          message: "E-mail foi cadastrado",
+        };
+      }
       await axios.post(`http://localhost:3004/users`, {
         email: email,
-        favs: [productName],
+        favs: [product],
       });
       return {
         success: true,
@@ -34,18 +43,21 @@ const addUserFavorite = async (
       };
     }
 
-    if (user[0]?.favs.includes(productName)) {
-      return {
-        success: false,
-        message: "O produto já está na lista de favoritos.",
-      };
+    for (var i = 0; i < user?.favs.length; i++) {
+      if (user?.favs[i].name === product.name) {
+        return {
+          success: false,
+          message: "O produto já estava na lista de favoritos.",
+        };
+      }
     }
-
-    await axios.patch(`http://localhost:3004/users/${user[0].id}`, {
-      favs: [...user[0].favs, productName],
+    await axios.patch(`http://localhost:3004/users/${user.id}`, {
+      favs: [...user.favs, product],
     });
-
-    return { success: true, message: "Produto adicionado aos favoritos." };
+    return {
+      success: false,
+      message: "O produto foi adicionado a sua lista de favoritos",
+    };
   } catch (error) {
     return {
       success: false,
@@ -59,10 +71,10 @@ const addFavorite = async (
   res: NextApiResponse<ApiResponse>
 ): Promise<void> => {
   if (req.method === "POST") {
-    const { email, productName } = req.body;
+    const { email, product } = req.body;
 
     try {
-      const response = await addUserFavorite(email, productName);
+      const response = await addUserFavorite(email, product);
       res.status(200).json(response);
     } catch (error) {
       res.status(500).json({ success: false, message: "Erro no servidor." });

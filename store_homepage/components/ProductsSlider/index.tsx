@@ -44,11 +44,7 @@ const ProductsSlider: FunctionComponent<ProductsSliderProps> = ({
             return (
               <SwiperSlide key={product.name}>
                 <ProductCard
-                  name={product.name}
-                  description={product.description}
-                  src={product.src}
-                  price={product.price}
-                  type={product.type}
+                  product={product}
                 />
               </SwiperSlide>
             );
