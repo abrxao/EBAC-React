@@ -60,18 +60,18 @@ class Form extends React.Component {
         documentNumber: this.state.answers.document.number ?? null,
       },
     });
-    this.handleRefresh()
+    this.handleRefresh();
   }
 
   async handleRefresh() {
     const { data } = await axios({
       method: "get",
-      url: "/api/get_docs"
+      url: "/api/get_docs",
     });
     this.setState({
       ...this.state,
-      results: data
-    })
+      results: data,
+    });
   }
 
   handleSubmit(e) {
@@ -175,6 +175,7 @@ class Form extends React.Component {
   }
 
   render() {
+    this.handleRefresh();
     return (
       <div className="webApp">
         <div className="Form">
@@ -297,7 +298,7 @@ class Form extends React.Component {
             <ModalErro visible={this.state.modal} />
           </form>
         </div>
-        {this.state.status && (
+        {this.state.results && (
           <AnswersArea className="answersArea" results={this.state.results} />
         )}
         {<ModalAnswer></ModalAnswer>}

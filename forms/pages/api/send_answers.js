@@ -13,7 +13,7 @@ export default async function send_answer(req, res) {
         documentNumber: req.body.documentNumber,
       };
       await db.collection("forms").insertOne(body);
-      res.status(200).json({success: 'sended'})
+      res.status(200).json({ success: "sended" });
     }
   } catch (e) {
     console.error(e);

@@ -1,6 +1,7 @@
-import { MongoClient} from "mongodb";
+import { MongoClient } from "mongodb";
 
-const db_url = process.env.DATABASE_URL;
+const db_url =
+  "mongodb+srv://forms:teste12345@portfolio.ca5u4ya.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(db_url, {
   useNewUrlParser: true,
@@ -8,7 +9,7 @@ const client = new MongoClient(db_url, {
 });
 
 export async function connect() {
-    await client.connect();
-    const db = client.db("portfolio");
-    return {db, client}
-};
+  await client.connect();
+  const db = client.db("portfolio");
+  return { db, client };
+}
