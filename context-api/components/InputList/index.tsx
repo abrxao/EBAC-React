@@ -4,22 +4,26 @@ import { useCounter } from "../Context/Context";
 
 interface InputList {
   id?: string;
-  disable?: boolean;
+  disabled?: boolean;
   title?: string;
   isLoading?: boolean;
   options: string[];
 }
 
-const InputList: React.FC<InputList> = ({ id, disable, title, isLoading, options}) => {
+const InputList: React.FC<InputList> = ({
+  id,
+  disabled,
+  title,
+  isLoading,
+  options,
+}) => {
   const amountValue = useCounter();
   if (!amountValue) {
     return null;
   }
   const { from, changeFrom } = amountValue;
   return (
-    <div
-      id={id}
-    >
+    <div id={id}>
       <label htmlFor="autoType">
         {title}
         {isLoading && (
@@ -29,8 +33,9 @@ const InputList: React.FC<InputList> = ({ id, disable, title, isLoading, options
         )}
         <Select
           name={id}
-          onChange={e=>changeFrom(e.target.value)}
+          onChange={(e) => changeFrom(e.target.value)}
           style={{ display: isLoading ? "none" : "block" }}
+          disabled={disabled}
         >
           {options.map((tipo, index) => {
             return (

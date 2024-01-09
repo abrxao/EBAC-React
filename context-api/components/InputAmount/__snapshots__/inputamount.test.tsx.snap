@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputAmount mask 1`] = `
+<div>
+  <input
+    class="chakra-input css-0"
+    data-testid="testid"
+    id="amount-input"
+    maxlength="30"
+    type="number"
+  />
+  <button
+    class="chakra-button css-1ner6ak"
+    type="button"
+  >
+    convert
+  </button>
+</div>
+`;
