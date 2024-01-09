@@ -22,7 +22,7 @@ const CounterContext = createContext<CounterContextValue | undefined>(
 );
 
 const CounterProvider: FunctionComponent<PropsWithChildren> = ({
-  children
+  children,
 }) => {
   const [value, setValue] = useState(0);
   const [from, setFrom] = useState("");
@@ -55,7 +55,7 @@ const CounterProvider: FunctionComponent<PropsWithChildren> = ({
           amount: amount,
           to: toCoin,
           result: res.data.result,
-          date:Date.now(),
+          date: Date.now(),
         };
 
         if (localStorage.conversions) {
@@ -123,6 +123,7 @@ const CounterProvider: FunctionComponent<PropsWithChildren> = ({
         onClick={handleSend}
         w="100%"
         bg="#A17C6B"
+        data-testid="send-button"
         color="#f2f2f2"
         _hover={{
           bg: "#A17C6B",

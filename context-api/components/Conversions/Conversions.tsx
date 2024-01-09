@@ -2,6 +2,7 @@ import { Box, keyframes, Text, Tooltip } from "@chakra-ui/react";
 import { FunctionComponent, useEffect, useState } from "react";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 import { useConversion } from "../ConversionContext/ConversionContext";
+import ShowDate from "../ShowDate/ShowDate";
 
 const animationKeyframes = keyframes`
   0% { background-position-x: 0%}
@@ -29,37 +30,11 @@ const Conversions: FunctionComponent = () => {
     }
   }, []);
 
-  const handleDate: Function = (ms: number) => {
-    const date = new Date(ms);
-
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    const month: string = months[date.getMonth()];
-    const day: number = date.getDate();
-    const year: number = date.getFullYear();
-    return (
-      <>
-        {day} of {month} of <b>{year}</b>
-        <br />
-      </>
-    );
-  };
   return (
     <Box maxWidth="sm" w="100%">
       {!convertContext?.conversions && (
         <Box>
+          {/*@ts-ignore*/}
           <Text>SEM RESPOSTAS AINDA</Text>
         </Box>
       )}
@@ -143,7 +118,7 @@ const Conversions: FunctionComponent = () => {
                   width={"calc(100% - 2em)"}
                 >
                   <Text fontSize={[".55em", ".8em"]} textAlign="center">
-                    {handleDate(conversion.date)}
+                    {<ShowDate ms={conversion.date} />}
                   </Text>
                 </Box>
 
@@ -176,6 +151,7 @@ const Conversions: FunctionComponent = () => {
                       overflow="hidden"
                       whiteSpace="nowrap"
                       textOverflow="ellipsis"
+                      data-testid="killer"
                     >
                       {conversion.result.toLocaleString("en-US", {
                         style: "currency",

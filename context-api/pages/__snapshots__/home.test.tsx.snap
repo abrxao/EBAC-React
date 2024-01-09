@@ -1,0 +1,1837 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home user tests home snapshot 1`] = `
+<div>
+  <main>
+    <div
+      class="chakra-container css-1ks91x5"
+    >
+      <div
+        class="css-1ft2k3r"
+      >
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            Amount
+          </p>
+          <input
+            class="chakra-input css-1kp110w"
+            data-testid="testid"
+            id="amount-input"
+            maxlength="30"
+          />
+        </div>
+        <div
+          class="css-0"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            From
+          </p>
+          <div>
+            <label
+              for="autoType"
+            >
+              <div
+                class="chakra-select__wrapper css-42b2qy"
+              >
+                <select
+                  class="chakra-select css-7p9xsp"
+                  data-testid="input-list-from"
+                >
+                  <option
+                    value=" "
+                  >
+                     
+                  </option>
+                  <option
+                    value="Afghani (AFN)"
+                  >
+                    Afghani (AFN)
+                  </option>
+                  <option
+                    value="Ariary malgaxe (MGA)"
+                  >
+                    Ariary malgaxe (MGA)
+                  </option>
+                  <option
+                    value="Baht (THB)"
+                  >
+                    Baht (THB)
+                  </option>
+                  <option
+                    value="Balboa (PAB)"
+                  >
+                    Balboa (PAB)
+                  </option>
+                  <option
+                    value="Birr etíope (ETB)"
+                  >
+                    Birr etíope (ETB)
+                  </option>
+                  <option
+                    value="Bolívar (VEF)"
+                  >
+                    Bolívar (VEF)
+                  </option>
+                  <option
+                    value="Boliviano (BOB)"
+                  >
+                    Boliviano (BOB)
+                  </option>
+                  <option
+                    value="Cabo Verde Escudo (CVE)"
+                  >
+                    Cabo Verde Escudo (CVE)
+                  </option>
+                  <option
+                    value="CFA Franc BCEAO (XOF)"
+                  >
+                    CFA Franc BCEAO (XOF)
+                  </option>
+                  <option
+                    value="CFA Franc BEAC (XAF)"
+                  >
+                    CFA Franc BEAC (XAF)
+                  </option>
+                  <option
+                    value="CFA Franco BCEAO (XOF)"
+                  >
+                    CFA Franco BCEAO (XOF)
+                  </option>
+                  <option
+                    value="CFP Franc (XPF)"
+                  >
+                    CFP Franc (XPF)
+                  </option>
+                  <option
+                    value="Colon da Costa Rica (CRC)"
+                  >
+                    Colon da Costa Rica (CRC)
+                  </option>
+                  <option
+                    value="Cólon de El Salvador (SVC)"
+                  >
+                    Cólon de El Salvador (SVC)
+                  </option>
+                  <option
+                    value="Cordoba Oro (NIO)"
+                  >
+                    Cordoba Oro (NIO)
+                  </option>
+                  <option
+                    value="Coroa da Islândia (ISK)"
+                  >
+                    Coroa da Islândia (ISK)
+                  </option>
+                  <option
+                    value="Coroa dinamarquesa (DKK)"
+                  >
+                    Coroa dinamarquesa (DKK)
+                  </option>
+                  <option
+                    value="Coroa norueguesa (NOK)"
+                  >
+                    Coroa norueguesa (NOK)
+                  </option>
+                  <option
+                    value="Coroa Tcheca (CZK)"
+                  >
+                    Coroa Tcheca (CZK)
+                  </option>
+                  <option
+                    value="Dalasi (GMD)"
+                  >
+                    Dalasi (GMD)
+                  </option>
+                  <option
+                    value="Denar (MKD)"
+                  >
+                    Denar (MKD)
+                  </option>
+                  <option
+                    value="Dinar argelino (DZD)"
+                  >
+                    Dinar argelino (DZD)
+                  </option>
+                  <option
+                    value="Dinar da Líbia (LYD)"
+                  >
+                    Dinar da Líbia (LYD)
+                  </option>
+                  <option
+                    value="Dinar do Bahrein (BHD)"
+                  >
+                    Dinar do Bahrein (BHD)
+                  </option>
+                  <option
+                    value="Dinar iraquiano (IQD)"
+                  >
+                    Dinar iraquiano (IQD)
+                  </option>
+                  <option
+                    value="Dinar jordaniano (JOD)"
+                  >
+                    Dinar jordaniano (JOD)
+                  </option>
+                  <option
+                    value="Dinar sérvio (RSD)"
+                  >
+                    Dinar sérvio (RSD)
+                  </option>
+                  <option
+                    value="Dinar tunisino (TND)"
+                  >
+                    Dinar tunisino (TND)
+                  </option>
+                  <option
+                    value="Dirham marroquino (MAD)"
+                  >
+                    Dirham marroquino (MAD)
+                  </option>
+                  <option
+                    value="Dobra (STD)"
+                  >
+                    Dobra (STD)
+                  </option>
+                  <option
+                    value="Dólar americano (USD)"
+                  >
+                    Dólar americano (USD)
+                  </option>
+                  <option
+                    value="Dólar australiano (AUD)"
+                  >
+                    Dólar australiano (AUD)
+                  </option>
+                  <option
+                    value="Dólar canadense (CAD)"
+                  >
+                    Dólar canadense (CAD)
+                  </option>
+                  <option
+                    value="Dólar da Guiana (GYD)"
+                  >
+                    Dólar da Guiana (GYD)
+                  </option>
+                  <option
+                    value="Dólar da Nova Zelândia (NZD)"
+                  >
+                    Dólar da Nova Zelândia (NZD)
+                  </option>
+                  <option
+                    value="Dólar das Bahamas (BSD)"
+                  >
+                    Dólar das Bahamas (BSD)
+                  </option>
+                  <option
+                    value="Dólar das Bermudas (BMD)"
+                  >
+                    Dólar das Bermudas (BMD)
+                  </option>
+                  <option
+                    value="Dólar das Ilhas Caimã (KYD)"
+                  >
+                    Dólar das Ilhas Caimã (KYD)
+                  </option>
+                  <option
+                    value="Dólar das Ilhas Salomão (SBD)"
+                  >
+                    Dólar das Ilhas Salomão (SBD)
+                  </option>
+                  <option
+                    value="Dólar de Barbados (BBD)"
+                  >
+                    Dólar de Barbados (BBD)
+                  </option>
+                  <option
+                    value="Dólar de Belize (BZD)"
+                  >
+                    Dólar de Belize (BZD)
+                  </option>
+                  <option
+                    value="Dólar de Fiji (FJD)"
+                  >
+                    Dólar de Fiji (FJD)
+                  </option>
+                  <option
+                    value="Dólar de Hong Kong (HKD)"
+                  >
+                    Dólar de Hong Kong (HKD)
+                  </option>
+                  <option
+                    value="Dólar de Singapura (SGD)"
+                  >
+                    Dólar de Singapura (SGD)
+                  </option>
+                  <option
+                    value="Dólar de Trinidad e Tobago (TTD)"
+                  >
+                    Dólar de Trinidad e Tobago (TTD)
+                  </option>
+                  <option
+                    value="Dólar do Caribe Oriental (XCD)"
+                  >
+                    Dólar do Caribe Oriental (XCD)
+                  </option>
+                  <option
+                    value="Dólar do Suriname (SRD)"
+                  >
+                    Dólar do Suriname (SRD)
+                  </option>
+                  <option
+                    value="Dólar dos EUA (dia seguinte) (USN)"
+                  >
+                    Dólar dos EUA (dia seguinte) (USN)
+                  </option>
+                  <option
+                    value="Dólar jamaicano (JMD)"
+                  >
+                    Dólar jamaicano (JMD)
+                  </option>
+                  <option
+                    value="Dólar liberiano (LRD)"
+                  >
+                    Dólar liberiano (LRD)
+                  </option>
+                  <option
+                    value="Dólar zimbabuano (ZWL)"
+                  >
+                    Dólar zimbabuano (ZWL)
+                  </option>
+                  <option
+                    value="Dólares da Namíbia (NAD)"
+                  >
+                    Dólares da Namíbia (NAD)
+                  </option>
+                  <option
+                    value="Dólares de Brunei (BND)"
+                  >
+                    Dólares de Brunei (BND)
+                  </option>
+                  <option
+                    value="Dong (VND)"
+                  >
+                    Dong (VND)
+                  </option>
+                  <option
+                    value="Dram armênio (AMD)"
+                  >
+                    Dram armênio (AMD)
+                  </option>
+                  <option
+                    value="Euro (EUR)"
+                  >
+                    Euro (EUR)
+                  </option>
+                  <option
+                    value="Florim de Aruba (AWG)"
+                  >
+                    Florim de Aruba (AWG)
+                  </option>
+                  <option
+                    value="Forint (HUF)"
+                  >
+                    Forint (HUF)
+                  </option>
+                  <option
+                    value="Fran congolesac (CDF)"
+                  >
+                    Fran congolesac (CDF)
+                  </option>
+                  <option
+                    value="Franco Comor (KMF)"
+                  >
+                    Franco Comor (KMF)
+                  </option>
+                  <option
+                    value="Franco da Guiné (GNF)"
+                  >
+                    Franco da Guiné (GNF)
+                  </option>
+                  <option
+                    value="Franco do Burundi (BIF)"
+                  >
+                    Franco do Burundi (BIF)
+                  </option>
+                  <option
+                    value="Franco do Djibouti (DJF)"
+                  >
+                    Franco do Djibouti (DJF)
+                  </option>
+                  <option
+                    value="Franco suíço (CHF)"
+                  >
+                    Franco suíço (CHF)
+                  </option>
+                  <option
+                    value="Ghana Cedi (GHS)"
+                  >
+                    Ghana Cedi (GHS)
+                  </option>
+                  <option
+                    value="Gourde (HTG)"
+                  >
+                    Gourde (HTG)
+                  </option>
+                  <option
+                    value="Guarani (PYG)"
+                  >
+                    Guarani (PYG)
+                  </option>
+                  <option
+                    value="Guilder das Antilhas Holandesas (ANG)"
+                  >
+                    Guilder das Antilhas Holandesas (ANG)
+                  </option>
+                  <option
+                    value="Hryvnia (UAH)"
+                  >
+                    Hryvnia (UAH)
+                  </option>
+                  <option
+                    value="Iene (JPY)"
+                  >
+                    Iene (JPY)
+                  </option>
+                  <option
+                    value="Kina (PGK)"
+                  >
+                    Kina (PGK)
+                  </option>
+                  <option
+                    value="Kip (LAK)"
+                  >
+                    Kip (LAK)
+                  </option>
+                  <option
+                    value="Kuna (HRK)"
+                  >
+                    Kuna (HRK)
+                  </option>
+                  <option
+                    value="Kwacha (MWK)"
+                  >
+                    Kwacha (MWK)
+                  </option>
+                  <option
+                    value="Kwanza (AOA)"
+                  >
+                    Kwanza (AOA)
+                  </option>
+                  <option
+                    value="Kyat (MMK)"
+                  >
+                    Kyat (MMK)
+                  </option>
+                  <option
+                    value="Lari (GEL)"
+                  >
+                    Lari (GEL)
+                  </option>
+                  <option
+                    value="Leão da Moldávia (MDL)"
+                  >
+                    Leão da Moldávia (MDL)
+                  </option>
+                  <option
+                    value="Lek (ALL)"
+                  >
+                    Lek (ALL)
+                  </option>
+                  <option
+                    value="Lempira (HNL)"
+                  >
+                    Lempira (HNL)
+                  </option>
+                  <option
+                    value="Leone (SLL)"
+                  >
+                    Leone (SLL)
+                  </option>
+                  <option
+                    value="Leu romeno (RON)"
+                  >
+                    Leu romeno (RON)
+                  </option>
+                  <option
+                    value="Lev búlgaro (BGN)"
+                  >
+                    Lev búlgaro (BGN)
+                  </option>
+                  <option
+                    value="Libra das Ilhas Falkland (FKP)"
+                  >
+                    Libra das Ilhas Falkland (FKP)
+                  </option>
+                  <option
+                    value="Libra De Gibraltar (GIP)"
+                  >
+                    Libra De Gibraltar (GIP)
+                  </option>
+                  <option
+                    value="Libra egípcia (EGP)"
+                  >
+                    Libra egípcia (EGP)
+                  </option>
+                  <option
+                    value="Libra esterlina (GBP)"
+                  >
+                    Libra esterlina (GBP)
+                  </option>
+                  <option
+                    value="Libra libanesa (LBP)"
+                  >
+                    Libra libanesa (LBP)
+                  </option>
+                  <option
+                    value="Libra síria (SYP)"
+                  >
+                    Libra síria (SYP)
+                  </option>
+                  <option
+                    value="Libra sudanesa (SDG)"
+                  >
+                    Libra sudanesa (SDG)
+                  </option>
+                  <option
+                    value="Libra Sudanesa do Sul (SSP)"
+                  >
+                    Libra Sudanesa do Sul (SSP)
+                  </option>
+                  <option
+                    value="Lilangeni (SZL)"
+                  >
+                    Lilangeni (SZL)
+                  </option>
+                  <option
+                    value="Lira turca (TRY)"
+                  >
+                    Lira turca (TRY)
+                  </option>
+                  <option
+                    value="Loti (LSL)"
+                  >
+                    Loti (LSL)
+                  </option>
+                  <option
+                    value="Manat do Azerbaijão (AZN)"
+                  >
+                    Manat do Azerbaijão (AZN)
+                  </option>
+                  <option
+                    value="Marco conversível (BAM)"
+                  >
+                    Marco conversível (BAM)
+                  </option>
+                  <option
+                    value="Moçambique Metical (MZN)"
+                  >
+                    Moçambique Metical (MZN)
+                  </option>
+                  <option
+                    value="Moroccan Dirham (MAD)"
+                  >
+                    Moroccan Dirham (MAD)
+                  </option>
+                  <option
+                    value="Mvdol (BOV)"
+                  >
+                    Mvdol (BOV)
+                  </option>
+                  <option
+                    value="Naira (NGN)"
+                  >
+                    Naira (NGN)
+                  </option>
+                  <option
+                    value="Nakfa (ERN)"
+                  >
+                    Nakfa (ERN)
+                  </option>
+                  <option
+                    value="Ngultrum (BTN)"
+                  >
+                    Ngultrum (BTN)
+                  </option>
+                  <option
+                    value="Novo dólar de Taiwan (TWD)"
+                  >
+                    Novo dólar de Taiwan (TWD)
+                  </option>
+                  <option
+                    value="Novo Sheqel israelense (ILS)"
+                  >
+                    Novo Sheqel israelense (ILS)
+                  </option>
+                  <option
+                    value="Nuevo Sol (PEN)"
+                  >
+                    Nuevo Sol (PEN)
+                  </option>
+                  <option
+                    value="O Dinar do Kuwait (KWD)"
+                  >
+                    O Dinar do Kuwait (KWD)
+                  </option>
+                  <option
+                    value="Ouguiya (MRO)"
+                  >
+                    Ouguiya (MRO)
+                  </option>
+                  <option
+                    value="Pa’anga (TOP)"
+                  >
+                    Pa’anga (TOP)
+                  </option>
+                  <option
+                    value="Pataca (MOP)"
+                  >
+                    Pataca (MOP)
+                  </option>
+                  <option
+                    value="Peso argentino (ARS)"
+                  >
+                    Peso argentino (ARS)
+                  </option>
+                  <option
+                    value="Peso chileno (CLP)"
+                  >
+                    Peso chileno (CLP)
+                  </option>
+                  <option
+                    value="Peso colombiano (COP)"
+                  >
+                    Peso colombiano (COP)
+                  </option>
+                  <option
+                    value="Peso conversível (CUC)"
+                  >
+                    Peso conversível (CUC)
+                  </option>
+                  <option
+                    value="Peso cubano (CUP)"
+                  >
+                    Peso cubano (CUP)
+                  </option>
+                  <option
+                    value="Peso dominicano (DOP)"
+                  >
+                    Peso dominicano (DOP)
+                  </option>
+                  <option
+                    value="Peso filipino (PHP)"
+                  >
+                    Peso filipino (PHP)
+                  </option>
+                  <option
+                    value="Peso mexicano (MXN)"
+                  >
+                    Peso mexicano (MXN)
+                  </option>
+                  <option
+                    value="Peso Uruguaio (UYU)"
+                  >
+                    Peso Uruguaio (UYU)
+                  </option>
+                  <option
+                    value="Peso Uruguaio em Unidades Indexadas (URUIURUI) (UYI)"
+                  >
+                    Peso Uruguaio em Unidades Indexadas (URUIURUI) (UYI)
+                  </option>
+                  <option
+                    value="Pula (BWP)"
+                  >
+                    Pula (BWP)
+                  </option>
+                  <option
+                    value="Qatari Rial (QAR)"
+                  >
+                    Qatari Rial (QAR)
+                  </option>
+                  <option
+                    value="Quetzal (GTQ)"
+                  >
+                    Quetzal (GTQ)
+                  </option>
+                  <option
+                    value="Rand (ZAR)"
+                  >
+                    Rand (ZAR)
+                  </option>
+                  <option
+                    value="Real brasileiro (BRL)"
+                  >
+                    Real brasileiro (BRL)
+                  </option>
+                  <option
+                    value="Rial Iemenita (YER)"
+                  >
+                    Rial Iemenita (YER)
+                  </option>
+                  <option
+                    value="Rial iraniano (IRR)"
+                  >
+                    Rial iraniano (IRR)
+                  </option>
+                  <option
+                    value="Rial Omani (OMR)"
+                  >
+                    Rial Omani (OMR)
+                  </option>
+                  <option
+                    value="Rial saudita (SAR)"
+                  >
+                    Rial saudita (SAR)
+                  </option>
+                  <option
+                    value="Riel (KHR)"
+                  >
+                    Riel (KHR)
+                  </option>
+                  <option
+                    value="Ringgit da Malásia (MYR)"
+                  >
+                    Ringgit da Malásia (MYR)
+                  </option>
+                  <option
+                    value="Rublo bielorrusso (BYR)"
+                  >
+                    Rublo bielorrusso (BYR)
+                  </option>
+                  <option
+                    value="rublo russo (RUB)"
+                  >
+                    Rublo russo (RUB)
+                  </option>
+                  <option
+                    value="Rufiyaa (MVR)"
+                  >
+                    Rufiyaa (MVR)
+                  </option>
+                  <option
+                    value="Rupia (IDR)"
+                  >
+                    Rupia (IDR)
+                  </option>
+                  <option
+                    value="Rupia das Maurícias (MUR)"
+                  >
+                    Rupia das Maurícias (MUR)
+                  </option>
+                  <option
+                    value="Rúpia das Seychelles (SCR)"
+                  >
+                    Rúpia das Seychelles (SCR)
+                  </option>
+                  <option
+                    value="Rupia do Paquistão (PKR)"
+                  >
+                    Rupia do Paquistão (PKR)
+                  </option>
+                  <option
+                    value="Rupia do Sri Lanka (LKR)"
+                  >
+                    Rupia do Sri Lanka (LKR)
+                  </option>
+                  <option
+                    value="Rupia indiana (INR)"
+                  >
+                    Rupia indiana (INR)
+                  </option>
+                  <option
+                    value="Rupia nepalesa (NPR)"
+                  >
+                    Rupia nepalesa (NPR)
+                  </option>
+                  <option
+                    value="Rwanda Franc (RWF)"
+                  >
+                    Rwanda Franc (RWF)
+                  </option>
+                  <option
+                    value="Saint Helena Pound (SHP)"
+                  >
+                    Saint Helena Pound (SHP)
+                  </option>
+                  <option
+                    value="SDR (Special Drawing Right) (XDR)"
+                  >
+                    SDR (Special Drawing Right) (XDR)
+                  </option>
+                  <option
+                    value="Shilling Somali (SOS)"
+                  >
+                    Shilling Somali (SOS)
+                  </option>
+                  <option
+                    value="Som (KGS)"
+                  >
+                    Som (KGS)
+                  </option>
+                  <option
+                    value="Soma do Uzbequistão (UZS)"
+                  >
+                    Soma do Uzbequistão (UZS)
+                  </option>
+                  <option
+                    value="Somoni (TJS)"
+                  >
+                    Somoni (TJS)
+                  </option>
+                  <option
+                    value="Sucre (XSU)"
+                  >
+                    Sucre (XSU)
+                  </option>
+                  <option
+                    value="Swedish Krona (SEK)"
+                  >
+                    Swedish Krona (SEK)
+                  </option>
+                  <option
+                    value="Taka (BDT)"
+                  >
+                    Taka (BDT)
+                  </option>
+                  <option
+                    value="Tala (WST)"
+                  >
+                    Tala (WST)
+                  </option>
+                  <option
+                    value="Tenge (KZT)"
+                  >
+                    Tenge (KZT)
+                  </option>
+                  <option
+                    value="Tugrik (MNT)"
+                  >
+                    Tugrik (MNT)
+                  </option>
+                  <option
+                    value="Turcomenistão New Manat (TMT)"
+                  >
+                    Turcomenistão New Manat (TMT)
+                  </option>
+                  <option
+                    value="UAE Dirham (AED)"
+                  >
+                    UAE Dirham (AED)
+                  </option>
+                  <option
+                    value="Unidad de Fomento (CLF)"
+                  >
+                    Unidad de Fomento (CLF)
+                  </option>
+                  <option
+                    value="Unidade de Conta do ADB (XUA)"
+                  >
+                    Unidade de Conta do ADB (XUA)
+                  </option>
+                  <option
+                    value="Unidade de Investimento Mexicana (UDI) (MXV)"
+                  >
+                    Unidade de Investimento Mexicana (UDI) (MXV)
+                  </option>
+                  <option
+                    value="Unidade de Valor Real (COU)"
+                  >
+                    Unidade de Valor Real (COU)
+                  </option>
+                  <option
+                    value="Vatu (VUV)"
+                  >
+                    Vatu (VUV)
+                  </option>
+                  <option
+                    value="WIR Euro (CHE)"
+                  >
+                    WIR Euro (CHE)
+                  </option>
+                  <option
+                    value="WIR Franc (CHW)"
+                  >
+                    WIR Franc (CHW)
+                  </option>
+                  <option
+                    value="Won (KRW)"
+                  >
+                    Won (KRW)
+                  </option>
+                  <option
+                    value="Won norte-coreano (KPW)"
+                  >
+                    Won norte-coreano (KPW)
+                  </option>
+                  <option
+                    value="Xelim da Tanzânia (TZS)"
+                  >
+                    Xelim da Tanzânia (TZS)
+                  </option>
+                  <option
+                    value="Xelim de Uganda (UGX)"
+                  >
+                    Xelim de Uganda (UGX)
+                  </option>
+                  <option
+                    value="Xelim do Quênia (KES)"
+                  >
+                    Xelim do Quênia (KES)
+                  </option>
+                  <option
+                    value="Yuan Renminbi (CNY)"
+                  >
+                    Yuan Renminbi (CNY)
+                  </option>
+                  <option
+                    value="Zambian Kwacha (ZMW)"
+                  >
+                    Zambian Kwacha (ZMW)
+                  </option>
+                  <option
+                    value="Zloty (PLN)"
+                  >
+                    Zloty (PLN)
+                  </option>
+                </select>
+                <div
+                  class="chakra-select__icon-wrapper css-iohxn1"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="chakra-select__icon"
+                    focusable="false"
+                    role="presentation"
+                    style="width: 1em; height: 1em; color: currentColor;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div
+          class="css-t6mvr8"
+        >
+          <p
+            class="chakra-text css-0"
+          >
+            To
+          </p>
+          <div>
+            <label
+              for="autoType"
+            >
+              <div
+                class="chakra-select__wrapper css-42b2qy"
+              >
+                <select
+                  class="chakra-select css-7p9xsp"
+                  data-testid="input-list-to"
+                >
+                  <option
+                    value=" "
+                  >
+                     
+                  </option>
+                  <option
+                    value="Afghani (AFN)"
+                  >
+                    Afghani (AFN)
+                  </option>
+                  <option
+                    value="Ariary malgaxe (MGA)"
+                  >
+                    Ariary malgaxe (MGA)
+                  </option>
+                  <option
+                    value="Baht (THB)"
+                  >
+                    Baht (THB)
+                  </option>
+                  <option
+                    value="Balboa (PAB)"
+                  >
+                    Balboa (PAB)
+                  </option>
+                  <option
+                    value="Birr etíope (ETB)"
+                  >
+                    Birr etíope (ETB)
+                  </option>
+                  <option
+                    value="Bolívar (VEF)"
+                  >
+                    Bolívar (VEF)
+                  </option>
+                  <option
+                    value="Boliviano (BOB)"
+                  >
+                    Boliviano (BOB)
+                  </option>
+                  <option
+                    value="Cabo Verde Escudo (CVE)"
+                  >
+                    Cabo Verde Escudo (CVE)
+                  </option>
+                  <option
+                    value="CFA Franc BCEAO (XOF)"
+                  >
+                    CFA Franc BCEAO (XOF)
+                  </option>
+                  <option
+                    value="CFA Franc BEAC (XAF)"
+                  >
+                    CFA Franc BEAC (XAF)
+                  </option>
+                  <option
+                    value="CFA Franco BCEAO (XOF)"
+                  >
+                    CFA Franco BCEAO (XOF)
+                  </option>
+                  <option
+                    value="CFP Franc (XPF)"
+                  >
+                    CFP Franc (XPF)
+                  </option>
+                  <option
+                    value="Colon da Costa Rica (CRC)"
+                  >
+                    Colon da Costa Rica (CRC)
+                  </option>
+                  <option
+                    value="Cólon de El Salvador (SVC)"
+                  >
+                    Cólon de El Salvador (SVC)
+                  </option>
+                  <option
+                    value="Cordoba Oro (NIO)"
+                  >
+                    Cordoba Oro (NIO)
+                  </option>
+                  <option
+                    value="Coroa da Islândia (ISK)"
+                  >
+                    Coroa da Islândia (ISK)
+                  </option>
+                  <option
+                    value="Coroa dinamarquesa (DKK)"
+                  >
+                    Coroa dinamarquesa (DKK)
+                  </option>
+                  <option
+                    value="Coroa norueguesa (NOK)"
+                  >
+                    Coroa norueguesa (NOK)
+                  </option>
+                  <option
+                    value="Coroa Tcheca (CZK)"
+                  >
+                    Coroa Tcheca (CZK)
+                  </option>
+                  <option
+                    value="Dalasi (GMD)"
+                  >
+                    Dalasi (GMD)
+                  </option>
+                  <option
+                    value="Denar (MKD)"
+                  >
+                    Denar (MKD)
+                  </option>
+                  <option
+                    value="Dinar argelino (DZD)"
+                  >
+                    Dinar argelino (DZD)
+                  </option>
+                  <option
+                    value="Dinar da Líbia (LYD)"
+                  >
+                    Dinar da Líbia (LYD)
+                  </option>
+                  <option
+                    value="Dinar do Bahrein (BHD)"
+                  >
+                    Dinar do Bahrein (BHD)
+                  </option>
+                  <option
+                    value="Dinar iraquiano (IQD)"
+                  >
+                    Dinar iraquiano (IQD)
+                  </option>
+                  <option
+                    value="Dinar jordaniano (JOD)"
+                  >
+                    Dinar jordaniano (JOD)
+                  </option>
+                  <option
+                    value="Dinar sérvio (RSD)"
+                  >
+                    Dinar sérvio (RSD)
+                  </option>
+                  <option
+                    value="Dinar tunisino (TND)"
+                  >
+                    Dinar tunisino (TND)
+                  </option>
+                  <option
+                    value="Dirham marroquino (MAD)"
+                  >
+                    Dirham marroquino (MAD)
+                  </option>
+                  <option
+                    value="Dobra (STD)"
+                  >
+                    Dobra (STD)
+                  </option>
+                  <option
+                    value="Dólar americano (USD)"
+                  >
+                    Dólar americano (USD)
+                  </option>
+                  <option
+                    value="Dólar australiano (AUD)"
+                  >
+                    Dólar australiano (AUD)
+                  </option>
+                  <option
+                    value="Dólar canadense (CAD)"
+                  >
+                    Dólar canadense (CAD)
+                  </option>
+                  <option
+                    value="Dólar da Guiana (GYD)"
+                  >
+                    Dólar da Guiana (GYD)
+                  </option>
+                  <option
+                    value="Dólar da Nova Zelândia (NZD)"
+                  >
+                    Dólar da Nova Zelândia (NZD)
+                  </option>
+                  <option
+                    value="Dólar das Bahamas (BSD)"
+                  >
+                    Dólar das Bahamas (BSD)
+                  </option>
+                  <option
+                    value="Dólar das Bermudas (BMD)"
+                  >
+                    Dólar das Bermudas (BMD)
+                  </option>
+                  <option
+                    value="Dólar das Ilhas Caimã (KYD)"
+                  >
+                    Dólar das Ilhas Caimã (KYD)
+                  </option>
+                  <option
+                    value="Dólar das Ilhas Salomão (SBD)"
+                  >
+                    Dólar das Ilhas Salomão (SBD)
+                  </option>
+                  <option
+                    value="Dólar de Barbados (BBD)"
+                  >
+                    Dólar de Barbados (BBD)
+                  </option>
+                  <option
+                    value="Dólar de Belize (BZD)"
+                  >
+                    Dólar de Belize (BZD)
+                  </option>
+                  <option
+                    value="Dólar de Fiji (FJD)"
+                  >
+                    Dólar de Fiji (FJD)
+                  </option>
+                  <option
+                    value="Dólar de Hong Kong (HKD)"
+                  >
+                    Dólar de Hong Kong (HKD)
+                  </option>
+                  <option
+                    value="Dólar de Singapura (SGD)"
+                  >
+                    Dólar de Singapura (SGD)
+                  </option>
+                  <option
+                    value="Dólar de Trinidad e Tobago (TTD)"
+                  >
+                    Dólar de Trinidad e Tobago (TTD)
+                  </option>
+                  <option
+                    value="Dólar do Caribe Oriental (XCD)"
+                  >
+                    Dólar do Caribe Oriental (XCD)
+                  </option>
+                  <option
+                    value="Dólar do Suriname (SRD)"
+                  >
+                    Dólar do Suriname (SRD)
+                  </option>
+                  <option
+                    value="Dólar dos EUA (dia seguinte) (USN)"
+                  >
+                    Dólar dos EUA (dia seguinte) (USN)
+                  </option>
+                  <option
+                    value="Dólar jamaicano (JMD)"
+                  >
+                    Dólar jamaicano (JMD)
+                  </option>
+                  <option
+                    value="Dólar liberiano (LRD)"
+                  >
+                    Dólar liberiano (LRD)
+                  </option>
+                  <option
+                    value="Dólar zimbabuano (ZWL)"
+                  >
+                    Dólar zimbabuano (ZWL)
+                  </option>
+                  <option
+                    value="Dólares da Namíbia (NAD)"
+                  >
+                    Dólares da Namíbia (NAD)
+                  </option>
+                  <option
+                    value="Dólares de Brunei (BND)"
+                  >
+                    Dólares de Brunei (BND)
+                  </option>
+                  <option
+                    value="Dong (VND)"
+                  >
+                    Dong (VND)
+                  </option>
+                  <option
+                    value="Dram armênio (AMD)"
+                  >
+                    Dram armênio (AMD)
+                  </option>
+                  <option
+                    value="Euro (EUR)"
+                  >
+                    Euro (EUR)
+                  </option>
+                  <option
+                    value="Florim de Aruba (AWG)"
+                  >
+                    Florim de Aruba (AWG)
+                  </option>
+                  <option
+                    value="Forint (HUF)"
+                  >
+                    Forint (HUF)
+                  </option>
+                  <option
+                    value="Fran congolesac (CDF)"
+                  >
+                    Fran congolesac (CDF)
+                  </option>
+                  <option
+                    value="Franco Comor (KMF)"
+                  >
+                    Franco Comor (KMF)
+                  </option>
+                  <option
+                    value="Franco da Guiné (GNF)"
+                  >
+                    Franco da Guiné (GNF)
+                  </option>
+                  <option
+                    value="Franco do Burundi (BIF)"
+                  >
+                    Franco do Burundi (BIF)
+                  </option>
+                  <option
+                    value="Franco do Djibouti (DJF)"
+                  >
+                    Franco do Djibouti (DJF)
+                  </option>
+                  <option
+                    value="Franco suíço (CHF)"
+                  >
+                    Franco suíço (CHF)
+                  </option>
+                  <option
+                    value="Ghana Cedi (GHS)"
+                  >
+                    Ghana Cedi (GHS)
+                  </option>
+                  <option
+                    value="Gourde (HTG)"
+                  >
+                    Gourde (HTG)
+                  </option>
+                  <option
+                    value="Guarani (PYG)"
+                  >
+                    Guarani (PYG)
+                  </option>
+                  <option
+                    value="Guilder das Antilhas Holandesas (ANG)"
+                  >
+                    Guilder das Antilhas Holandesas (ANG)
+                  </option>
+                  <option
+                    value="Hryvnia (UAH)"
+                  >
+                    Hryvnia (UAH)
+                  </option>
+                  <option
+                    value="Iene (JPY)"
+                  >
+                    Iene (JPY)
+                  </option>
+                  <option
+                    value="Kina (PGK)"
+                  >
+                    Kina (PGK)
+                  </option>
+                  <option
+                    value="Kip (LAK)"
+                  >
+                    Kip (LAK)
+                  </option>
+                  <option
+                    value="Kuna (HRK)"
+                  >
+                    Kuna (HRK)
+                  </option>
+                  <option
+                    value="Kwacha (MWK)"
+                  >
+                    Kwacha (MWK)
+                  </option>
+                  <option
+                    value="Kwanza (AOA)"
+                  >
+                    Kwanza (AOA)
+                  </option>
+                  <option
+                    value="Kyat (MMK)"
+                  >
+                    Kyat (MMK)
+                  </option>
+                  <option
+                    value="Lari (GEL)"
+                  >
+                    Lari (GEL)
+                  </option>
+                  <option
+                    value="Leão da Moldávia (MDL)"
+                  >
+                    Leão da Moldávia (MDL)
+                  </option>
+                  <option
+                    value="Lek (ALL)"
+                  >
+                    Lek (ALL)
+                  </option>
+                  <option
+                    value="Lempira (HNL)"
+                  >
+                    Lempira (HNL)
+                  </option>
+                  <option
+                    value="Leone (SLL)"
+                  >
+                    Leone (SLL)
+                  </option>
+                  <option
+                    value="Leu romeno (RON)"
+                  >
+                    Leu romeno (RON)
+                  </option>
+                  <option
+                    value="Lev búlgaro (BGN)"
+                  >
+                    Lev búlgaro (BGN)
+                  </option>
+                  <option
+                    value="Libra das Ilhas Falkland (FKP)"
+                  >
+                    Libra das Ilhas Falkland (FKP)
+                  </option>
+                  <option
+                    value="Libra De Gibraltar (GIP)"
+                  >
+                    Libra De Gibraltar (GIP)
+                  </option>
+                  <option
+                    value="Libra egípcia (EGP)"
+                  >
+                    Libra egípcia (EGP)
+                  </option>
+                  <option
+                    value="Libra esterlina (GBP)"
+                  >
+                    Libra esterlina (GBP)
+                  </option>
+                  <option
+                    value="Libra libanesa (LBP)"
+                  >
+                    Libra libanesa (LBP)
+                  </option>
+                  <option
+                    value="Libra síria (SYP)"
+                  >
+                    Libra síria (SYP)
+                  </option>
+                  <option
+                    value="Libra sudanesa (SDG)"
+                  >
+                    Libra sudanesa (SDG)
+                  </option>
+                  <option
+                    value="Libra Sudanesa do Sul (SSP)"
+                  >
+                    Libra Sudanesa do Sul (SSP)
+                  </option>
+                  <option
+                    value="Lilangeni (SZL)"
+                  >
+                    Lilangeni (SZL)
+                  </option>
+                  <option
+                    value="Lira turca (TRY)"
+                  >
+                    Lira turca (TRY)
+                  </option>
+                  <option
+                    value="Loti (LSL)"
+                  >
+                    Loti (LSL)
+                  </option>
+                  <option
+                    value="Manat do Azerbaijão (AZN)"
+                  >
+                    Manat do Azerbaijão (AZN)
+                  </option>
+                  <option
+                    value="Marco conversível (BAM)"
+                  >
+                    Marco conversível (BAM)
+                  </option>
+                  <option
+                    value="Moçambique Metical (MZN)"
+                  >
+                    Moçambique Metical (MZN)
+                  </option>
+                  <option
+                    value="Moroccan Dirham (MAD)"
+                  >
+                    Moroccan Dirham (MAD)
+                  </option>
+                  <option
+                    value="Mvdol (BOV)"
+                  >
+                    Mvdol (BOV)
+                  </option>
+                  <option
+                    value="Naira (NGN)"
+                  >
+                    Naira (NGN)
+                  </option>
+                  <option
+                    value="Nakfa (ERN)"
+                  >
+                    Nakfa (ERN)
+                  </option>
+                  <option
+                    value="Ngultrum (BTN)"
+                  >
+                    Ngultrum (BTN)
+                  </option>
+                  <option
+                    value="Novo dólar de Taiwan (TWD)"
+                  >
+                    Novo dólar de Taiwan (TWD)
+                  </option>
+                  <option
+                    value="Novo Sheqel israelense (ILS)"
+                  >
+                    Novo Sheqel israelense (ILS)
+                  </option>
+                  <option
+                    value="Nuevo Sol (PEN)"
+                  >
+                    Nuevo Sol (PEN)
+                  </option>
+                  <option
+                    value="O Dinar do Kuwait (KWD)"
+                  >
+                    O Dinar do Kuwait (KWD)
+                  </option>
+                  <option
+                    value="Ouguiya (MRO)"
+                  >
+                    Ouguiya (MRO)
+                  </option>
+                  <option
+                    value="Pa’anga (TOP)"
+                  >
+                    Pa’anga (TOP)
+                  </option>
+                  <option
+                    value="Pataca (MOP)"
+                  >
+                    Pataca (MOP)
+                  </option>
+                  <option
+                    value="Peso argentino (ARS)"
+                  >
+                    Peso argentino (ARS)
+                  </option>
+                  <option
+                    value="Peso chileno (CLP)"
+                  >
+                    Peso chileno (CLP)
+                  </option>
+                  <option
+                    value="Peso colombiano (COP)"
+                  >
+                    Peso colombiano (COP)
+                  </option>
+                  <option
+                    value="Peso conversível (CUC)"
+                  >
+                    Peso conversível (CUC)
+                  </option>
+                  <option
+                    value="Peso cubano (CUP)"
+                  >
+                    Peso cubano (CUP)
+                  </option>
+                  <option
+                    value="Peso dominicano (DOP)"
+                  >
+                    Peso dominicano (DOP)
+                  </option>
+                  <option
+                    value="Peso filipino (PHP)"
+                  >
+                    Peso filipino (PHP)
+                  </option>
+                  <option
+                    value="Peso mexicano (MXN)"
+                  >
+                    Peso mexicano (MXN)
+                  </option>
+                  <option
+                    value="Peso Uruguaio (UYU)"
+                  >
+                    Peso Uruguaio (UYU)
+                  </option>
+                  <option
+                    value="Peso Uruguaio em Unidades Indexadas (URUIURUI) (UYI)"
+                  >
+                    Peso Uruguaio em Unidades Indexadas (URUIURUI) (UYI)
+                  </option>
+                  <option
+                    value="Pula (BWP)"
+                  >
+                    Pula (BWP)
+                  </option>
+                  <option
+                    value="Qatari Rial (QAR)"
+                  >
+                    Qatari Rial (QAR)
+                  </option>
+                  <option
+                    value="Quetzal (GTQ)"
+                  >
+                    Quetzal (GTQ)
+                  </option>
+                  <option
+                    value="Rand (ZAR)"
+                  >
+                    Rand (ZAR)
+                  </option>
+                  <option
+                    value="Real brasileiro (BRL)"
+                  >
+                    Real brasileiro (BRL)
+                  </option>
+                  <option
+                    value="Rial Iemenita (YER)"
+                  >
+                    Rial Iemenita (YER)
+                  </option>
+                  <option
+                    value="Rial iraniano (IRR)"
+                  >
+                    Rial iraniano (IRR)
+                  </option>
+                  <option
+                    value="Rial Omani (OMR)"
+                  >
+                    Rial Omani (OMR)
+                  </option>
+                  <option
+                    value="Rial saudita (SAR)"
+                  >
+                    Rial saudita (SAR)
+                  </option>
+                  <option
+                    value="Riel (KHR)"
+                  >
+                    Riel (KHR)
+                  </option>
+                  <option
+                    value="Ringgit da Malásia (MYR)"
+                  >
+                    Ringgit da Malásia (MYR)
+                  </option>
+                  <option
+                    value="Rublo bielorrusso (BYR)"
+                  >
+                    Rublo bielorrusso (BYR)
+                  </option>
+                  <option
+                    value="rublo russo (RUB)"
+                  >
+                    Rublo russo (RUB)
+                  </option>
+                  <option
+                    value="Rufiyaa (MVR)"
+                  >
+                    Rufiyaa (MVR)
+                  </option>
+                  <option
+                    value="Rupia (IDR)"
+                  >
+                    Rupia (IDR)
+                  </option>
+                  <option
+                    value="Rupia das Maurícias (MUR)"
+                  >
+                    Rupia das Maurícias (MUR)
+                  </option>
+                  <option
+                    value="Rúpia das Seychelles (SCR)"
+                  >
+                    Rúpia das Seychelles (SCR)
+                  </option>
+                  <option
+                    value="Rupia do Paquistão (PKR)"
+                  >
+                    Rupia do Paquistão (PKR)
+                  </option>
+                  <option
+                    value="Rupia do Sri Lanka (LKR)"
+                  >
+                    Rupia do Sri Lanka (LKR)
+                  </option>
+                  <option
+                    value="Rupia indiana (INR)"
+                  >
+                    Rupia indiana (INR)
+                  </option>
+                  <option
+                    value="Rupia nepalesa (NPR)"
+                  >
+                    Rupia nepalesa (NPR)
+                  </option>
+                  <option
+                    value="Rwanda Franc (RWF)"
+                  >
+                    Rwanda Franc (RWF)
+                  </option>
+                  <option
+                    value="Saint Helena Pound (SHP)"
+                  >
+                    Saint Helena Pound (SHP)
+                  </option>
+                  <option
+                    value="SDR (Special Drawing Right) (XDR)"
+                  >
+                    SDR (Special Drawing Right) (XDR)
+                  </option>
+                  <option
+                    value="Shilling Somali (SOS)"
+                  >
+                    Shilling Somali (SOS)
+                  </option>
+                  <option
+                    value="Som (KGS)"
+                  >
+                    Som (KGS)
+                  </option>
+                  <option
+                    value="Soma do Uzbequistão (UZS)"
+                  >
+                    Soma do Uzbequistão (UZS)
+                  </option>
+                  <option
+                    value="Somoni (TJS)"
+                  >
+                    Somoni (TJS)
+                  </option>
+                  <option
+                    value="Sucre (XSU)"
+                  >
+                    Sucre (XSU)
+                  </option>
+                  <option
+                    value="Swedish Krona (SEK)"
+                  >
+                    Swedish Krona (SEK)
+                  </option>
+                  <option
+                    value="Taka (BDT)"
+                  >
+                    Taka (BDT)
+                  </option>
+                  <option
+                    value="Tala (WST)"
+                  >
+                    Tala (WST)
+                  </option>
+                  <option
+                    value="Tenge (KZT)"
+                  >
+                    Tenge (KZT)
+                  </option>
+                  <option
+                    value="Tugrik (MNT)"
+                  >
+                    Tugrik (MNT)
+                  </option>
+                  <option
+                    value="Turcomenistão New Manat (TMT)"
+                  >
+                    Turcomenistão New Manat (TMT)
+                  </option>
+                  <option
+                    value="UAE Dirham (AED)"
+                  >
+                    UAE Dirham (AED)
+                  </option>
+                  <option
+                    value="Unidad de Fomento (CLF)"
+                  >
+                    Unidad de Fomento (CLF)
+                  </option>
+                  <option
+                    value="Unidade de Conta do ADB (XUA)"
+                  >
+                    Unidade de Conta do ADB (XUA)
+                  </option>
+                  <option
+                    value="Unidade de Investimento Mexicana (UDI) (MXV)"
+                  >
+                    Unidade de Investimento Mexicana (UDI) (MXV)
+                  </option>
+                  <option
+                    value="Unidade de Valor Real (COU)"
+                  >
+                    Unidade de Valor Real (COU)
+                  </option>
+                  <option
+                    value="Vatu (VUV)"
+                  >
+                    Vatu (VUV)
+                  </option>
+                  <option
+                    value="WIR Euro (CHE)"
+                  >
+                    WIR Euro (CHE)
+                  </option>
+                  <option
+                    value="WIR Franc (CHW)"
+                  >
+                    WIR Franc (CHW)
+                  </option>
+                  <option
+                    value="Won (KRW)"
+                  >
+                    Won (KRW)
+                  </option>
+                  <option
+                    value="Won norte-coreano (KPW)"
+                  >
+                    Won norte-coreano (KPW)
+                  </option>
+                  <option
+                    value="Xelim da Tanzânia (TZS)"
+                  >
+                    Xelim da Tanzânia (TZS)
+                  </option>
+                  <option
+                    value="Xelim de Uganda (UGX)"
+                  >
+                    Xelim de Uganda (UGX)
+                  </option>
+                  <option
+                    value="Xelim do Quênia (KES)"
+                  >
+                    Xelim do Quênia (KES)
+                  </option>
+                  <option
+                    value="Yuan Renminbi (CNY)"
+                  >
+                    Yuan Renminbi (CNY)
+                  </option>
+                  <option
+                    value="Zambian Kwacha (ZMW)"
+                  >
+                    Zambian Kwacha (ZMW)
+                  </option>
+                  <option
+                    value="Zloty (PLN)"
+                  >
+                    Zloty (PLN)
+                  </option>
+                </select>
+                <div
+                  class="chakra-select__icon-wrapper css-iohxn1"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="chakra-select__icon"
+                    focusable="false"
+                    role="presentation"
+                    style="width: 1em; height: 1em; color: currentColor;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+        <button
+          class="chakra-button css-1pp9bw3"
+          data-testid="send-button"
+          type="button"
+        >
+          convert
+        </button>
+        <div
+          class="css-1swftd8"
+        />
+      </div>
+    </div>
+  </main>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

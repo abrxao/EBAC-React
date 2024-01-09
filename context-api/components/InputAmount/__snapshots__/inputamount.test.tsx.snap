@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputAmount mask 1`] = `
+exports[`InputAmount mask tests InputMask Snapshot 1`] = `
 <div>
   <input
     class="chakra-input css-0"
@@ -11,6 +11,7 @@ exports[`InputAmount mask 1`] = `
   />
   <button
     class="chakra-button css-1ner6ak"
+    data-testid="send-button"
     type="button"
   >
     convert

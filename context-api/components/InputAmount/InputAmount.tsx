@@ -10,7 +10,7 @@ const InputAmount: FunctionComponent<InputProps> = (props) => {
       mask: Number,
       isContentEditable: true,
     };
-    const amount: HTMLElement | null = document.querySelector("#amount-input");
+    const amount: HTMLElement | null = document.getElementById(props.id ?? "");
     amount ? IMask(amount, maskOptions) : () => {};
   }, []);
 
