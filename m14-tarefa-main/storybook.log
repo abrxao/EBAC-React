@@ -1,0 +1,52 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: react-scripts@5.0.1
+npm ERR! Found: typescript@5.3.3
+npm ERR! node_modules/typescript
+npm ERR!   peer typescript@">3.6.0" from fork-ts-checker-webpack-plugin@8.0.0
+npm ERR!   node_modules/@storybook/builder-webpack5/node_modules/fork-ts-checker-webpack-plugin
+npm ERR!     fork-ts-checker-webpack-plugin@"^8.0.0" from @storybook/builder-webpack5@7.6.10
+npm ERR!     node_modules/@storybook/builder-webpack5
+npm ERR!       @storybook/builder-webpack5@"7.6.10" from @storybook/react-webpack5@7.6.10
+npm ERR!       node_modules/@storybook/react-webpack5
+npm ERR!         dev @storybook/react-webpack5@"^7.6.10" from the root project
+npm ERR!   peerOptional typescript@"*" from @storybook/react@7.6.10
+npm ERR!   node_modules/@storybook/react
+npm ERR!     @storybook/react@"7.6.10" from @storybook/preset-react-webpack@7.6.10
+npm ERR!     node_modules/@storybook/preset-react-webpack
+npm ERR!       @storybook/preset-react-webpack@"7.6.10" from @storybook/react-webpack5@7.6.10
+npm ERR!       node_modules/@storybook/react-webpack5
+npm ERR!         dev @storybook/react-webpack5@"^7.6.10" from the root project
+npm ERR!     @storybook/react@"7.6.10" from @storybook/react-webpack5@7.6.10
+npm ERR!     node_modules/@storybook/react-webpack5
+npm ERR!       dev @storybook/react-webpack5@"^7.6.10" from the root project
+npm ERR!     1 more (the root project)
+npm ERR!   6 more (@storybook/react-docgen-typescript-plugin, ...)
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peerOptional typescript@"^3.2.1 || ^4" from react-scripts@5.0.1
+npm ERR! node_modules/react-scripts
+npm ERR!   peer react-scripts@">=5.0.0" from @storybook/preset-create-react-app@7.6.10
+npm ERR!   node_modules/@storybook/preset-create-react-app
+npm ERR!     dev @storybook/preset-create-react-app@"^7.6.10" from the root project
+npm ERR!   react-scripts@"5.0.1" from the root project
+npm ERR! 
+npm ERR! Conflicting peer dependency: typescript@4.9.5
+npm ERR! node_modules/typescript
+npm ERR!   peerOptional typescript@"^3.2.1 || ^4" from react-scripts@5.0.1
+npm ERR!   node_modules/react-scripts
+npm ERR!     peer react-scripts@">=5.0.0" from @storybook/preset-create-react-app@7.6.10
+npm ERR!     node_modules/@storybook/preset-create-react-app
+npm ERR!       dev @storybook/preset-create-react-app@"^7.6.10" from the root project
+npm ERR!     react-scripts@"5.0.1" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! 
+npm ERR! For a full report see:
+npm ERR! /home/abraao/.npm/_logs/2024-01-25T17_22_27_957Z-eresolve-report.txt
+
+npm ERR! A complete log of this run can be found in: /home/abraao/.npm/_logs/2024-01-25T17_22_27_957Z-debug-0.log

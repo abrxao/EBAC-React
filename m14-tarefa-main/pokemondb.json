@@ -1,0 +1,22 @@
+{
+  "pokemons": [
+    {
+      "name": "Pichu",
+      "imageUrl": "https://vignette1.wikia.nocookie.net/centro-de-ayuda-pokemon/images/9/9d/Pichu.png/revision/latest/scale-to-width-down/2000?cb=20130120163056&path-prefix=es",
+      "evolution": 1,
+      "id": "7b49"
+    },
+    {
+      "id": "5472",
+      "name": "Raichu",
+      "imageUrl": "https://images.wikidexcdn.net/mwuploads/wikidex/3/34/latest/20160815220038/Raichu.png",
+      "evolution": 3
+    },
+    {
+      "id": "4a30",
+      "name": "Pikachu",
+      "imageUrl": "https://pngimg.com/uploads/pokemon/pokemon_PNG14.png",
+      "evolution": 2
+    }
+  ]
+}

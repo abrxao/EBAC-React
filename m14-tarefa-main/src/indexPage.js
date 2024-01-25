@@ -1,29 +1,43 @@
-import React, { useEffect, useState } from 'react'
-import { PokemonCard } from './PokemonCard'
-import axios from 'axios'
-import './style.css'
+import React, { useEffect, useState } from "react";
+import { PokemonCard } from "./components/PokemonCard";
+import PokemonCardSkeleton from "./components/PokemonCard/PokemonCardSkeleton";
+import axios from "axios";
+import "./style.css";
+import Button from "./components/button";
+import { useQuery } from "@tanstack/react-query";
 
 const IndexPage = () => {
-  const [pokemonList, setPokemonList] = useState([])
-  const [createPokemon, setCreatePokemon] = useState(false)
-  const [updateList, setUpdateList] = useState(0)
+  const {
+    data: pokemonList,
+    isLoading,
+    refetch,
+  } = useQuery({
+    queryKey: "pokemons",
+    queryFn: async () => {
+      const { data } = await axios.get("http://localhost:4000/pokemons");
+      return data;
+    },
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: true,
+  });
+  const [createPokemon, setCreatePokemon] = useState(false);
+  const [updateList, setUpdateList] = useState(0);
 
   useEffect(() => {
-    const request = async () => {
-      const { data } = await axios.get('http://localhost:4000/')
-      setPokemonList(data)
-    }
-    setTimeout(request, 1500)
-  }, [updateList])
+    refetch();
+  }, [updateList]);
 
   return (
     <main>
-      <h1>Coleção pessoal de POKÉMONS</h1>
-      <button onClick={() => setCreatePokemon(true)}>
+      <h1 className="text-2xl font-bold my-2 dark:text-zinc-100">
+        Coleção pessoal de POKÉMONS
+      </h1>
+      <Button onClick={() => setCreatePokemon(true)} className="my-2">
         Adicionar Pokémon à sua coleção
-      </button>
+      </Button>
       {createPokemon && (
-        <div className="create-card">
+        <div className="py-4">
+          <p>Novo pokemon</p>
           <PokemonCard
             createPokemon={createPokemon}
             setCreatePokemon={setCreatePokemon}
@@ -32,21 +46,25 @@ const IndexPage = () => {
           />
         </div>
       )}
-      <div className="pokemon-container">
-        {pokemonList.map(({ _id, name, imageUrl, evolution }) => (
-          <PokemonCard
-            key={_id}
-            id={_id}
-            name={name}
-            image={imageUrl}
-            evolution={evolution}
-            updateList={updateList}
-            setUpdateList={setUpdateList}
-          />
-        ))}
+      <div className="flex flex-wrap gap-4">
+        {!isLoading
+          ? pokemonList.map(({ id, name, imageUrl, evolution }) => (
+              <PokemonCard
+                key={id}
+                id={id}
+                name={name}
+                image={imageUrl}
+                evolution={evolution}
+                updateList={updateList}
+                setUpdateList={setUpdateList}
+              />
+            ))
+          : Array.from({ length: 8 }).map((_, index) => (
+              <PokemonCardSkeleton key={`skeleton-${index}`} />
+            ))}
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
